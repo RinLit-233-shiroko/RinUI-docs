@@ -37,7 +37,7 @@ npm run docs:dev
 ### Contributors
 Contributions are welcome!
 Thanks to the great people who contributed to this project.
-[![Contributors](http://contrib.nn.ci/api?repo=rinlit-233-shiroko/Rin-UI)](https://github.com/RinLit-233-shiroko/Rin-UI/graphs/contributors)
+[![Contributors](http://contrib.nn.ci/api?repo=rinlit-233-shiroko/RinUI-docs)](https://github.com/RinLit-233-shiroko/RinUI-docs/graphs/contributors)
 
 ## 📜 License
 This project is licensed under the MIT License, you can learn more about it in the [license file](./LICENSE).
