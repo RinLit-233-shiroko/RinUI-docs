@@ -15,11 +15,15 @@ hero:
       link: /guide/getting-started
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Good Fluent Design Controls
+    icon: ✨
+    details: RinUI will provide a series of meticulously crafted Fluent Design style controls.
+  - title: Easy to Use
+    icon: ⚡
+    details: RinUI's controls are designed in conjunction with QML built-in controls. With just a simple configuration, you can quickly develop an elegant Fluent-style UI interface.
+  - title: Theme System
+    icon: 🪄
+    details: RinUI offers light and dark theme switching and supports custom configuration files (to be improved).
 ---
+
     
