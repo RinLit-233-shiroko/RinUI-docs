@@ -30,8 +30,8 @@ import QtQuick.Controls
 import QtQuick.Window
 import RinUI  // 仅需在您现有的项目中导入本库  // [!code highlight]
 
-// ↓ 记得将窗口替换为RinUI的窗口类型，如 FluentWindowBase, FluentWindow 等（具体请参见文档）
-FluentWindowBase { // [!code highlight]
+
+Window {
     width: 640
     height: 480
     visible: true

@@ -31,8 +31,8 @@ import QtQuick.Controls
 import QtQuick.Window
 import RinUI  // Just import this library into your existing project // [!code highlight]
 
-// ↓ Remember to replace the window type with RinUI's window type, such as FluentWindowBase, FluentWindow, etc. (please refer to the documentation for details)
-FluentWindowBase { // [!code highlight]
+
+Window {
     width: 640
     height: 480
     visible: true
