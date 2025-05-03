@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: Quick Start
       link: /guide/getting-started
+    - theme: alt
+      text: Button
+      link: /zh/BasicInput/Button
 
 features:
   - title: Good Fluent Design Controls
@@ -25,5 +28,3 @@ features:
     icon: 🪄
     details: RinUI offers light and dark theme switching and supports custom configuration files (to be improved).
 ---
-
-    
