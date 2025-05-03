@@ -21,7 +21,7 @@ Button {
 }
 ```
 
-### A Button with an Icon
+### Button with an Icon
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/IconButton.png">

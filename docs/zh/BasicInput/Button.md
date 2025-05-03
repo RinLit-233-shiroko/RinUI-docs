@@ -21,7 +21,7 @@ Button {
 }
 ```
 
-### 一个带图标的按钮
+### 带图标的按钮
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/IconButton.png">
@@ -72,8 +72,8 @@ Button {
     flat: true
     text: qsTr("Plain Style Button")
 }
+```
 
 ## 备注
 
 ## 另请参阅
-```
