@@ -46,7 +46,7 @@ Button {
 }
 ```
 
-### Accent Style Button
+### Highlighted Style Button
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/AccentStyleButton.png">
