@@ -25,5 +25,3 @@ features:
     icon: 🪄
     details: RinUI offers light and dark theme switching and supports custom configuration files (to be improved).
 ---
-
-    

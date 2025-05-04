@@ -29,6 +29,12 @@ export default defineConfig({
               { text: 'What is RinUI?', link: '/guide/' },
               { text: 'Getting Started', link: '/guide/getting-started' },
             ]
+          },
+          {
+            text: 'BasicInput',
+            items: [
+              { text: 'Button', link: '/BasicInput/Button.md' },
+            ]
           }
         ]
       }
@@ -54,6 +60,12 @@ export default defineConfig({
             items: [
               { text: '何为 RinUI?', link: '/zh/guide/' },
               { text: '快速开始', link: '/zh/guide/getting-started' },
+            ]
+          },
+          {
+            text: '基本输入',
+            items: [
+              { text: '按钮', link: '/zh/BasicInput/Button.md' },
             ]
           }
         ],
