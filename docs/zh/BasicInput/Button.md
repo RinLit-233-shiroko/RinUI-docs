@@ -1,10 +1,8 @@
 # 按钮
 
-Button 表示一个按钮控件，用户可以按下或单击该控件。按钮通常用于执行作或回答问题。典型的按钮包括 Ok、Apply、Cancel、Close、Yes、No 和 Help。
+Button 表示一个按钮控件，用户可以按下或单击该控件。按钮通常用于执行作或回答问题。
 
-按钮继承自 AbstractButton 的 API。例如，您可以使用 AbstractButton API 设置文本、显示图标以及响应用户的点击。
-
-当按钮被用户激活时，会发出 clicked()信号。将此信号连接起来以执行按钮的操作。按钮还提供了 canceled()、doubleClicked()、pressed()、released()和 pressAndHold()信号，用于长按。
+与 QtQuick 原生组件一样，当按钮被用户激活时，会发出 clicked()信号，将此信号连接起来以执行按钮的操作。
 
 ## 示例
 

@@ -1,10 +1,8 @@
 # Button
 
-Button represents a button control that the user can press or click. Buttons are typically used to perform an action or answer a question. Typical buttons include Ok, Apply, Cancel, Close, Yes, No, and Help.
+The Button represents a button control that the user can press or click. Buttons are typically used to perform an action or answer a question.
 
-Button inherits APIs from AbstractButton. For example, you can use the AbstractButton APIs to set the text, display an icon, and respond to user clicks.
-
-When the button is activated by the user, it emits the clicked() signal. Connect to this signal to perform the button's action. Button also provides the canceled(), doubleClicked(), pressed(), released(), and pressAndHold() signals, the last of which is for long presses.
+As with QtQuick native components, the Button emits the clicked() signal when it is activated by the user. Connect this signal to execute the button's action.
 
 ## Examples
 
