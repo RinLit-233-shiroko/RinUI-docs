@@ -33,7 +33,7 @@ export default defineConfig({
           {
             text: 'BasicInput',
             items: [
-              { text: 'Button', link: '/zh/BasicInput/Button.md' },
+              { text: 'Button', link: '/BasicInput/Button.md' },
             ]
           }
         ]
