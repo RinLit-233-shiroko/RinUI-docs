@@ -6,19 +6,14 @@ You can download the Gallery example program from the [Releases Page](https://gi
 ## Installation & Testing
 ### Python
 
-You can install RinUI via pip (TestPyPi):
+You can install RinUI via pip (PyPi):
 >[!TIP]
 > Before installation, it is recommended that you build a Python virtual environment.
-> After RinUI is perfected, RinUI will be released to PyPi.
->
-> Currently, the version of TestPyPi may not follow the latest version of the repository.
 
 ::: code-group
 
 ```bash [PySide6]
-pip install PySide6 darkdetect  
-# There is no Release for these two packages in TestPypi. When RinUI is released to PyPi, this step can be omitted.
-pip install -i https://test.pypi.org/simple/ RinUI --no-deps
+pip install RinUI
 ```
 :::
 
