@@ -1,12 +1,10 @@
 # 按钮
 
-Button 表示一个按钮控件，用户可以按下或单击该控件。按钮通常用于执行作或回答问题。
+Button 是一个按钮控件，用户可以按下或单击该控件。按钮通常用于执行作或回答问题。
 
-与 QtQuick 原生组件一样，当按钮被用户激活时，会发出 clicked()信号，将此信号连接起来以执行按钮的操作。
+与QtQuick原生组件一样，当按钮被用户激活时，会发出 clicked()信号，将此信号连接起来以执行按钮的操作。
 
-## 示例
-
-### 一个基本按钮
+### 基本按钮
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/Button.png">
@@ -46,7 +44,7 @@ Button {
 }
 ```
 
-### 强调风格按钮
+### primary风格按钮
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/AccentStyleButton.png">
@@ -59,7 +57,7 @@ Button {
 }
 ```
 
-### 平面样式的按钮
+### transparent风格按钮
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/PlainStyleButton.png">
@@ -72,6 +70,5 @@ Button {
 }
 ```
 
-## 备注
 
-## 另请参阅
+就这样（
