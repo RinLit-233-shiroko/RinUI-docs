@@ -6,18 +6,14 @@
 ## 安装 & 测试
 ### Python
 
-您可以通过 pip (TestPyPi) 安装 RinUI：
+您可以通过 pip (PyPi) 安装 RinUI：
 >[!TIP]
 > 在安装之前，推荐您构建一个 Python 虚拟环境。
-> 在 RinUI 完善之后，RinUI 将会发布到 PyPi。
-> 
-> 目前 TestPyPi 的版本可能不会跟随仓库的最新版本。
 
 ::: code-group
 
 ```bash [PySide6]
-pip install PySide6 darkdetect  # 在 TestPypi 中这两个包没有 Release，当 RinUI 发布到 PyPi 时，即可省略此步骤。
-pip install -i https://test.pypi.org/simple/ RinUI --no-deps
+pip install RinUI
 ```
 :::
 
