@@ -31,6 +31,14 @@ export default defineConfig({
             ]
           },
           {
+            text: 'RinUI Core',
+            items: [
+              { text: 'Theme', link: '/core/theme' },
+              { text: 'Utils', link: '/core/utils' },
+              { text: 'Float Layer Manager', link: '/core/floatLayer' },
+            ]
+          },
+          {
             text: 'BasicInput',
             items: [
               { text: 'Button', link: '/BasicInput/Button.md' },
@@ -43,7 +51,6 @@ export default defineConfig({
     zh: {
       label: "简体中文",
       lang: "zh",
-      // link: "/zh/",
       title: 'RinUI 开发文档',
 
       themeConfig: {
@@ -63,6 +70,14 @@ export default defineConfig({
             ]
           },
           {
+            text: 'RinUI 核心',
+            items: [
+              { text: '主题', link: '/zh/core/theme' },
+              { text: '工具', link: '/zh/core/utils' },
+              { text: '浮层管理器', link: '/zh/core/floatLayer' }
+            ]
+          },
+          {
             text: '基本输入',
             items: [
               { text: '按钮', link: '/zh/BasicInput/Button.md' },
@@ -75,27 +90,6 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/assets/favicon.ico',
-    // https://vitepress.dev/reference/default-theme-config
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'Examples', link: '/markdown-examples' }
-    // ],
-    //
-    // sidebar: [
-    //   {
-    //     text: 'Introduction',
-    //     items: [
-    //       { text: 'What is RinUI?', link: '/introduction' }
-    //     ]
-    //   },
-    //   {
-    //     text: 'Examples',
-    //     items: [
-    //       { text: 'Markdown Examples', link: '/markdown-examples' },
-    //       { text: 'Runtime API Examples', link: '/api-examples' }
-    //     ]
-    //   }
-    // ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RinLit-233-shiroko/Rin-UI' }
