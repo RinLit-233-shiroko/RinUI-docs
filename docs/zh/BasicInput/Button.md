@@ -1,10 +1,11 @@
 # 按钮
 
-Button 是一个按钮控件，用户可以按下或单击该控件。按钮通常用于执行作或回答问题。
+Button 是一个按钮控件，用户可以按下或单击该控件。按钮通常用于执行操作或回答问题。
 
-与QtQuick原生组件一样，当按钮被用户激活时，会发出 clicked()信号，将此信号连接起来以执行按钮的操作。
+与 QtQuick 原生组件一样，当按钮被用户激活时，会发出 `clicked()` 信号，将此信号连接起来以执行按钮的操作。
+使用方法也与原生控件完全一致。
 
-### 基本按钮
+## 按钮
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/Button.png">
@@ -13,11 +14,10 @@ Button 是一个按钮控件，用户可以按下或单击该控件。按钮通�
 ```qml
 Button {
     text: qsTr("Standard QML Button")
-    enabled: !buttonSwitch.checked
 }
 ```
 
-### 带图标的按钮
+## 图标按钮
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/IconButton.png">
@@ -25,26 +25,17 @@ Button {
 
 ```qml
 Button {
-    icon.source: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png")
+    icon.source: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png")   // [!code highlight]
     text: qsTr("Sunaookami Shiroko")
-    ToolTip {
-        delay: 500
-        text: qsTr("icon.source: Qt.resolvedUrl(\"../../assets/BA_Pic_Shiroko-chibi.png\")")
-        visible: parent.hovered
-    }
 }
+
 Button {
-    icon.name: "ic_fluent_button_20_regular"
+    icon.name: "ic_fluent_button_20_regular"  // [!code highlight]
     text: qsTr("Button with Icon")
-    ToolTip {
-        delay: 500
-        text: qsTr("icon.name: \"ic_fluent_button_20_regular\"")
-        visible: parent.hovered
-    }
 }
 ```
 
-### primary风格按钮
+## 高亮按钮（Highlighted）
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/AccentStyleButton.png">
@@ -57,7 +48,7 @@ Button {
 }
 ```
 
-### transparent风格按钮
+## 扁平按钮（Flat）
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/PlainStyleButton.png">
@@ -70,5 +61,17 @@ Button {
 }
 ```
 
+## 自定义按钮（Highlighted）
 
-就这样（
+<div align="center">
+<img src="/assets/images/BasicInput/Button/ButtonWithCustomColor.png">
+</div>
+
+```qml
+Button {
+    highlighted: true
+    primaryColor: "#444"
+    text: qsTr("Button with Custom Color")
+}
+```
+

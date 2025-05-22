@@ -1,12 +1,10 @@
 # Button
 
-The Button represents a button control that the user can press or click. Buttons are typically used to perform an action or answer a question.
+Button is a button control that users can press or click. Buttons are typically used to perform actions or answer questions.
 
-As with QtQuick native components, the Button emits the clicked() signal when it is activated by the user. Connect this signal to execute the button's action.
+Like native components in QtQuick, when a button is activated by the user, it emits a `clicked()` signal. Connecting this signal allows the execution of actions associated with the button. The usage method is consistent with native controls.
 
-## Examples
-
-### A Basic Button
+## A Basic Button
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/Button.png">
@@ -15,11 +13,10 @@ As with QtQuick native components, the Button emits the clicked() signal when it
 ```qml
 Button {
     text: qsTr("Standard QML Button")
-    enabled: !buttonSwitch.checked
 }
 ```
 
-### Button with an Icon
+## Button with Icon
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/IconButton.png">
@@ -27,26 +24,17 @@ Button {
 
 ```qml
 Button {
-    icon.source: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png")
+    icon.source: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png")   // [!code highlight]
     text: qsTr("Sunaookami Shiroko")
-    ToolTip {
-        delay: 500
-        text: qsTr("icon.source: Qt.resolvedUrl(\"../../assets/BA_Pic_Shiroko-chibi.png\")")
-        visible: parent.hovered
-    }
 }
+
 Button {
-    icon.name: "ic_fluent_button_20_regular"
+    icon.name: "ic_fluent_button_20_regular"  // [!code highlight]
     text: qsTr("Button with Icon")
-    ToolTip {
-        delay: 500
-        text: qsTr("icon.name: \"ic_fluent_button_20_regular\"")
-        visible: parent.hovered
-    }
 }
 ```
 
-### Highlighted Style Button
+## Highlighted Button
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/AccentStyleButton.png">
@@ -59,7 +47,7 @@ Button {
 }
 ```
 
-### Plain Style Button
+## Flat Button
 
 <div align="center">
 <img src="/assets/images/BasicInput/Button/PlainStyleButton.png">
@@ -72,6 +60,17 @@ Button {
 }
 ```
 
-## Remarks
 
-## See Also
+## Custom Button (Highlighted)
+
+<div align="center">
+<img src="/assets/images/BasicInput/Button/ButtonWithCustomColor.png">
+</div>
+
+```qml
+Button {
+    highlighted: true
+    primaryColor: "#444"
+    text: qsTr("Button with Custom Color")
+}
+```
