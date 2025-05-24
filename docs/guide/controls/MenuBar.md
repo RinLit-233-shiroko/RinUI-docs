@@ -1,0 +1,191 @@
+# MenuBar
+
+## Introduction
+
+The MenuBar simplifies the creation of basic application by providing a set of menus at the top of the app or window. Use it to let users choose from a context-related list of simple commands or options.
+
+## Examples
+
+### A simple MenuBar
+
+::: code-group
+
+```qml
+Button {
+    flat: true
+    icon.name: "ic_fluent_arrow_sort_20_regular"
+    width: 76
+    height: 36
+    text: qsTr("Sort")
+    anchors.verticalCenter: parent.verticalCenter
+    onClicked: menu.open()
+
+    Menu {
+        id: menu
+        MenuItem {
+            text: qsTr("By rating")
+        }
+        MenuItem {
+            text: qsTr("By match")
+        }
+        MenuItem {
+            text: qsTr("By distance")
+        }
+    }
+}
+```
+
+:::
+
+### MenuBar with keyboard accelerators.
+
+::: code-group
+
+```qml
+Button {
+    text: qsTr("Options")
+    anchors.verticalCenter: parent.verticalCenter
+    onClicked: menuToggle.open()
+
+    Menu {
+        id: menuToggle
+        MenuItem {
+            text: qsTr("Reset")
+        }
+        MenuSeparator {}
+        MenuItem {
+            checkable: true
+            checked: true
+            text: qsTr("Repeat")
+        }
+        MenuItem {
+            checkable: true
+            checked: true
+            text: qsTr("Shuffle")
+        }
+    }
+}
+```
+
+:::
+
+### MenuBar with submenus, separators, and checkable items
+
+::: code-group
+
+```qml
+Button {
+    text: qsTr("File Options")
+    anchors.verticalCenter: parent.verticalCenter
+    onClicked: menuWithCascading.open()
+
+    Menu {
+        id: menuWithCascading
+        MenuItem {
+            text: qsTr("Open")
+        }
+        Menu {
+            title: qsTr("Send to")
+            MenuItem {
+                text: qsTr("Bluetooth")
+            }
+            MenuItem {
+                text: qsTr("Desktop (shortcut)")
+            }
+            Menu {
+                title: qsTr("Compressed file")
+                MenuItem {
+                    text: qsTr("Compress and email")
+                }
+                MenuItem {
+                    text: qsTr("Compress to .7z")
+                }
+                MenuItem {
+                    text: qsTr("Compress to .zip")
+                }
+            }
+        }
+    }
+}
+```
+
+:::
+
+### MenuBar with icons.
+
+::: code-group
+
+```qml
+Button {
+    text: qsTr("Edit Options")
+    anchors.verticalCenter: parent.verticalCenter
+    onClicked: menuWithIcons.open()
+
+    Menu {
+        id: menuWithIcons
+        MenuItem {
+            icon.name: "ic_fluent_share_20_regular"
+            text: qsTr("Share")
+        }
+        MenuItem {
+            icon.name: "ic_fluent_copy_20_regular"
+            text: qsTr("Copy")
+        }
+        MenuItem {
+            icon.name: "ic_fluent_delete_20_regular"
+            text: qsTr("Delete")
+        }
+        MenuSeparator {}
+        MenuItem {
+            text: qsTr("Rename")
+        }
+        MenuItem {
+            text: qsTr("Select")
+        }
+    }
+}
+```
+
+:::
+
+### MenuBar with keyboard accelerators.
+
+::: code-group
+
+```qml
+Button {
+    text: qsTr("Edit Options")
+    anchors.verticalCenter: parent.verticalCenter
+    onClicked: menuWithIconsAndShortcuts.open()
+
+    Menu {
+        id: menuWithIconsAndShortcuts
+        Action {
+            icon.name: "ic_fluent_share_20_regular"
+            text: qsTr("Share")
+            shortcut: "Ctrl+S"
+        }
+        Action {
+            icon.name: "ic_fluent_copy_20_regular"
+            text: qsTr("Copy")
+            shortcut: "Ctrl+C"
+        }
+        Action {
+            icon.name: "ic_fluent_delete_20_regular"
+            text: qsTr("Delete")
+            shortcut: "Del"
+        }
+        MenuSeparator {}
+        Action {
+            text: qsTr("Rename")
+            shortcut: "F2"
+        }
+        Action {
+            text: qsTr("Select")
+            shortcut: "Ctrl+A"
+        }
+    }
+}
+```
+
+:::
