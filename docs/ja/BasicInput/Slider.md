@@ -2,26 +2,6 @@
 
 `Slider` コンポーネントを使用すると、ユーザーはトラックに沿ってハンドルをドラッグすることにより、連続的または離散的な範囲から値を選択できます。水平または垂直に表示でき、オプションで目盛りと現在の値のツールチップを表示できます。RinUI の `Slider` は `QtQuick.Controls.Basic.Slider` から継承されます。
 
-## 基本的なスライダー
-
-シンプルな水平スライダー。デフォルトでは、`from` と `to` が指定されていない場合、範囲は `0.0` から `1.0` です。
-
-<div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
-</div>
-
-```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
-Slider {
-    width: 200
-    // value: 0.5 
-}
-```
-
 ## 範囲とステップ付きスライダー
 
 `from` および `to` プロパティを使用してスライダーの範囲を定義し、`stepSize` を使用して増分を制御します。`value` プロパティはスライダーの現在の位置を設定します。

@@ -31,33 +31,6 @@ ToggleButton {
 }
 ```
 
-## アイコン付きトグルボタン
-
-`Button` から派生した他のボタンと同様に、`ToggleButton` もテキストと共にアイコンを含めるか、アイコンのみにすることができます。
-
-<div align="center">
-  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-icon.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
-</div>
-
-```qml
-ToggleButton {
-    icon.name: "ic_fluent_mic_off_20_regular"
-    // text: qsTr("Mic") // オプションのテキスト
-    // 初期状態はオフ、アイコンは「マイクオフ」を表示
-
-    onCheckedChanged: {
-        if (checked) {
-            // 例：チェック時にアイコンを "ic_fluent_mic_20_filled" に変更
-            icon.name = "ic_fluent_mic_20_filled"; 
-            console.log("Microphone ON");
-        } else {
-            icon.name = "ic_fluent_mic_off_20_regular";
-            console.log("Microphone OFF");
-        }
-    }
-}
-```
-
 ## 主なプロパティ
 
 *   `text`: `string` - ボタンに表示されるテキストラベル。

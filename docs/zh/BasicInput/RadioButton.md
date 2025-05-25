@@ -24,18 +24,18 @@ Column {
     ButtonGroup { id: myExclusiveGroup }
 
     RadioButton {
-        text: qsTr("Option Alpha")
+        text: qsTr("Option 1")
         ButtonGroup.group: myExclusiveGroup
         checked: true // 为组设置初始选项
     }
 
     RadioButton {
-        text: qsTr("Option Beta")
+        text: qsTr("Option 2")
         ButtonGroup.group: myExclusiveGroup
     }
 
     RadioButton {
-        text: qsTr("Option Gamma")
+        text: qsTr("Option 3")
         ButtonGroup.group: myExclusiveGroup
     }
 }

@@ -2,26 +2,6 @@
 
 The `Slider` component allows users to select a value from a continuous or discrete range by dragging a handle along a track. It can be displayed horizontally or vertically and can optionally show tick marks and a tooltip for the current value. RinUI's `Slider` inherits from `QtQuick.Controls.Basic.Slider`.
 
-## Basic Slider
-
-A simple horizontal slider. By default, if `from` and `to` are not specified, the range is `0.0` to `1.0`.
-
-<div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
-</div>
-
-```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
-Slider {
-    width: 200
-    // value: 0.5 
-}
-```
-
 ## Slider with Range and Steps
 
 Define the slider's range using `from` and `to`, and control the increment with `stepSize`. The `value` property sets the slider's current position.
@@ -31,14 +11,12 @@ Define the slider's range using `from` and `to`, and control the increment with 
 </div>
 
 ```qml
-import RinUI // Consistent import
-
 Slider {
     width: 200
     from: 0
-    to: 1000
+    to: 100
     stepSize: 10 // Value will change in increments of 10
-    value: 500   // Initial value
+    value: 50   // Initial value
 }
 ```
 
@@ -51,8 +29,6 @@ Set `tickmarks` to `true` to display visual markers. `tickFrequency` controls th
 </div>
 
 ```qml
-import RinUI // Consistent import
-
 Slider {
     width: 300
     from: 0
@@ -72,8 +48,6 @@ Set `orientation` to `Qt.Vertical` for a vertical slider.
 </div>
 
 ```qml
-import RinUI // Consistent import
-
 Slider {
     height: 150 // For vertical sliders, height is more relevant for primary dimension
     orientation: Qt.Vertical

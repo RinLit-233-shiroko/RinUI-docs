@@ -27,23 +27,6 @@ RoundButton {
 }
 ```
 
-**Circular Shape (Width == Height):**
-<div align="center">
-  <img src="/assets/images/BasicInput/RoundButton/roundbutton-circle.png"> <!-- Placeholder: image path to be confirmed or created -->
-</div>
-
-```qml
-import RinUI // Consistent import
-
-RoundButton {
-    icon.name: "ic_fluent_checkmark_20_regular"
-    width: 40 // Equal width and height for a circle
-    height: 40
-    // ToolTip.text: qsTr("Confirm") // Optional: Tooltip for icon-only buttons
-    onClicked: console.log("Circular RoundButton clicked")
-}
-```
-
 ## Key Properties
 
 *   `radius`: `real` - (Alias for background's radius) Controls the corner radius. In `RoundButton`, the background's `radius` is dynamically bound to `height / 2`, ensuring fully rounded corners that adapt to the button's height.
@@ -61,5 +44,3 @@ As `RoundButton` inherits from `Button`, all standard `Button` properties (like 
 *   For a perfect circle, set `width` and `height` to the same value. These are often ideal for icon-only buttons.
 *   If `width` is greater than `height`, the button will naturally take on a pill or capsule shape.
 *   The `PillButton` component is a specialized `RoundButton` that adds `checkable` behavior by default and links its `checked` state to the `highlighted` visual state. If you need a checkable round button, `PillButton` might be more direct.
-
-```

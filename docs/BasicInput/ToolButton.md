@@ -17,40 +17,12 @@ import RinUI
 // ...
 
 ToolButton {
-    icon.name: "ic_fluent_gear_20_regular"
-    // size: 24 // Adjusts the internal IconWidget's size (default is 20)
-    // color: Theme.currentTheme.colors.textPrimaryColor // Sets the icon's color
-    flat: true // Common styling for tool buttons
-    ToolTip.text: qsTr("Settings") // Recommended for accessibility on icon-only buttons
+    icon.name: "ic_fluent_apps_settings_20_regular"
     onClicked: {
         console.log("Settings ToolButton clicked");
     }
 }
 ```
-
-## ToolButton with Text and Icon
-
-A `ToolButton` can also display text alongside or instead of an icon. The internal layout places both a `Text` item and an `IconWidget`.
-
-<div align="center">
-  <img src="/assets/images/BasicInput/ToolButton/toolbutton-text-icon.png"> <!-- Placeholder: image path to be confirmed or created -->
-</div>
-
-```qml
-import RinUI // Consistent import
-
-ToolButton {
-    text: qsTr("Edit")
-    icon.name: "ic_fluent_edit_20_regular"
-    flat: true
-    // The layout of text and icon within the button might depend on theming 
-    // and specific size constraints.
-    onClicked: {
-        console.log("Edit ToolButton clicked");
-    }
-}
-```
-> **Important Note on `icon.name` vs `text` for Icon Display**: The `ToolButton`'s internal `IconWidget` primarily uses `toolBtn.icon.name` to determine the icon. If `toolBtn.icon.name` is not set, it attempts to use `toolBtn.text` as the icon name. This fallback is generally not recommended for clarity. **Always use `icon.name` to specify the icon.**
 
 ## Key Properties
 
