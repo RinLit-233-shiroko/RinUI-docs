@@ -26,7 +26,7 @@ Button {
 
 Flyout {
     id: myFlyout
-    target: myButton // Positions the flyout relative to myButton
+    parent: myButton // Positions the flyout relative to myButton
     text: qsTr("This is a flyout with a message.")
     
     // Add buttons by assigning a list of QML items to buttonBox
@@ -55,27 +55,28 @@ Button {
     id: detailsButton
     text: qsTr("View Details")
     onClicked: detailsFlyout.open()
-}
-
-Flyout {
-    id: detailsFlyout
-    target: detailsButton
-    // Position enum likely includes: Position.Top, Position.Bottom, Position.Left, Position.Right
-    // Position.Center (if available) might center it on the target or screen.
-    position: Position.Bottom // Example: show below the target
-    image: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png") // Ensure path is correct
-    text: qsTr("More details about the item can be shown here.")
-    maximumWidth: 300
-    buttonBox: [
-        Button {
-            text: qsTr("Confirm")
-            onClicked: detailsFlyout.close()
-        },
-        Button {
-            text: qsTr("Cancel")
-            onClicked: detailsFlyout.close()
-        }
-    ]
+    
+    Flyout {
+        id: detailsFlyout
+        // You can directly nest Flyout inside a button without defining the parent attribute.
+        
+        // Position enum likely includes: Position.Top, Position.Bottom, Position.Left, Position.Right
+        // Position.Center (if available) might center it on the target or screen.
+        position: Position.Bottom // Example: show below the target
+        image: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png") // Ensure path is correct
+        text: qsTr("More details about the item can be shown here.")
+        maximumWidth: 300
+        buttonBox: [
+            Button {
+                text: qsTr("Confirm")
+                onClicked: detailsFlyout.close()
+            },
+            Button {
+                text: qsTr("Cancel")
+                onClicked: detailsFlyout.close()
+            }
+        ]
+    }
 }
 ```
 
@@ -89,7 +90,7 @@ Flyout {
 *   `padding`: `real` - Padding around the content of the flyout. Defaults to `16`.
 
 **Inherited from `Popup`:**
-*   `target`: `Item` - The item to position the flyout relative to. The `x` and `y` properties of the `Flyout` are automatically calculated based on `target` and `position`.
+*   `parent`: `Item` - The item to position the flyout relative to. The `x` and `y` properties of the `Flyout` are automatically calculated based on `target` and `position`.
 *   `opened`: `bool` (readonly) - Whether the flyout is currently visible.
 *   `open()`: Method to show the flyout.
 *   `close()`: Method to hide the flyout.

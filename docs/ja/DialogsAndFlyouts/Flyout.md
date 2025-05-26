@@ -26,7 +26,7 @@ Button {
 
 Flyout {
     id: myFlyout
-    target: myButton // フライアウトを myButton に相対的に配置します
+    parent: myButton // フライアウトを myButton に相対的に配置します
     text: qsTr("This is a flyout with a message.")
     
     // QML アイテムのリストを buttonBox に割り当てることでボタンを追加します
@@ -53,27 +53,27 @@ Button {
     id: detailsButton
     text: qsTr("View Details")
     onClicked: detailsFlyout.open()
-}
-
-Flyout {
-    id: detailsFlyout
-    target: detailsButton
-    // Position 列挙型には、Position.Top, Position.Bottom, Position.Left, Position.Right などが含まれる可能性があります
-    // Position.Center (利用可能な場合) は、ターゲットまたは画面の中央に配置する場合があります。
-    position: Position.Bottom // 例：ターゲットの下に表示
-    image: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png") // パスが正しいことを確認してください
-    text: qsTr("More details about the item can be shown here.")
-    maximumWidth: 300
-    buttonBox: [
-        Button {
-            text: qsTr("Confirm")
-            onClicked: detailsFlyout.close()
-        },
-        Button {
-            text: qsTr("Cancel")
-            onClicked: detailsFlyout.close()
-        }
-    ]
+    
+    Flyout {
+        id: detailsFlyout
+        // 親属性を定義せずに、ボタン内に Flyout を直接ネストすることができます。
+        // Position 列挙型には、Position.Top, Position.Bottom, Position.Left, Position.Right などが含まれる可能性があります
+        // Position.Center (利用可能な場合) は、ターゲットまたは画面の中央に配置する場合があります。
+        position: Position.Bottom // 例：ターゲットの下に表示
+        image: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png") // パスが正しいことを確認してください
+        text: qsTr("More details about the item can be shown here.")
+        maximumWidth: 300
+        buttonBox: [
+            Button {
+                text: qsTr("Confirm")
+                onClicked: detailsFlyout.close()
+            },
+            Button {
+                text: qsTr("Cancel")
+                onClicked: detailsFlyout.close()
+            }
+        ]
+    }
 }
 ```
 
@@ -87,7 +87,7 @@ Flyout {
 *   `padding`: `real` - フライアウトのコンテンツ周囲のパディング。デフォルトは `16` です。
 
 **`Popup` から継承:**
-*   `target`: `Item` - フライアウトを相対的に配置するアイテム。`Flyout` の `x` および `y` プロパティは、`target` と `position` に基づいて自動的に計算されます。
+*   `parent`: `Item` - フライアウトを相対的に配置するアイテム。`Flyout` の `x` および `y` プロパティは、`target` と `position` に基づいて自動的に計算されます。
 *   `opened`: `bool` (読み取り専用) - フライアウトが現在表示されているかどうか。
 *   `open()`: フライアウトを表示するメソッド。
 *   `close()`: フライアウトを非表示にするメソッド。

@@ -26,7 +26,7 @@ Button {
 
 Flyout {
     id: myFlyout
-    target: myButton // 将浮出控件相对于 myButton 定位
+    parent: myButton // 将浮出控件相对于 myButton 定位
     text: qsTr("This is a flyout with a message.")
     
     // 通过将 QML 项列表分配给 buttonBox 来添加按钮
@@ -53,27 +53,28 @@ Button {
     id: detailsButton
     text: qsTr("View Details")
     onClicked: detailsFlyout.open()
-}
-
-Flyout {
-    id: detailsFlyout
-    target: detailsButton
-    // Position 枚举可能包括：Position.Top, Position.Bottom, Position.Left, Position.Right
-    // Position.Center (如果可用) 可能会在目标或屏幕上居中显示。
-    position: Position.Bottom // 示例：在目标下方显示
-    image: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png") // 确保路径正确
-    text: qsTr("More details about the item can be shown here.")
-    maximumWidth: 300
-    buttonBox: [
-        Button {
-            text: qsTr("Confirm")
-            onClicked: detailsFlyout.close()
-        },
-        Button {
-            text: qsTr("Cancel")
-            onClicked: detailsFlyout.close()
-        }
-    ]
+    
+    Flyout {
+        id: detailsFlyout
+        // 可以直接将 Flyout 嵌套在按钮内部，就不需要定义parent属性
+        
+        // Position 枚举可能包括：Position.Top, Position.Bottom, Position.Left, Position.Right
+        // Position.Center (如果可用) 可能会在目标或屏幕上居中显示。
+        position: Position.Bottom // 示例：在目标下方显示
+        image: Qt.resolvedUrl("../../assets/BA_Pic_Shiroko-chibi.png") // 确保路径正确
+        text: qsTr("More details about the item can be shown here.")
+        maximumWidth: 300
+        buttonBox: [
+            Button {
+                text: qsTr("Confirm")
+                onClicked: detailsFlyout.close()
+            },
+            Button {
+                text: qsTr("Cancel")
+                onClicked: detailsFlyout.close()
+            }
+        ]
+    }
 }
 ```
 
@@ -87,7 +88,7 @@ Flyout {
 *   `padding`: `real` - 浮出控件内容周围的填充。默认为 `16`。
 
 **继承自 `Popup`:**
-*   `target`: `Item` - 浮出控件相对于其定位的项。`Flyout` 的 `x` 和 `y` 属性会根据 `target` 和 `position` 自动计算。
+*   `parent`: `Item` - 浮出控件相对于其定位的项。`Flyout` 的 `x` 和 `y` 属性会根据 `target` 和 `position` 自动计算。
 *   `opened`: `bool` (只读) - 浮出控件当前是否可见。
 *   `open()`: 显示浮出控件的方法。
 *   `close()`: 隐藏浮出控件的方法。

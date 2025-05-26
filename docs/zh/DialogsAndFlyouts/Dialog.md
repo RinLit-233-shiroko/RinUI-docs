@@ -57,6 +57,8 @@ import RinUI // Consistent import
 Dialog {
     id: customDialog
     title: qsTr("Custom Layout")
+    modal: true  // 模态对话框，会出现窗口遮罩
+    
     standardButtons: Dialog.Apply | Dialog.Close // 使用“应用”和“关闭”按钮的示例
 
     // 这些项成为内部 ColumnLayout 的子项
@@ -73,22 +75,6 @@ Dialog {
         id: agreeCheck
         text: qsTr("I agree to the terms and conditions")
         Layout.fillWidth: true
-    }
-    
-    // 处理“应用”按钮
-    onApply: { 
-        if (agreeCheck.checked) {
-            console.log("Applied with name:", nameField.text);
-            customDialog.close(); // 应用后关闭对话框
-        } else {
-            console.log("Terms not agreed.");
-            // 可选：通知用户必须同意条款
-        }
-    }
-    
-    // 当点击 Dialog.Close 或调用 close() 时发出 onClose
-    onClose: { 
-        console.log("Custom dialog was closed.");
     }
 }
 ```

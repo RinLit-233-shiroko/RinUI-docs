@@ -57,6 +57,7 @@ import RinUI // Consistent import
 Dialog {
     id: customDialog
     title: qsTr("Custom Layout")
+    modal: true // ウィンドウマスクを表示するモーダルダイアログボックス
     standardButtons: Dialog.Apply | Dialog.Close // 「適用」と「閉じる」ボタンの使用例
 
     // これらのアイテムは内部 ColumnLayout の子になります
@@ -73,22 +74,6 @@ Dialog {
         id: agreeCheck
         text: qsTr("I agree to the terms and conditions")
         Layout.fillWidth: true
-    }
-    
-    // 「適用」ボタンの処理
-    onApply: { 
-        if (agreeCheck.checked) {
-            console.log("Applied with name:", nameField.text);
-            customDialog.close(); // 適用後にダイアログを閉じる
-        } else {
-            console.log("Terms not agreed.");
-            // オプション：ユーザーに規約に同意する必要があることを通知
-        }
-    }
-    
-    // Dialog.Close がクリックされるか close() が呼び出されると onClose が発行されます
-    onClose: { 
-        console.log("Custom dialog was closed.");
     }
 }
 ```
