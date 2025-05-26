@@ -38,46 +38,9 @@ Frame {
 
 Set the `frameless` property to `true` to make the visible background (color and border) of the `Frame` disappear. The `Frame` itself still exists as a layout container and will continue to clip its content if `clip` is `true`. This can be useful for grouping and clipping without adding visual decoration.
 
-```qml
-import RinUI // Consistent import
-
-Frame {
-    width: 150
-    height: 100
-    frameless: true
-    padding: 5 // Padding still applies for content positioning
-    clip: true // Content is clipped to the Frame's bounds
-
-    Rectangle {
-        // This rectangle is a child of the Frame's contentItem
-        anchors.fill: parent
-        // If margins are negative or content is larger, it will be clipped
-        anchors.margins: -10 // Example: content larger than frame
-        color: "lightblue" 
-        Text { anchors.centerIn: parent; text: "Clipped Content"; }
-    }
-}
-```
-
 ## Hover Effects
 
 If `hoverable` is `true` (the default), the `Frame`'s background opacity changes slightly on mouse hover, providing visual feedback. The `hover` property can be used to react to this state.
-
-```qml
-import RinUI // Consistent import
-
-Frame {
-    width: 100
-    height: 100
-    color: "lightgray"
-    hoverable: true // Default
-
-    Text {
-        anchors.centerIn: parent
-        text: parent.hover ? qsTr("Hovered!") : qsTr("Hover me")
-    }
-}
-```
 
 ## Key Properties
 

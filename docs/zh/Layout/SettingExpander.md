@@ -2,49 +2,6 @@
 
 `SettingExpander` 是 `Expander` 组件的一个专门版本，专为在设置页面或列表中创建项目而设计。它提供了一个结构化的标题，包含图标、标题、描述以及标题右侧控件的插槽。与标准 `Expander` 一样，它也具有一个可折叠的内容区域，用于显示其他详细信息或子设置。
 
-## 基本设置展开器
-
-`SettingExpander` 的标题显示图标、标题和描述。`content` 属性允许在此标题的右侧放置控件（如 `Switch` 或 `ComboBox`）。主要的可折叠区域（继承自 `Expander` 的 `contentData` 默认属性）通过将 QML 项作为 `SettingExpander` 的子项添加来填充。
-
-<div align="center">
-  <img src="/assets/images/Layout/SettingExpander/settingexpander-basic.png"> <!-- 占位符：图片路径待确认或创建 -->
-</div>
-
-```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
-SettingExpander {
-    width: 400 // 示例宽度，根据需要调整
-    icon: "ic_fluent_settings_20_regular" // 标题的 Fluent 图标名称
-    title: qsTr("Appearance Settings")
-    description: qsTr("Customize the look and feel of the application.")
-
-    // 通过 'content' 属性放置在标题右侧的控件
-    content: Switch {
-        // 此开关可能控制全局外观设置
-        checked: true 
-        // 注意：如果此处需要多个项目或复杂布局，
-        // 'content' 插槽内的布局可能需要特定处理。
-    }
-
-    // 可折叠内容（作为子项添加，填充 'contentData'）
-    Text {
-        text: qsTr("More detailed appearance options can be placed here, inside the collapsible area.")
-        padding: 10 // 由于 SettingExpander 的基础 Expander 的 contentPadding 为 0，因此添加填充
-        wrapMode: Text.WordWrap
-        Layout.fillWidth: true
-    }
-    Button {
-        text: qsTr("Advanced Options")
-        Layout.alignment: Qt.AlignHCenter
-        // 根据需要添加填充或边距
-    }
-}
-```
-
 ## 在可折叠区域中使用 `SettingItem`
 
 `SettingExpander` 的可折叠内容区域通常用 `SettingItem` 组件填充，以保持子设置列表的一致布局。

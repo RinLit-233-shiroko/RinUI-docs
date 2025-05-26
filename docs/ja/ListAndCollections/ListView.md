@@ -46,51 +46,54 @@ import RinUI // ListViewDelegate、IconWidget などの RinUI タイプが利用
 
 // ...
 
-ListModel {
-    id: contactModel
-    ListElement { name: "Alice Wonderland"; status: "Online"; iconName: "ic_fluent_person_20_filled" }
-    ListElement { name: "Bob The Builder"; status: "Offline"; iconName: "ic_fluent_person_20_regular" }
-    ListElement { name: "Charlie Brown"; status: "Busy"; iconName: "ic_fluent_person_prohibited_20_filled" }
-}
-
 ListView {
-    width: 300
+    width: 350
     height: 300
-    model: contactModel
-    // カスタムデリゲートがモデルプロパティを直接アクセスするため、ここでは textRole は不要です
+    model: ListModel {
+        ListElement { titleText: "Meeting Notes"; dateText: "Yesterday"; iconSymbol: "ic_fluent_document_20_regular" }
+        ListElement { titleText: "Project Alpha"; dateText: "2023-10-26"; iconSymbol: "ic_fluent_folder_20_regular" }
+        ListElement { titleText: "Quick Reminder"; dateText: "10:30 AM"; iconSymbol: "ic_fluent_alert_20_regular" }
+    }
 
     delegate: ListViewDelegate {
-        // width は通常、デリゲート自体によって ListView.view.width にバインドされます
-        // height はコンテンツに基づいて適応可能 (デフォルト: contents.implicitHeight + 20)
+        // width is typically bound to ListView.view.width by the delegate itself
+        // height is adaptive by default (contents.implicitHeight + 20)
 
-        leftArea: IconWidget { 
-            icon.name: model.iconName // モデルデータを直接アクセス
-            size: 24
-            // Layout.alignment: Qt.AlignVCenter // leftArea がレイアウトで余分なスペースがある場合
+        leftArea: IconWidget {
+            icon: model.iconSymbol // Access model data for the icon
+            size: 22
+            Layout.alignment: Qt.AlignVCenter // Aligns icon within the Row of leftArea
         }
 
-        middleArea: [ // middleArea は ColumnLayout で、アイテムは子として追加されます
+        middleArea: [ // middleArea takes a list of items for its ColumnLayout
             Text {
-                text: model.name 
+                text: model.titleText // Main text from model
                 font.bold: true
-                Layout.fillWidth: true 
+                elide: Text.ElideRight
+                Layout.fillWidth: true
             },
             Text {
-                text: model.status
+                text: model.dateText // Secondary text from model
                 font.pixelSize: 12
                 color: Theme.currentTheme.colors.textSecondaryColor
+                elide: Text.ElideRight
                 Layout.fillWidth: true
             }
         ]
 
-        rightArea: Button { // rightArea は RowLayout です
-            text: qsTr("View")
+        rightArea: ToolButton { // Example: a ToolButton on the right
+            icon.name: "ic_fluent_chevron_right_20_regular"
             flat: true
-            Layout.alignment: Qt.AlignVCenter
+            size: 16
+            Layout.alignment: Qt.AlignVCenter // Aligns button within the RowLayout of rightArea
             onClicked: {
-                console.log("Viewing details for:", model.name);
-                // ListView.view.currentIndex = index; // デリゲートがデフォルトでこれを処理します
+                console.log("More options for:", model.titleText);
             }
+        }
+
+        onClicked: {
+            console.log("Clicked on item:", model.titleText);
+            // ListView.view.currentIndex is automatically updated by the delegate's default onClicked handler
         }
     }
 }

@@ -2,49 +2,6 @@
 
 The `SettingExpander` is a specialized version of the `Expander` component, tailored for creating items typically found in settings pages or lists. It provides a structured header that includes an icon, a title, a description, and a slot for a control on the right side of the header. Like a standard `Expander`, it also features a collapsible content area for additional details or sub-settings.
 
-## Basic SettingExpander
-
-A `SettingExpander`'s header displays an `icon`, `title`, and `description`. The `content` property allows placing a control (like a `Switch` or `ComboBox`) on the right side of this header. The main collapsible area (inherited from `Expander`'s `contentData` default property) is populated by adding QML items as children to the `SettingExpander`.
-
-<div align="center">
-  <img src="/assets/images/Layout/SettingExpander/settingexpander-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
-</div>
-
-```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
-SettingExpander {
-    width: 400 // Example width, adjust as needed
-    icon: "ic_fluent_settings_20_regular" // Fluent icon name for the header
-    title: qsTr("Appearance Settings")
-    description: qsTr("Customize the look and feel of the application.")
-
-    // Control placed on the right side of the header via the 'content' property
-    content: Switch {
-        // This switch might control a global appearance setting
-        checked: true 
-        // Note: Layouting within the 'content' slot might need specific handling 
-        // if multiple items or complex layouts are needed there.
-    }
-
-    // Collapsible content (added as children, populating 'contentData')
-    Text {
-        text: qsTr("More detailed appearance options can be placed here, inside the collapsible area.")
-        padding: 10 // Add padding as base Expander's contentPadding is 0 for SettingExpander
-        wrapMode: Text.WordWrap
-        Layout.fillWidth: true
-    }
-    Button {
-        text: qsTr("Advanced Options")
-        Layout.alignment: Qt.AlignHCenter
-        // Add padding or margins as needed
-    }
-}
-```
-
 ## Using `SettingItem` in Collapsible Area
 
 The collapsible content area of a `SettingExpander` is often populated with `SettingItem` components to maintain a consistent layout for lists of sub-settings.

@@ -74,7 +74,6 @@ export default defineConfig({
             items: [
               { text: 'Expander', link: '/Layout/Expander.md' },
               { text: 'SettingExpander', link: '/Layout/SettingExpander.md' },
-              { text: 'SettingItem', link: '/Layout/SettingItem.md' }
             ]
           },
           {
@@ -83,7 +82,6 @@ export default defineConfig({
               { text: 'Clip (Interactive Surface)', link: '/ListAndCollections/Clip.md' },
               { text: 'Frame', link: '/ListAndCollections/Frame.md' },
               { text: 'ListView', link: '/ListAndCollections/ListView.md' },
-              { text: 'ListViewDelegate', link: '/ListAndCollections/ListViewDelegate.md' },
               { text: 'SettingCard', link: '/ListAndCollections/SettingCard.md' }
             ]
           }
@@ -156,7 +154,6 @@ export default defineConfig({
             items: [
               { text: '展开器', link: '/zh/Layout/Expander.md' },
               { text: '设置展开器', link: '/zh/Layout/SettingExpander.md' },
-              { text: '设置项', link: '/zh/Layout/SettingItem.md' }
             ]
           },
           {
@@ -165,7 +162,6 @@ export default defineConfig({
               { text: 'Clip (可交互表面)', link: '/zh/ListAndCollections/Clip.md' },
               { text: '框架', link: '/zh/ListAndCollections/Frame.md' },
               { text: '列表视图', link: '/zh/ListAndCollections/ListView.md' },
-              { text: '列表项委托', link: '/zh/ListAndCollections/ListViewDelegate.md' },
               { text: '设置卡片', link: '/zh/ListAndCollections/SettingCard.md' }
             ]
           }
@@ -238,7 +234,6 @@ export default defineConfig({
             items: [
               { text: 'エキスパンダー', link: '/ja/Layout/Expander.md' },
               { text: '設定エキスパンダー', link: '/ja/Layout/SettingExpander.md' },
-              { text: '設定アイテム', link: '/ja/Layout/SettingItem.md' }
             ]
           },
           {
@@ -247,7 +242,6 @@ export default defineConfig({
               { text: 'Clip (インタラクティブサーフェス)', link: '/ja/ListAndCollections/Clip.md' },
               { text: 'フレーム', link: '/ja/ListAndCollections/Frame.md' },
               { text: 'リストビュー', link: '/ja/ListAndCollections/ListView.md' },
-              { text: 'リストビューデリゲート', link: '/ja/ListAndCollections/ListViewDelegate.md' },
               { text: '設定カード', link: '/ja/ListAndCollections/SettingCard.md' }
             ]
           }

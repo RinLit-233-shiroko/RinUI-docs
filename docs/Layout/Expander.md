@@ -13,7 +13,7 @@ A basic `Expander` can have a text title in its default header and QML items as 
 ```qml
 import QtQuick 2.15
 import RinUI
-
+![img.png](img.png)
 // ...
 
 Expander {
@@ -72,12 +72,6 @@ Expander {
                 Layout.alignment: Qt.AlignVCenter
             }
         }
-        // Important: To make the custom header toggle the expander:
-        MouseArea {
-            anchors.fill: parent
-            onClicked: parentExpander.expanded = !parentExpander.expanded 
-                       // where parentExpander is the id of the Expander
-        }
     }
     // Give your Expander an id if referencing from within custom header
     id: parentExpander 
@@ -85,6 +79,7 @@ Expander {
     Text {
         text: qsTr("Content area for the expander with a custom header.")
         padding: 10 // Add padding if needed
+        Layout.fillWidth: true
     }
 }
 ```
@@ -110,6 +105,8 @@ Expander {
     width: 300
 
     Text {
+        Layout.fillWidth: true
+        padding: 10
         text: qsTr("This content expands upwards from the header.")
     }
 }

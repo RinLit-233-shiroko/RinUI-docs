@@ -54,43 +54,53 @@ ListModel {
 }
 
 ListView {
-    width: 300
+    width: 350
     height: 300
-    model: contactModel
-    // textRole is not needed here as the custom delegate accesses model properties directly
+    model: ListModel {
+        ListElement { titleText: "Meeting Notes"; dateText: "Yesterday"; iconSymbol: "ic_fluent_document_20_regular" }
+        ListElement { titleText: "Project Alpha"; dateText: "2023-10-26"; iconSymbol: "ic_fluent_folder_20_regular" }
+        ListElement { titleText: "Quick Reminder"; dateText: "10:30 AM"; iconSymbol: "ic_fluent_alert_20_regular" }
+    }
 
     delegate: ListViewDelegate {
         // width is typically bound to ListView.view.width by the delegate itself
-        // height can be adaptive based on content (default: contents.implicitHeight + 20)
+        // height is adaptive by default (contents.implicitHeight + 20)
 
-        leftArea: IconWidget { 
-            icon.name: model.iconName // Access model data directly
-            size: 24
-            // Layout.alignment: Qt.AlignVCenter // If leftArea were a Layout and had extra space
+        leftArea: IconWidget {
+            icon: model.iconSymbol // Access model data for the icon
+            size: 22
+            Layout.alignment: Qt.AlignVCenter // Aligns icon within the Row of leftArea
         }
 
-        middleArea: [ // middleArea is a ColumnLayout, items are added as children
+        middleArea: [ // middleArea takes a list of items for its ColumnLayout
             Text {
-                text: model.name 
+                text: model.titleText // Main text from model
                 font.bold: true
-                Layout.fillWidth: true 
+                elide: Text.ElideRight
+                Layout.fillWidth: true
             },
             Text {
-                text: model.status
+                text: model.dateText // Secondary text from model
                 font.pixelSize: 12
                 color: Theme.currentTheme.colors.textSecondaryColor
+                elide: Text.ElideRight
                 Layout.fillWidth: true
             }
         ]
 
-        rightArea: Button { // rightArea is a RowLayout
-            text: qsTr("View")
+        rightArea: ToolButton { // Example: a ToolButton on the right
+            icon.name: "ic_fluent_chevron_right_20_regular"
             flat: true
-            Layout.alignment: Qt.AlignVCenter
+            size: 16
+            Layout.alignment: Qt.AlignVCenter // Aligns button within the RowLayout of rightArea
             onClicked: {
-                console.log("Viewing details for:", model.name);
-                // ListView.view.currentIndex = index; // Delegate handles this by default
+                console.log("More options for:", model.titleText);
             }
+        }
+
+        onClicked: {
+            console.log("Clicked on item:", model.titleText);
+            // ListView.view.currentIndex is automatically updated by the delegate's default onClicked handler
         }
     }
 }

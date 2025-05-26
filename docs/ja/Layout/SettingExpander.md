@@ -2,49 +2,6 @@
 
 `SettingExpander` は `Expander` コンポーネントの特殊化されたバージョンであり、設定ページやリストのアイテムを作成するために調整されています。アイコン、タイトル、説明、およびヘッダーの右側にあるコントロール用のスロットを含む構造化されたヘッダーを提供します。標準の `Expander` と同様に、追加の詳細やサブ設定のための折りたたみ可能なコンテンツ領域も備えています。
 
-## 基本的な設定エキスパンダー
-
-`SettingExpander` のヘッダーには、アイコン、タイトル、説明が表示されます。`content` プロパティを使用すると、このヘッダーの右側にコントロール（`Switch` や `ComboBox` など）を配置できます。主要な折りたたみ可能領域（`Expander` の `contentData` デフォルトプロパティから継承）は、`SettingExpander` の子として QML アイテムを追加することによって設定されます。
-
-<div align="center">
-  <img src="/assets/images/Layout/SettingExpander/settingexpander-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
-</div>
-
-```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
-SettingExpander {
-    width: 400 // 例：幅、必要に応じて調整
-    icon: "ic_fluent_settings_20_regular" // ヘッダーの Fluent アイコン名
-    title: qsTr("Appearance Settings")
-    description: qsTr("Customize the look and feel of the application.")
-
-    // 'content' プロパティを介してヘッダーの右側に配置されるコントロール
-    content: Switch {
-        // このスイッチはグローバルな外観設定を制御する場合があります
-        checked: true 
-        // 注：ここに複数のアイテムや複雑なレイアウトが必要な場合、
-        // 'content' スロット内のレイアウトには特定の処理が必要になる場合があります。
-    }
-
-    // 折りたたみ可能なコンテンツ（子として追加され、「contentData」を設定）
-    Text {
-        text: qsTr("More detailed appearance options can be placed here, inside the collapsible area.")
-        padding: 10 // SettingExpander のベース Expander の contentPadding が 0 なのでパディングを追加
-        wrapMode: Text.WordWrap
-        Layout.fillWidth: true
-    }
-    Button {
-        text: qsTr("Advanced Options")
-        Layout.alignment: Qt.AlignHCenter
-        // 必要に応じてパディングやマージンを追加
-    }
-}
-```
-
 ## 折りたたみ可能領域での `SettingItem` の使用
 
 `SettingExpander` の折りたたみ可能なコンテンツ領域は、サブ設定のリストの一貫したレイアウトを維持するために、`SettingItem` コンポーネントで設定されることがよくあります。

@@ -46,51 +46,54 @@ import RinUI // 确保 ListViewDelegate、IconWidget 等 RinUI 类型可用
 
 // ...
 
-ListModel {
-    id: contactModel
-    ListElement { name: "Alice Wonderland"; status: "Online"; iconName: "ic_fluent_person_20_filled" }
-    ListElement { name: "Bob The Builder"; status: "Offline"; iconName: "ic_fluent_person_20_regular" }
-    ListElement { name: "Charlie Brown"; status: "Busy"; iconName: "ic_fluent_person_prohibited_20_filled" }
-}
-
 ListView {
-    width: 300
+    width: 350
     height: 300
-    model: contactModel
-    // 此处不需要 textRole，因为自定义委托直接访问模型属性
+    model: ListModel {
+        ListElement { titleText: "Meeting Notes"; dateText: "Yesterday"; iconSymbol: "ic_fluent_document_20_regular" }
+        ListElement { titleText: "Project Alpha"; dateText: "2023-10-26"; iconSymbol: "ic_fluent_folder_20_regular" }
+        ListElement { titleText: "Quick Reminder"; dateText: "10:30 AM"; iconSymbol: "ic_fluent_alert_20_regular" }
+    }
 
     delegate: ListViewDelegate {
-        // width 通常由委托本身绑定到 ListView.view.width
-        // height 可以根据内容自适应 (默认: contents.implicitHeight + 20)
+        // width is typically bound to ListView.view.width by the delegate itself
+        // height is adaptive by default (contents.implicitHeight + 20)
 
-        leftArea: IconWidget { 
-            icon.name: model.iconName // 直接访问模型数据
-            size: 24
-            // Layout.alignment: Qt.AlignVCenter // 如果 leftArea 是布局且有额外空间
+        leftArea: IconWidget {
+            icon: model.iconSymbol // Access model data for the icon
+            size: 22
+            Layout.alignment: Qt.AlignVCenter // Aligns icon within the Row of leftArea
         }
 
-        middleArea: [ // middleArea 是一个 ColumnLayout，项目作为子项添加
+        middleArea: [ // middleArea takes a list of items for its ColumnLayout
             Text {
-                text: model.name 
+                text: model.titleText // Main text from model
                 font.bold: true
-                Layout.fillWidth: true 
+                elide: Text.ElideRight
+                Layout.fillWidth: true
             },
             Text {
-                text: model.status
+                text: model.dateText // Secondary text from model
                 font.pixelSize: 12
                 color: Theme.currentTheme.colors.textSecondaryColor
+                elide: Text.ElideRight
                 Layout.fillWidth: true
             }
         ]
 
-        rightArea: Button { // rightArea 是一个 RowLayout
-            text: qsTr("View")
+        rightArea: ToolButton { // Example: a ToolButton on the right
+            icon.name: "ic_fluent_chevron_right_20_regular"
             flat: true
-            Layout.alignment: Qt.AlignVCenter
+            size: 16
+            Layout.alignment: Qt.AlignVCenter // Aligns button within the RowLayout of rightArea
             onClicked: {
-                console.log("Viewing details for:", model.name);
-                // ListView.view.currentIndex = index; // 委托默认处理此操作
+                console.log("More options for:", model.titleText);
             }
+        }
+
+        onClicked: {
+            console.log("Clicked on item:", model.titleText);
+            // ListView.view.currentIndex is automatically updated by the delegate's default onClicked handler
         }
     }
 }

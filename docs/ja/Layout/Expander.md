@@ -68,12 +68,6 @@ Expander {
                 Layout.alignment: Qt.AlignVCenter
             }
         }
-        // 重要：カスタムヘッダーでエキスパンダーを切り替えるには：
-        MouseArea {
-            anchors.fill: parent
-            onClicked: parentExpander.expanded = !parentExpander.expanded 
-                       // parentExpander は Expander の id です
-        }
     }
     // カスタムヘッダー内から参照する場合は、Expander に id を付けます
     id: parentExpander 
@@ -81,6 +75,7 @@ Expander {
     Text {
         text: qsTr("Content area for the expander with a custom header.")
         padding: 10 // 必要に応じてパディングを追加します
+        Layout.fillWidth: true
     }
 }
 ```
@@ -104,6 +99,8 @@ Expander {
     width: 300
 
     Text {
+        Layout.fillWidth: true
+        padding: 10
         text: qsTr("This content expands upwards from the header.")
     }
 }

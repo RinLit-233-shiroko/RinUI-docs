@@ -68,12 +68,6 @@ Expander {
                 Layout.alignment: Qt.AlignVCenter
             }
         }
-        // 重要：要使自定义标题切换展开器：
-        MouseArea {
-            anchors.fill: parent
-            onClicked: parentExpander.expanded = !parentExpander.expanded 
-                       // 其中 parentExpander 是 Expander 的 id
-        }
     }
     // 如果从自定义标题内部引用，请为您的 Expander 指定一个 id
     id: parentExpander 
@@ -81,6 +75,7 @@ Expander {
     Text {
         text: qsTr("Content area for the expander with a custom header.")
         padding: 10 // 如果需要，添加填充
+        Layout.fillWidth: true
     }
 }
 ```
@@ -104,6 +99,8 @@ Expander {
     width: 300
 
     Text {
+        Layout.fillWidth: true
+        padding: 10
         text: qsTr("This content expands upwards from the header.")
     }
 }

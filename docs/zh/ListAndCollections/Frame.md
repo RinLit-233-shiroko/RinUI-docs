@@ -34,50 +34,13 @@ Frame {
 }
 ```
 
-## 无框模式
+## 无边框模式
 
 将 `frameless` 属性设置为 `true`，以使 `Frame` 的可见背景（颜色和边框）消失。`Frame` 本身仍然作为布局容器存在，如果 `clip` 为 `true`，则将继续裁剪其内容。这对于分组和裁剪而不添加视觉装饰非常有用。
-
-```qml
-import RinUI // Consistent import
-
-Frame {
-    width: 150
-    height: 100
-    frameless: true
-    padding: 5 // 填充仍适用于内容定位
-    clip: true // 内容被裁剪到 Frame 的边界
-
-    Rectangle {
-        // 此矩形是 Frame 的 contentItem 的子项
-        anchors.fill: parent
-        // 如果边距为负或内容大于框架，则会被裁剪
-        anchors.margins: -10 // 示例：内容大于框架
-        color: "lightblue" 
-        Text { anchors.centerIn: parent; text: "Clipped Content"; }
-    }
-}
-```
 
 ## 悬停效果
 
 如果 `hoverable` 为 `true`（默认值），则鼠标悬停时 `Frame` 背景的不透明度会略有变化，提供视觉反馈。`hover` 属性可用于对此状态做出反应。
-
-```qml
-import RinUI // Consistent import
-
-Frame {
-    width: 100
-    height: 100
-    color: "lightgray"
-    hoverable: true // 默认值
-
-    Text {
-        anchors.centerIn: parent
-        text: parent.hover ? qsTr("Hovered!") : qsTr("Hover me")
-    }
-}
-```
 
 ## 主要属性
 
