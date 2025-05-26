@@ -54,6 +54,13 @@ export default defineConfig({
               { text: 'ToggleButton', link: '/BasicInput/ToggleButton.md' },
               { text: 'ToolButton', link: '/BasicInput/ToolButton.md' }
             ]
+          },
+          {
+            text: 'Date and Time',
+            items: [
+              { text: 'DatePicker', link: '/DateAndTime/DatePicker.md' },
+              { text: 'TimePicker', link: '/DateAndTime/TimePicker.md' }
+            ]
           }
         ]
       }
@@ -104,6 +111,13 @@ export default defineConfig({
               { text: '切换按钮', link: '/zh/BasicInput/ToggleButton.md' },
               { text: '工具按钮', link: '/zh/BasicInput/ToolButton.md' }
             ]
+          },
+          {
+            text: '日期和时间',
+            items: [
+              { text: '日期选择器', link: '/zh/DateAndTime/DatePicker.md' },
+              { text: '时间选择器', link: '/zh/DateAndTime/TimePicker.md' }
+            ]
           }
         ],
       }
@@ -153,6 +167,13 @@ export default defineConfig({
               { text: 'スイッチ', link: '/ja/BasicInput/Switch.md' },
               { text: 'トグルボタン', link: '/ja/BasicInput/ToggleButton.md' },
               { text: 'ツールボタン', link: '/ja/BasicInput/ToolButton.md' }
+            ]
+          },
+          {
+            text: '日付と時刻',
+            items: [
+              { text: '日付ピッカー', link: '/ja/DateAndTime/DatePicker.md' },
+              { text: '時刻ピッカー', link: '/ja/DateAndTime/TimePicker.md' }
             ]
           }
         ],
