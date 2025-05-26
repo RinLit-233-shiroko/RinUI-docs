@@ -61,6 +61,13 @@ export default defineConfig({
               { text: 'DatePicker', link: '/DateAndTime/DatePicker.md' },
               { text: 'TimePicker', link: '/DateAndTime/TimePicker.md' }
             ]
+          },
+          {
+            text: 'Dialogs and Flyouts',
+            items: [
+              { text: 'Dialog', link: '/DialogsAndFlyouts/Dialog.md' },
+              { text: 'Flyout', link: '/DialogsAndFlyouts/Flyout.md' }
+            ]
           }
         ]
       }
@@ -118,6 +125,13 @@ export default defineConfig({
               { text: '日期选择器', link: '/zh/DateAndTime/DatePicker.md' },
               { text: '时间选择器', link: '/zh/DateAndTime/TimePicker.md' }
             ]
+          },
+          {
+            text: '对话框和浮出控件',
+            items: [
+              { text: '对话框', link: '/zh/DialogsAndFlyouts/Dialog.md' },
+              { text: '浮出控件', link: '/zh/DialogsAndFlyouts/Flyout.md' }
+            ]
           }
         ],
       }
@@ -174,6 +188,13 @@ export default defineConfig({
             items: [
               { text: '日付ピッカー', link: '/ja/DateAndTime/DatePicker.md' },
               { text: '時刻ピッカー', link: '/ja/DateAndTime/TimePicker.md' }
+            ]
+          },
+          {
+            text: 'ダイアログとフライアウト',
+            items: [
+              { text: 'ダイアログ', link: '/ja/DialogsAndFlyouts/Dialog.md' },
+              { text: 'フライアウト', link: '/ja/DialogsAndFlyouts/Flyout.md' }
             ]
           }
         ],
