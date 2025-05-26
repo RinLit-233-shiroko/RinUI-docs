@@ -17,37 +17,12 @@ import RinUI
 // ...
 
 ToolButton {
-    icon.name: "ic_fluent_gear_20_regular"
-    // size: 24 // 调整内部 IconWidget 的尺寸 (默认为 20)
-    // color: Theme.currentTheme.colors.textPrimaryColor // 设置图标颜色
-    flat: true // 工具按钮的常见样式
-    ToolTip.text: qsTr("Settings") // 建议为仅图标按钮提供可访问性提示
+    icon.name: "ic_fluent_apps_settings_20_regular"
     onClicked: {
         console.log("Settings ToolButton clicked");
     }
 }
 ```
-
-## 带文本和图标的工具按钮
-
-`ToolButton` 也可以在图标旁边或代替图标显示文本。内部布局同时放置了 `Text` 项和 `IconWidget`。
-
-<div align="center">
-  <img src="/assets/images/BasicInput/ToolButton/toolbutton-text-icon.png"> <!-- 占位符：图片路径待确认或创建 -->
-</div>
-
-```qml
-ToolButton {
-    text: qsTr("Edit")
-    icon.name: "ic_fluent_edit_20_regular"
-    flat: true
-    // 按钮内文本和图标的布局可能取决于主题和特定尺寸约束。
-    onClicked: {
-        console.log("Edit ToolButton clicked");
-    }
-}
-```
-> **关于图标显示的 `icon.name` 与 `text` 的重要说明**：`ToolButton` 的内部 `IconWidget` 主要使用 `toolBtn.icon.name` 来确定图标。如果 `toolBtn.icon.name` 未设置，它会尝试使用 `toolBtn.text` 作为图标名称。为了清晰起见，通常不建议使用此回退方式。**始终使用 `icon.name` 指定图标。**
 
 ## 主要属性
 

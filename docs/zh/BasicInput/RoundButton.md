@@ -27,21 +27,6 @@ RoundButton {
 }
 ```
 
-**圆形 (宽度 == 高度):**
-<div align="center">
-  <img src="/assets/images/BasicInput/RoundButton/roundbutton-circle.png"> <!-- 占位符：图片路径待确认或创建 -->
-</div>
-
-```qml
-RoundButton {
-    icon.name: "ic_fluent_checkmark_20_regular"
-    width: 40 // 等宽等高形成圆形
-    height: 40
-    // ToolTip.text: qsTr("Confirm") // 可选：为仅图标按钮添加工具提示
-    onClicked: console.log("Circular RoundButton clicked")
-}
-```
-
 ## 主要属性
 
 *   `radius`: `real` - (背景圆角的别名) 控制圆角半径。在 `RoundButton` 中，背景的 `radius` 动态绑定到 `height / 2`，确保完全圆角并适应按钮高度。

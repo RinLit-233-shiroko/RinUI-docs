@@ -57,6 +57,8 @@ import RinUI // Consistent import
 Dialog {
     id: customDialog
     title: qsTr("Custom Layout")
+    modal: true  // Modal dialog, with overlay
+    
     standardButtons: Dialog.Apply | Dialog.Close // Example using Apply and Close
 
     // These items become children of the internal ColumnLayout

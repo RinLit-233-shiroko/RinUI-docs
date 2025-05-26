@@ -16,7 +16,7 @@ import RinUI
 
 // ...
 
-ToggleButton {
+![img.png](img.png)ToggleButton {
     text: qsTr("Mute")
     checked: false // Initial state
     onCheckedChanged: {
@@ -26,35 +26,6 @@ ToggleButton {
         } else {
             console.log("Mute is OFF");
             // Remove mute action
-        }
-    }
-}
-```
-
-## ToggleButton with Icon
-
-Like other buttons derived from `Button`, `ToggleButton` can also include an icon along with text, or be icon-only.
-
-<div align="center">
-  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-icon.png"> <!-- Placeholder: image path to be confirmed or created -->
-</div>
-
-```qml
-import RinUI // Consistent import
-
-ToggleButton {
-    icon.name: "ic_fluent_mic_off_20_regular"
-    // text: qsTr("Mic") // Optional text
-    // Initial state is unchecked, icon shows "mic off"
-
-    onCheckedChanged: {
-        if (checked) {
-            // Example: change icon to "ic_fluent_mic_20_filled" when checked
-            icon.name = "ic_fluent_mic_20_filled"; 
-            console.log("Microphone ON");
-        } else {
-            icon.name = "ic_fluent_mic_off_20_regular";
-            console.log("Microphone OFF");
         }
     }
 }
