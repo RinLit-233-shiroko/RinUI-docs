@@ -24,18 +24,18 @@ Column {
     ButtonGroup { id: myExclusiveGroup }
 
     RadioButton {
-        text: qsTr("Option Alpha")
+        text: qsTr("Option 1")
         ButtonGroup.group: myExclusiveGroup
         checked: true // Set an initial selection for the group
     }
 
     RadioButton {
-        text: qsTr("Option Beta")
+        text: qsTr("Option 2")
         ButtonGroup.group: myExclusiveGroup
     }
 
     RadioButton {
-        text: qsTr("Option Gamma")
+        text: qsTr("Option 3")
         ButtonGroup.group: myExclusiveGroup
     }
 }
@@ -59,4 +59,4 @@ To ensure that only one `RadioButton` in a set can be selected at a time (which 
 2.  For each `RadioButton` in the logical group, set its `ButtonGroup.group` attached property to the instance of your `ButtonGroup`.
 
 This ensures that when one `RadioButton` in that group is checked, any other `RadioButton` in the same group that was previously checked becomes unchecked.
-```
+

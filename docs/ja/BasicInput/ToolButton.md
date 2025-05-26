@@ -17,37 +17,12 @@ import RinUI
 // ...
 
 ToolButton {
-    icon.name: "ic_fluent_gear_20_regular"
-    // size: 24 // 内部 IconWidget のサイズを調整します (デフォルトは 20)
-    // color: Theme.currentTheme.colors.textPrimaryColor // アイコンの色を設定します
-    flat: true // ツールボタンの一般的なスタイル
-    ToolTip.text: qsTr("Settings") // アイコンのみのボタンのアクセシビリティ向上のために推奨
+    icon.name: "ic_fluent_apps_settings_20_regular"
     onClicked: {
         console.log("Settings ToolButton clicked");
     }
 }
 ```
-
-## テキストとアイコン付きツールボタン
-
-`ToolButton` は、アイコンの横または代わりにテキストを表示することもできます。内部レイアウトには `Text` アイテムと `IconWidget` の両方が配置されます。
-
-<div align="center">
-  <img src="/assets/images/BasicInput/ToolButton/toolbutton-text-icon.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
-</div>
-
-```qml
-ToolButton {
-    text: qsTr("Edit")
-    icon.name: "ic_fluent_edit_20_regular"
-    flat: true
-    // ボタン内のテキストとアイコンのレイアウトは、テーマ設定や特定のサイズ制約に依存する場合があります。
-    onClicked: {
-        console.log("Edit ToolButton clicked");
-    }
-}
-```
-> **アイコン表示のための `icon.name` と `text` に関する重要な注意**：`ToolButton` の内部 `IconWidget` は、主に `toolBtn.icon.name` を使用してアイコンを決定します。`toolBtn.icon.name` が設定されていない場合、`toolBtn.text` をアイコン名として使用しようとします。明確にするために、このフォールバックは一般的に推奨されません。**常に `icon.name` を使用してアイコンを指定してください。**
 
 ## 主なプロパティ
 

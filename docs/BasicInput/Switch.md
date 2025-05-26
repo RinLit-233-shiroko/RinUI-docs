@@ -11,11 +11,6 @@ A `Switch` displays a visual knob that slides between two states. By default, it
 </div>
 
 ```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
 Switch {
     // checked: true // To make it initially "on"
     onCheckedChanged: {

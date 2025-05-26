@@ -2,26 +2,6 @@
 
 `Slider` 组件允许用户通过沿轨道拖动滑块来从连续或离散范围中选择一个值。它可以水平或垂直显示，并可选择显示刻度标记和当前值的工具提示。RinUI 的 `Slider` 继承自 `QtQuick.Controls.Basic.Slider`。
 
-## 基本滑块
-
-一个简单的水平滑块。默认情况下，如果未指定 `from` 和 `to`，则范围是 `0.0` 到 `1.0`。
-
-<div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-basic.png"> <!-- 占位符：图片路径待确认或创建 -->
-</div>
-
-```qml
-import QtQuick 2.15
-import RinUI
-
-// ...
-
-Slider {
-    width: 200
-    // value: 0.5 
-}
-```
-
 ## 带范围和步长的滑块
 
 使用 `from` 和 `to` 属性定义滑块的范围，并使用 `stepSize` 控制增量。`value` 属性设置滑块的当前位置。

@@ -31,33 +31,6 @@ ToggleButton {
 }
 ```
 
-## 带图标的切换按钮
-
-与 `Button` 派生的其他按钮一样，`ToggleButton` 也可以包含图标和文本，或者仅包含图标。
-
-<div align="center">
-  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-icon.png"> <!-- 占位符：图片路径待确认或创建 -->
-</div>
-
-```qml
-ToggleButton {
-    icon.name: "ic_fluent_mic_off_20_regular"
-    // text: qsTr("Mic") // 可选文本
-    // 初始状态为未选中，图标显示“麦克风关闭”
-
-    onCheckedChanged: {
-        if (checked) {
-            // 示例：选中时将图标更改为 "ic_fluent_mic_20_filled"
-            icon.name = "ic_fluent_mic_20_filled"; 
-            console.log("Microphone ON");
-        } else {
-            icon.name = "ic_fluent_mic_off_20_regular";
-            console.log("Microphone OFF");
-        }
-    }
-}
-```
-
 ## 主要属性
 
 *   `text`: `string` - 显示在按钮上的文本标签。

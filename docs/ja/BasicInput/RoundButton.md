@@ -27,21 +27,6 @@ RoundButton {
 }
 ```
 
-**円形 (幅 == 高さ):**
-<div align="center">
-  <img src="/assets/images/BasicInput/RoundButton/roundbutton-circle.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
-</div>
-
-```qml
-RoundButton {
-    icon.name: "ic_fluent_checkmark_20_regular"
-    width: 40 // 幅と高さが等しいため円形
-    height: 40
-    // ToolTip.text: qsTr("Confirm") // オプション：アイコンのみのボタン用のツールチップ
-    onClicked: console.log("Circular RoundButton clicked")
-}
-```
-
 ## 主なプロパティ
 
 *   `radius`: `real` - (背景の半径のエイリアス) 角の半径を制御します。`RoundButton` では、背景の `radius` は動的に `height / 2` にバインドされ、完全に丸みを帯びた角を保証し、ボタンの高さに適応します。
