@@ -68,6 +68,22 @@ export default defineConfig({
               { text: 'Dialog', link: '/DialogsAndFlyouts/Dialog.md' },
               { text: 'Flyout', link: '/DialogsAndFlyouts/Flyout.md' }
             ]
+          },
+          {
+            text: 'Layout',
+            items: [
+              { text: 'Expander', link: '/Layout/Expander.md' },
+              { text: 'SettingExpander', link: '/Layout/SettingExpander.md' },
+            ]
+          },
+          {
+            text: 'Lists and Collections',
+            items: [
+              { text: 'Clip (Interactive Surface)', link: '/ListAndCollections/Clip.md' },
+              { text: 'Frame', link: '/ListAndCollections/Frame.md' },
+              { text: 'ListView', link: '/ListAndCollections/ListView.md' },
+              { text: 'SettingCard', link: '/ListAndCollections/SettingCard.md' }
+            ]
           }
         ]
       }
@@ -132,6 +148,22 @@ export default defineConfig({
               { text: '对话框', link: '/zh/DialogsAndFlyouts/Dialog.md' },
               { text: '浮出控件', link: '/zh/DialogsAndFlyouts/Flyout.md' }
             ]
+          },
+          {
+            text: '布局',
+            items: [
+              { text: '展开器', link: '/zh/Layout/Expander.md' },
+              { text: '设置展开器', link: '/zh/Layout/SettingExpander.md' },
+            ]
+          },
+          {
+            text: '列表和集合',
+            items: [
+              { text: 'Clip (可交互表面)', link: '/zh/ListAndCollections/Clip.md' },
+              { text: '框架', link: '/zh/ListAndCollections/Frame.md' },
+              { text: '列表视图', link: '/zh/ListAndCollections/ListView.md' },
+              { text: '设置卡片', link: '/zh/ListAndCollections/SettingCard.md' }
+            ]
           }
         ],
       }
@@ -195,6 +227,22 @@ export default defineConfig({
             items: [
               { text: 'ダイアログ', link: '/ja/DialogsAndFlyouts/Dialog.md' },
               { text: 'フライアウト', link: '/ja/DialogsAndFlyouts/Flyout.md' }
+            ]
+          },
+          {
+            text: 'レイアウト',
+            items: [
+              { text: 'エキスパンダー', link: '/ja/Layout/Expander.md' },
+              { text: '設定エキスパンダー', link: '/ja/Layout/SettingExpander.md' },
+            ]
+          },
+          {
+            text: 'リストとコレクション',
+            items: [
+              { text: 'Clip (インタラクティブサーフェス)', link: '/ja/ListAndCollections/Clip.md' },
+              { text: 'フレーム', link: '/ja/ListAndCollections/Frame.md' },
+              { text: 'リストビュー', link: '/ja/ListAndCollections/ListView.md' },
+              { text: '設定カード', link: '/ja/ListAndCollections/SettingCard.md' }
             ]
           }
         ],
