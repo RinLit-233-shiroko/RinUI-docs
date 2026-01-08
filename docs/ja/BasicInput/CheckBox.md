@@ -7,7 +7,7 @@ CheckBox コントロールを使用すると、ユーザーはオプション�
 CheckBox は、単純なブール値の選択に使用できます。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png">
 </div>
 
 ```qml
@@ -32,7 +32,7 @@ CheckBox {
 - `Qt.PartiallyChecked` （部分的にチェック済み、`tristate` が true の場合）
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png">
 </div>
 
 ```qml

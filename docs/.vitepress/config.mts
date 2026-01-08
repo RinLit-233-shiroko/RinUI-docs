@@ -41,6 +41,7 @@ export default defineConfig({
           {
             text: 'BasicInput',
             items: [
+              { text: 'AutoSuggestBox', link: '/BasicInput/AutoSuggestBox.md' },
               { text: 'Button', link: '/BasicInput/Button.md' },
               { text: 'CheckBox', link: '/BasicInput/CheckBox.md' },
               { text: 'ComboBox', link: '/BasicInput/ComboBox.md' },
@@ -50,7 +51,10 @@ export default defineConfig({
               { text: 'RadioButton', link: '/BasicInput/RadioButton.md' },
               { text: 'RoundButton', link: '/BasicInput/RoundButton.md' },
               { text: 'Slider', link: '/BasicInput/Slider.md' },
+              { text: 'SpinBox', link: '/BasicInput/SpinBox.md' },
               { text: 'Switch', link: '/BasicInput/Switch.md' },
+              { text: 'TextField', link: '/BasicInput/TextField.md' },
+              { text: 'TextArea', link: '/BasicInput/TextArea.md' },
               { text: 'ToggleButton', link: '/BasicInput/ToggleButton.md' },
               { text: 'ToolButton', link: '/BasicInput/ToolButton.md' }
             ]
@@ -58,6 +62,8 @@ export default defineConfig({
           {
             text: 'Date and Time',
             items: [
+              { text: 'Calendar', link: '/DateAndTime/Calendar.md' },
+              { text: 'CalendarDatePicker', link: '/DateAndTime/CalendarDatePicker.md' },
               { text: 'DatePicker', link: '/DateAndTime/DatePicker.md' },
               { text: 'TimePicker', link: '/DateAndTime/TimePicker.md' }
             ]
@@ -66,7 +72,8 @@ export default defineConfig({
             text: 'Dialogs and Flyouts',
             items: [
               { text: 'Dialog', link: '/DialogsAndFlyouts/Dialog.md' },
-              { text: 'Flyout', link: '/DialogsAndFlyouts/Flyout.md' }
+              { text: 'Flyout', link: '/DialogsAndFlyouts/Flyout.md' },
+              { text: 'Popup', link: '/DialogsAndFlyouts/Popup.md' }
             ]
           },
           {
@@ -82,7 +89,52 @@ export default defineConfig({
               { text: 'Clip (Interactive Surface)', link: '/ListAndCollections/Clip.md' },
               { text: 'Frame', link: '/ListAndCollections/Frame.md' },
               { text: 'ListView', link: '/ListAndCollections/ListView.md' },
-              { text: 'SettingCard', link: '/ListAndCollections/SettingCard.md' }
+              { text: 'SettingCard', link: '/ListAndCollections/SettingCard.md' },
+              { text: 'TableView', link: '/ListAndCollections/TableView.md' }
+            ]
+          },
+          {
+            text: 'Media',
+            items: [
+              { text: 'Avatar', link: '/Media/Avatar.md' }
+            ]
+          },
+          {
+            text: 'Menus and Toolbars',
+            items: [
+              { text: 'Menu', link: '/MenusAndToolbars/Menu.md' },
+              { text: 'MenuBar', link: '/MenusAndToolbars/MenuBar.md' }
+            ]
+          },
+          {
+            text: 'Navigation',
+            items: [
+              { text: 'NavigationView', link: '/Navigation/NavigationView.md' },
+              { text: 'Segmented', link: '/Navigation/Segmented.md' },
+              { text: 'SelectorBar', link: '/Navigation/SelectorBar.md' }
+            ]
+          },
+          {
+            text: 'Status and Info',
+            items: [
+              { text: 'BusyIndicator', link: '/StatusAndInfo/BusyIndicator.md' },
+              { text: 'InfoBadge', link: '/StatusAndInfo/InfoBadge.md' },
+              { text: 'InfoBar', link: '/StatusAndInfo/InfoBar.md' },
+              { text: 'ProgressBar', link: '/StatusAndInfo/ProgressBar.md' },
+              { text: 'ProgressRing', link: '/StatusAndInfo/ProgressRing.md' },
+              { text: 'Toast', link: '/StatusAndInfo/Toast.md' },
+              { text: 'ToolTip', link: '/StatusAndInfo/ToolTip.md' }
+            ]
+          },
+          {
+            text: 'Text',
+            items: [
+              { text: 'AutoSuggestBox', link: '/Text/AutoSuggestBox.md' },
+              { text: 'ScrollableTextArea', link: '/Text/ScrollableTextArea.md' },
+              { text: 'SpinBox', link: '/Text/SpinBox.md' },
+              { text: 'Text', link: '/Text/Text.md' },
+              { text: 'TextArea', link: '/Text/TextArea.md' },
+              { text: 'TextField', link: '/Text/TextField.md' }
             ]
           }
         ]
@@ -121,6 +173,7 @@ export default defineConfig({
           {
             text: '基本输入',
             items: [
+              { text: '自动建议框', link: '/zh/BasicInput/AutoSuggestBox.md' },
               { text: '按钮', link: '/zh/BasicInput/Button.md' },
               { text: '复选框', link: '/zh/BasicInput/CheckBox.md' },
               { text: '组合框', link: '/zh/BasicInput/ComboBox.md' },
@@ -130,7 +183,10 @@ export default defineConfig({
               { text: '单选按钮', link: '/zh/BasicInput/RadioButton.md' },
               { text: '圆形按钮', link: '/zh/BasicInput/RoundButton.md' },
               { text: '滑块', link: '/zh/BasicInput/Slider.md' },
+              { text: '旋转框', link: '/zh/BasicInput/SpinBox.md' },
               { text: '开关', link: '/zh/BasicInput/Switch.md' },
+              { text: '文本框', link: '/zh/BasicInput/TextField.md' },
+              { text: '文本域', link: '/zh/BasicInput/TextArea.md' },
               { text: '切换按钮', link: '/zh/BasicInput/ToggleButton.md' },
               { text: '工具按钮', link: '/zh/BasicInput/ToolButton.md' }
             ]
@@ -138,6 +194,8 @@ export default defineConfig({
           {
             text: '日期和时间',
             items: [
+              { text: '日历', link: '/zh/DateAndTime/Calendar.md' },
+              { text: '日历日期选择器', link: '/zh/DateAndTime/CalendarDatePicker.md' },
               { text: '日期选择器', link: '/zh/DateAndTime/DatePicker.md' },
               { text: '时间选择器', link: '/zh/DateAndTime/TimePicker.md' }
             ]
@@ -146,7 +204,8 @@ export default defineConfig({
             text: '对话框和浮出控件',
             items: [
               { text: '对话框', link: '/zh/DialogsAndFlyouts/Dialog.md' },
-              { text: '浮出控件', link: '/zh/DialogsAndFlyouts/Flyout.md' }
+              { text: '浮出控件', link: '/zh/DialogsAndFlyouts/Flyout.md' },
+              { text: '弹出窗口', link: '/zh/DialogsAndFlyouts/Popup.md' }
             ]
           },
           {
@@ -162,7 +221,52 @@ export default defineConfig({
               { text: 'Clip (可交互表面)', link: '/zh/ListAndCollections/Clip.md' },
               { text: '框架', link: '/zh/ListAndCollections/Frame.md' },
               { text: '列表视图', link: '/zh/ListAndCollections/ListView.md' },
-              { text: '设置卡片', link: '/zh/ListAndCollections/SettingCard.md' }
+              { text: '设置卡片', link: '/zh/ListAndCollections/SettingCard.md' },
+              { text: '表格视图', link: '/zh/ListAndCollections/TableView.md' }
+            ]
+          },
+          {
+            text: '媒体',
+            items: [
+              { text: '头像', link: '/zh/Media/Avatar.md' }
+            ]
+          },
+          {
+            text: '菜单和工具栏',
+            items: [
+              { text: '菜单', link: '/zh/MenusAndToolbars/Menu.md' },
+              { text: '菜单栏', link: '/zh/MenusAndToolbars/MenuBar.md' }
+            ]
+          },
+          {
+            text: '导航',
+            items: [
+              { text: '导航视图', link: '/zh/Navigation/NavigationView.md' },
+              { text: '分段控件', link: '/zh/Navigation/Segmented.md' },
+              { text: '选择器栏', link: '/zh/Navigation/SelectorBar.md' }
+            ]
+          },
+          {
+            text: '状态和信息',
+            items: [
+              { text: '忙碌指示器', link: '/zh/StatusAndInfo/BusyIndicator.md' },
+              { text: '信息徽章', link: '/zh/StatusAndInfo/InfoBadge.md' },
+              { text: '信息栏', link: '/zh/StatusAndInfo/InfoBar.md' },
+              { text: '进度条', link: '/zh/StatusAndInfo/ProgressBar.md' },
+              { text: '进度环', link: '/zh/StatusAndInfo/ProgressRing.md' },
+              { text: '提示框', link: '/zh/StatusAndInfo/Toast.md' },
+              { text: '工具提示', link: '/zh/StatusAndInfo/ToolTip.md' }
+            ]
+          },
+          {
+            text: '文本',
+            items: [
+              { text: '自动建议框', link: '/zh/Text/AutoSuggestBox.md' },
+              { text: '可滚动文本域', link: '/zh/Text/ScrollableTextArea.md' },
+              { text: '旋转框', link: '/zh/Text/SpinBox.md' },
+              { text: '文本', link: '/zh/Text/Text.md' },
+              { text: '文本域', link: '/zh/Text/TextArea.md' },
+              { text: '文本框', link: '/zh/Text/TextField.md' }
             ]
           }
         ],

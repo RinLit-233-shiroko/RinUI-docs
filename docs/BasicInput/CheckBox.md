@@ -7,7 +7,7 @@ The `CheckBox` control allows users to make a binary choice, such as selecting o
 A `CheckBox` can be used for simple boolean selections.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png">
 </div>
 
 ```qml
@@ -32,7 +32,7 @@ The `checkState` property can be:
 - `Qt.PartiallyChecked` (when `tristate` is true)
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png">
 </div>
 
 ```qml

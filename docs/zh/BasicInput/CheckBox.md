@@ -7,7 +7,7 @@ CheckBox 控件允许用户进行二元选择，例如选择或取消选择某�
 CheckBox 可用于简单的布尔值选择。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png"> <!-- 占位符：图片路径待确认或创建 -->
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png">
 </div>
 
 ```qml
@@ -32,7 +32,7 @@ CheckBox {
 - `Qt.PartiallyChecked` （部分选中，当 `tristate` 为 true 时）
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png"> <!-- 占位符：图片路径待确认或创建 -->
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png">
 </div>
 
 ```qml
