@@ -31,11 +31,17 @@ export default defineConfig({
             ]
           },
           {
+            text: 'RinUI Window',
+            items: [
+              { text: 'Get QQmlApplicationEngine', link: '/RinUIWindow/engine' }
+            ]
+          },
+          {
             text: 'RinUI Core',
             items: [
               { text: 'Theme', link: '/core/theme' },
               { text: 'Utils', link: '/core/utils' },
-              { text: 'Float Layer Manager', link: '/core/floatLayer' },
+              { text: 'Float Layer Manager', link: '/core/floatLayer' }
             ]
           },
           {
@@ -108,6 +114,12 @@ export default defineConfig({
             items: [
               { text: '何为 RinUI?', link: '/zh/guide/' },
               { text: '快速开始', link: '/zh/guide/getting-started' },
+            ]
+          },
+          {
+            text: 'RinUI 窗口',
+            items: [
+              { text: '获取 QQmlApplicationEngine', link: '/zh/RinUIWindow/engine' }
             ]
           },
           {
