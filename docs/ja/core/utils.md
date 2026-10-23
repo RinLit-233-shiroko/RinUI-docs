@@ -35,14 +35,31 @@ Component {
 | `fontIconSource`                    | フォントアイコンの `.ttf` ファイルへのパス                                                                 |
 | `fontIconIndexSource`               | フォントアイコンインデックスの `.js` ファイルへのパス                                                            |
 | `fontIconIndex`                     | アイコンインデックスオブジェクト。`Utils.fontIconIndex['icon-name']` を介して直接文字にアクセスできます               |
+| `dpiScale`                          | 現在の画面の読み取り専用 `devicePixelRatio`。診断用途のみ                                                 |
 
 ## アニメーションの継続時間
 
 | プロパティ                         | 説明                              |
 |----------------------------------|------------------------------------------|
 | `animationSpeed`                 | 標準アニメーション速度 (250ms)         |
-| `animationSpeedFaster`           | 高速アニメーション速度 (120ms)             |
-| `animationSpeedMiddle`           | 中程度の低速 (450ms)            |
-| `appearanceSpeed`                | インターフェース切り替え速度 (175ms)        |
+| `animationSpeedExpander`         | エキスパンダーのアニメーション速度 (333ms) |
+| `animationSpeedFaster`           | 高速アニメーション速度 (167ms) |
+| `animationSpeedMiddle`           | 中程度の低速 (667ms) |
+| `appearanceSpeed`                | インターフェース切り替え速度 (187ms) |
 | `progressBarAnimationSpeed`      | プログレスバーアニメーション時間 (1550ms)     |
+
+## サイズと DPI
+
+`Utils.dp(value)` は非推奨です。互換性のため残っていますが、現在は恒等関数で、値をそのまま返し、最初の呼び出し時に非推奨警告を出力します。
+
+Qt Quick の `width`、`height`、`font.pixelSize` などは既に論理ピクセルを使用しています。デバイスピクセル比を掛ける必要はありません：
+
+```qml
+Rectangle {
+    width: 320
+    height: 48
+    font.pixelSize: 14
+}
 ```
+
+`Utils.dp(320)` や `Utils.dpiScale` を手動で掛けると、HiDPI 環境で二重にスケーリングされます。

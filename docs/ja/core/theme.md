@@ -5,7 +5,7 @@
 RinUI は軽量なテーママネージャーを提供します。
 
 QML で `import RinUI` をするだけで、すぐにグローバルなテーマサポートが得られます。
-テーマモジュールはデフォルトでシングルトン `prama Singleton` として存在し、アプリケーション全体でのスタイル切り替えや一貫性の維持に適しています。
+テーマモジュールはシングルトン `pragma Singleton` として存在し、アプリケーション全体のスタイル切り替えを一貫して管理します。
 
 このように `Theme` マネージャーを使用できます：
 ```qml
@@ -27,21 +27,35 @@ Component {
 - `Theme.mode.Dark`: ダークテーマに切り替え
 - `Theme.mode.Auto`: テーマを自動切り替え。現在のシステムテーマモードに基づいてライトテーマまたはダークテーマに切り替えるかどうかを決定します。
 
-### `toggleTheme()`
-`toggleTheme` 関数は、現在のテーマモードを切り替えるために使用されます。現在のモードがライトであればダークに切り替わり、そうでなければライトに切り替わります。
+### `toggleMode()`
+`toggleMode` は現在の実際の外観に基づき、`Theme.mode.Light` と `Theme.mode.Dark` を切り替えます。ダーク表示ならライトへ、ライト表示ならダークへ切り替わります：
+
+```qml
+Theme.toggleMode()
+```
+
+`Light`、`Dark`、`Auto` の設定モードを順番に切り替える関数ではありません。自動モードへ入る、または自動モードから抜ける場合は `setTheme()` を直接呼び出してください。
 
 ### `getTheme() -> str`
-`getTheme` 関数は、現在のテーマモードを取得するために使用されます。関数は以下の値を返します：
+`getTheme` 関数は、保存されているテーマ設定モードを返します：
 
 - `"Light"`: 現在のテーマはライトです
 - `"Dark"`: 現在のテーマはダークです
 - `"Auto"`: 現在のテーマは自動モードです
 
-### `setThemeColor(color: str)`
-`setThemeColor` 関数は、RinUI コンポーネントのテーマカラーを設定するために使用されます。この関数は16進数のカラー値を受け付けます（例：`#FF0000` は赤を表します）。
+`Auto` モードでも `getTheme()` は `"Auto"` を返し、実際に適用されているライト／ダークへ解決しません。実際の外観は別途取得します：
 
-### `getThemeColor() -> str`
-`getThemeColor` 関数は、コンポーネントの現在のテーマカラーを取得するために使用されます。関数は16進数のカラー値を返します。
+```qml
+let darkNow = Theme.currentTheme.isDark
+```
+
+`Theme.isDark()` を呼び出すこともできます。これは `currentTheme.isDark` を返します。
+
+### `setThemeColor(color)`
+`setThemeColor` は RinUI のアクセントカラーを設定します。16 進数の文字列または QML の `color` 値を受け付けます（例：`"#FF0000"` は赤）。
+
+### `getThemeColor() -> color`
+`getThemeColor` は現在のアクセントカラーを QML の `color` 値として返します。テーママネージャーが初期化されていない場合は `"transparent"` を返します。
 
 ## 背景エフェクト
 

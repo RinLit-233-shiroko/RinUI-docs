@@ -30,7 +30,6 @@ providing the following options:
 - `Bottom`：Bottom Center
 - `BottomRight`：Bottom Right Corner
 
-
 ## Method
 
 ### `createInfoBar(options: object)`

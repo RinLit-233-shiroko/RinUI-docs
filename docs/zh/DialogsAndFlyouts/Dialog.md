@@ -4,6 +4,10 @@
 
 ## 基本对话框
 
+<div align="center">
+  <img src="/assets/images/docs/Dialog/基本对话框.png" alt="基本对话框 示例">
+</div>
+
 基本对话框由标题、内容和标准按钮（例如“确定”、“取消”）组成。内容项作为 `Dialog` 组件的直接子项添加。
 
 <div align="center">
@@ -44,6 +48,10 @@ Dialog {
 ```
 
 ## 自定义内容
+
+<div align="center">
+  <img src="/assets/images/docs/Dialog/自定义内容.png" alt="自定义内容 示例">
+</div>
 
 您可以将任何 QML 组件作为 `Dialog` 的子项放置，以在对话框的内容区域内创建自定义布局和交互。这些子项会自动成为 `Dialog` 内部 `contentItem` 中 `ColumnLayout` 的父项。
 

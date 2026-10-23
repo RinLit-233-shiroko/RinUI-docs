@@ -4,6 +4,10 @@
 
 ## 基本工具按钮（仅图标）
 
+<div align="center">
+  <img src="/assets/images/docs/ToolButton/基本工具按钮-仅图标.png" alt="基本工具按钮（仅图标） 示例">
+</div>
+
 `ToolButton` 经常用作仅图标按钮，通常设置 `flat: true` 以获得适合工具栏的、不那么突兀的外观。
 
 <div align="center">
@@ -36,6 +40,11 @@ ToolButton {
 由于 `ToolButton` 继承自 `Button`，所有标准的 `Button` 属性（如 `highlighted`、`checkable`、`primaryColor`、不同状态的样式）和信号（如 `onClicked`）都可用。
 
 ## 示例：用作 ComboBox 指示器
+
+
+<div align="center">
+  <img src="/assets/images/docs/ToolButton/示例-用作-combobox-指示器.png" alt="示例：用作 ComboBox 指示器 示例">
+</div>
 
 RinUI 的 `ComboBox` 内部使用 `ToolButton` 作为其下拉箭头指示器：
 ```qml

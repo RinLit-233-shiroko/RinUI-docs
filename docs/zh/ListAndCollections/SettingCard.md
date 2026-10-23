@@ -6,6 +6,10 @@
 
 ## 基本用法
 
+<div align="center">
+  <img src="/assets/images/docs/SettingCard/基本用法.png" alt="基本用法 示例">
+</div>
+
 一个典型的 `SettingCard` 包含 `icon` 图标、`title` 标题 和 `description` 描述。通过 `content` 属性（默认属性）可在右侧添加控件。
 
 <div align="center">
@@ -32,6 +36,10 @@ SettingCard {
 ```
 
 ## 信息展示用法
+
+<div align="center">
+  <img src="/assets/images/docs/SettingCard/信息展示用法.png" alt="信息展示用法 示例">
+</div>
 
 如果不需要右侧的控件（即 `content` 属性未使用），`SettingCard` 也可作为信息卡片展示内容，风格一致。
 
@@ -71,6 +79,11 @@ SettingCard {
 * 内边距属性：默认 `leftPadding: 15`, `rightPadding: 15`, `topPadding: 13`, `bottomPadding: 13`。
 
 ## 在设置列表中的应用示例
+
+
+<div align="center">
+  <img src="/assets/images/docs/SettingCard/在设置列表中的应用示例.png" alt="在设置列表中的应用示例 示例">
+</div>
 
 `SettingCard` 适合用于设置项列表，每一项都有独立展示区域，不需要展开部分。
 

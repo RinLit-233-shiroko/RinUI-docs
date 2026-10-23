@@ -4,6 +4,10 @@
 
 ## 带范围和步长的滑块
 
+<div align="center">
+  <img src="/assets/images/docs/Slider/带范围和步长的滑块.png" alt="带范围和步长的滑块 示例">
+</div>
+
 使用 `from` 和 `to` 属性定义滑块的范围，并使用 `stepSize` 控制增量。`value` 属性设置滑块的当前位置。
 
 <div align="center">
@@ -21,6 +25,10 @@ Slider {
 ```
 
 ## 带刻度标记的滑块
+
+<div align="center">
+  <img src="/assets/images/docs/Slider/带刻度标记的滑块.png" alt="带刻度标记的滑块 示例">
+</div>
 
 将 `tickmarks` 设置为 `true` 以显示视觉标记。`tickFrequency` 控制这些刻度的间隔。如果 `tickFrequency` 为 `0` 或未设置，刻度可能与 `stepSize` 对齐。
 
@@ -40,6 +48,10 @@ Slider {
 ```
 
 ## 垂直滑块
+
+<div align="center">
+  <img src="/assets/images/docs/Slider/垂直滑块.png" alt="垂直滑块 示例">
+</div>
 
 将 `orientation` 设置为 `Qt.Vertical` 以获得垂直滑块。
 

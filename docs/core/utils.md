@@ -22,7 +22,7 @@ Component {
 ## Appearance and Theme
 | Property                   | Description                                                                                                                                                                                                                          |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| primaryColor               | Theme primary color, default reads the backend configuration file default value `#605ed2` <br/> It is recommended to modify the theme color through [`Theme.setThemeColor(color: str)`](/zh/core/theme.md#setthemecolor-color-str)   |
+| primaryColor               | Theme primary color, default reads the backend configuration file default value `#605ed2` <br/> It is recommended to modify the theme color through [`Theme.setThemeColor(color)`](/core/theme#setthemecolor-color)                    |
 | colors                     | The color table of the currently selected theme in RinUI, all controls in RinUI will reference these colors                                                                                                                          |
 | appearance                 | Appearance settings of the current theme (such as rounded corners, shadows, opacity)                                                                                                                                                 |
 | typography                 | Currently only stores font size information                                                                                                                                                                                          |
@@ -35,13 +35,31 @@ Component {
 | `fontIconSource`                    | Path to the `.ttf` file of the font icon                                                                 |
 | `fontIconIndexSource`               | Path to the `.js` file of the font icon index                                                            |
 | `fontIconIndex`                     | Icon index object, can directly access characters through Utils.fontIconIndex['icon-name']               |
+| `dpiScale`                          | Read-only `devicePixelRatio` of the current screen, intended for diagnostics only                         |
 
 ## Animation Durations
 
 | Property                         | Description                              |
 |----------------------------------|------------------------------------------|
 | `animationSpeed`                 | Standard animation speed (250ms)         |
-| `animationSpeedFaster`           | Fast animation speed (120ms)             |
-| `animationSpeedMiddle`           | Moderately slow speed (450ms)            |
-| `appearanceSpeed`                | Interface switching speed (175ms)        |
+| `animationSpeedExpander`         | Expander animation speed (333ms)         |
+| `animationSpeedFaster`           | Fast animation speed (167ms)             |
+| `animationSpeedMiddle`           | Moderately slow speed (667ms)            |
+| `appearanceSpeed`                | Interface switching speed (187ms)        |
 | `progressBarAnimationSpeed`      | Progress bar animation time (1550ms)     |
+
+## Sizing and DPI
+
+`Utils.dp(value)` is deprecated. It remains for source compatibility, but it is now an identity function: it returns the input unchanged and logs a deprecation warning on first use.
+
+Qt Quick dimensions such as `width`, `height`, and `font.pixelSize` already use logical pixels. Do not multiply them by the device pixel ratio:
+
+```qml
+Rectangle {
+    width: 320
+    height: 48
+    font.pixelSize: 14
+}
+```
+
+Avoid `Utils.dp(320)` and do not manually multiply by `Utils.dpiScale`; doing so applies HiDPI scaling twice.

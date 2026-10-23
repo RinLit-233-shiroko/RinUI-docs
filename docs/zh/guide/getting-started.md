@@ -3,6 +3,11 @@
 ## Gallery 示例
 您可在 RinUI 仓库的 [Releases 页面](https://github.com/RinLit-233-shiroko/Rin-UI/releases) 下载 Gallery 示例程序，并运行它来体验 RinUI 的基本功能。
 
+<picture class="gallery-theme-preview">
+  <source srcset="/assets/images/home/gallery-dark.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)">
+  <img src="/assets/images/home/gallery-light.png" alt="RinUI Gallery" />
+</picture>
+
 ## 安装 & 测试
 ### Python
 
@@ -25,7 +30,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
 import RinUI  // 仅需在您现有的项目中导入本库  // [!code highlight]
-
 
 Window {
     width: 640
@@ -67,7 +71,6 @@ from PySide6.QtWidgets import QApplication
 import RinUI
 from RinUI import RinUIWindow
 
-
 if __name__ == '__main__':
     print(RinUI.__file__)
     app = QApplication(sys.argv)
@@ -79,7 +82,6 @@ if __name__ == '__main__':
 最后您应该会看到如下效果：
 
 ![简易示例](/assets/images/simple-demo.png)
-
 
 ## 进一步深入……
 

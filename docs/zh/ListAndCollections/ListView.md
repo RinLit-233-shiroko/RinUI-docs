@@ -4,6 +4,10 @@
 
 ## 带默认委托的基本列表视图
 
+<div align="center">
+  <img src="/assets/images/docs/ListView/带默认委托的基本列表视图.png" alt="带默认委托的基本列表视图 示例">
+</div>
+
 `ListView` 需要一个 `model` 来提供数据。如果为模型的 `textRole` 属性正确设置，默认委托（`ListViewDelegate` 的实例）可以显示简单文本。
 
 <div align="center">

@@ -101,7 +101,7 @@ ComboBox {
 *   `headerText`: `string` - Optional header text within the dropdown.
 *   `controlRadius`: `real` - Corner radius of the ComboBox.
 *   `enabled`: `bool` - Whether the control is interactive.
-*   `popup`: `Popup` (specifically a `ContextMenu` in RinUI) - The dropdown list.
+*   `popup`: `Popup` - The dropdown list.
 *   `indicator`: `Item` - The dropdown arrow indicator item.
 
 ## Signals

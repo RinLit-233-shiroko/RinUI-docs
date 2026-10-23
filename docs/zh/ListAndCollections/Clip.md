@@ -6,10 +6,14 @@
 
 ## 基本用法
 
+<div align="center">
+  <img src="/assets/images/docs/Clip/基本用法.png" alt="基本用法 示例">
+</div>
+
 `Clip` 可以用作具有确定外观的基本可点击区域。由于其 `contentItem`（继承自 `Button`）在此组件的源码中默认为空 `Item`，因此它并非设计为像标准 `Button` 的 `text` 或 `icon.name` 属性那样直接显示文本或图标。如果需要显示内容，通常应将 QML 项作为 `Clip` 的子项放置，它们将显示在其带样式的背景之上。
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/Clip/clip-basic.png"> <!-- 占位符：图片路径待确认或创建 -->
+  <img src="/assets/images/ListAndCollections/Clip/clip-basic.png" alt="Clip 基本用法">
 </div>
 
 ```qml

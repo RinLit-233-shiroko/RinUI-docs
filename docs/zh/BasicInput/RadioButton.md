@@ -4,6 +4,10 @@
 
 ## 基本单选按钮
 
+<div align="center">
+  <img src="/assets/images/docs/RadioButton/基本单选按钮.png" alt="基本单选按钮 示例">
+</div>
+
 `RadioButton` 通常用于组中，以呈现一组相关选项，其中一次只能激活一个。为强制实现互斥性，应将它们分配给 `ButtonGroup`。
 
 <div align="center">

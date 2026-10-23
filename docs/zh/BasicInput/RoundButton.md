@@ -6,6 +6,10 @@
 
 ## 基本圆形按钮示例
 
+<div align="center">
+  <img src="/assets/images/docs/RoundButton/基本圆形按钮示例.png" alt="基本圆形按钮示例 示例">
+</div>
+
 `RoundButton` 可以像标准 `Button`一样使用，其形状会适应其尺寸。
 
 **药丸形状 (宽度 > 高度):**

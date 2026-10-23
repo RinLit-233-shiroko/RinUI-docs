@@ -4,6 +4,10 @@
 
 ## 基本开关
 
+<div align="center">
+  <img src="/assets/images/docs/Switch/基本开关.png" alt="基本开关 示例">
+</div>
+
 `Switch` 显示一个在两种状态之间滑动的可视化旋钮。默认情况下，如果未设置主 `text` 属性，它可以根据其状态显示“On”或“Off”文本。
 
 <div align="center">
@@ -30,6 +34,10 @@ Switch {
 
 ## 带自定义标签文本的开关
 
+<div align="center">
+  <img src="/assets/images/docs/Switch/带自定义标签文本的开关.png" alt="带自定义标签文本的开关 示例">
+</div>
+
 您可以使用其 `text` 属性为 `Switch` 提供持久的自定义文本标签。无论开关状态如何，此标签都保持不变。
 
 <div align="center">
@@ -44,6 +52,10 @@ Switch {
 ```
 
 ## 带自定义开/关状态文本的开关
+
+<div align="center">
+  <img src="/assets/images/docs/Switch/带自定义开-关状态文本的开关.png" alt="带自定义开/关状态文本的开关 示例">
+</div>
 
 如果主 `text` 属性为空，则 `Switch` 可以通过设置 `checkedText` 和 `uncheckedText` 来根据其 `checked` 状态显示不同的文本标签。
 

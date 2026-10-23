@@ -98,7 +98,7 @@ ComboBox {
 *   `headerText`: `string` - ドロップダウンメニュー内のオプションのヘッダーテキスト。
 *   `controlRadius`: `real` - ComboBox の角の半径。
 *   `enabled`: `bool` - コントロールがインタラクティブかどうか。
-*   `popup`: `Popup` (RinUI では具体的には `ContextMenu`) - ドロップダウンリスト。
+*   `popup`: `Popup` - ドロップダウンリスト。
 *   `indicator`: `Item` - ドロップダウン矢印インジケータアイテム。
 
 ## シグナル

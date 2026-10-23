@@ -35,13 +35,31 @@ Component {
 | `fontIconSource`        | 	字体图标`.ttf`文件路径                                       |
 | `fontIconIndexSource`   | 	字体图标索引`.js`文件路径                                      |
 | `fontIconIndex`	        | 图标索引对象，可直接通过 Utils.fontIconIndex['icon-name'] 获取字符    |
+| `dpiScale`              | 当前屏幕的只读 `devicePixelRatio`，仅用于诊断                     |
 
 ## 动画时长
 
 | 属性                            | 	说明              |
 |-------------------------------|------------------|
-| `animationSpeed`	             | 标准动画速度（250ms）    |
-| `animationSpeedFaster`        | 	快速动画速度（120ms）   |
-| `animationSpeedMiddle`	       | 中等偏慢速度（450ms）    |
-| `appearanceSpeed`             | 	界面切换速度（175ms）   |
-| `progressBarAnimationSpeed`   | 	进度条动画时间（1550ms） |
+| `animationSpeed`              | 标准动画速度（250ms） |
+| `animationSpeedExpander`      | 展开器动画速度（333ms） |
+| `animationSpeedFaster`        | 快速动画速度（167ms） |
+| `animationSpeedMiddle`        | 中等偏慢速度（667ms） |
+| `appearanceSpeed`             | 界面切换速度（187ms） |
+| `progressBarAnimationSpeed`   | 进度条动画时间（1550ms） |
+
+## 尺寸与 DPI
+
+`Utils.dp(value)` 已弃用。为了兼容旧代码它仍然存在，但现在是恒等函数：传入多少就返回多少，并会在首次调用时输出弃用警告。
+
+Qt Quick 的 `width`、`height`、`font.pixelSize` 等尺寸本身使用逻辑像素，不需要再乘以设备像素比。直接写 QML 尺寸即可：
+
+```qml
+Rectangle {
+    width: 320
+    height: 48
+    font.pixelSize: 14
+}
+```
+
+不要写成 `Utils.dp(320)`，也不要手动乘 `Utils.dpiScale`，否则在 HiDPI 屏幕上会出现重复缩放。

@@ -40,7 +40,6 @@ Item (FloatLayer)
 - `Bottom`：底部居中
 - `BottomRight`：右下角
 
-
 ## 方法
 
 ### `createInfoBar(options: object)`

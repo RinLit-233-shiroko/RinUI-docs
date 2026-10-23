@@ -4,6 +4,10 @@
 
 ## 基本切换按钮
 
+<div align="center">
+  <img src="/assets/images/docs/ToggleButton/基本切换按钮.png" alt="基本切换按钮 示例">
+</div>
+
 `ToggleButton` 显示文本和/或图标，并保持一个选中状态。它默认是 `checkable` 的。
 
 <div align="center">

@@ -4,6 +4,10 @@
 
 ## 基本展开器
 
+<div align="center">
+  <img src="/assets/images/docs/Expander/基本展开器.png" alt="基本展开器 示例">
+</div>
+
 基本 `Expander` 可以在其默认标题中包含文本标题，并以 QML 项作为其内容。子项会添加到 `contentData` 属性（这是默认属性）。
 
 <div align="center">
@@ -34,6 +38,10 @@ Expander {
 ```
 
 ## 自定义标题
+
+<div align="center">
+  <img src="/assets/images/docs/Expander/自定义标题.png" alt="自定义标题 示例">
+</div>
 
 `Expander` 的标题可以通过将 `Item` 分配给 `header` 属性来完全替换为自定义 QML 内容。
 
@@ -82,6 +90,10 @@ Expander {
 > **注意**：如果提供自定义 `header`，则还必须实现切换 `Expander` 的 `expanded` 状态的机制（例如，如上所示使用 `MouseArea`）。默认的展开/折叠按钮及其旋转动画是默认标题结构的一部分，如果覆盖 `header` 属性，则不会出现。
 
 ## 展开方向
+
+<div align="center">
+  <img src="/assets/images/docs/Expander/展开方向.png" alt="展开方向 示例">
+</div>
 
 `expandDirection` 属性控制内容区域是从标题向上扩展还是向下扩展。
 

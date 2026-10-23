@@ -30,7 +30,6 @@ Item (FloatLayer)
 - `Bottom`：下部中央
 - `BottomRight`：右下隅
 
-
 ## メソッド
 
 ### `createInfoBar(options: object)`

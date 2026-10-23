@@ -4,6 +4,10 @@ ComboBox 允许用户从下拉列表中选择一个选项。它可以配置为�
 
 ## 基本组合框
 
+<div align="center">
+  <img src="/assets/images/docs/ComboBox/基本组合框.png" alt="基本组合框 示例">
+</div>
+
 包含字符串项目列表的标准组合框。
 
 <div align="center">
@@ -25,6 +29,10 @@ ComboBox {
 ```
 
 ## 使用 ListModel 的组合框
+
+<div align="center">
+  <img src="/assets/images/docs/ComboBox/使用-listmodel-的组合框.png" alt="使用 ListModel 的组合框 示例">
+</div>
 
 对于更复杂的项目或当模型需要动态时，可以使用 `ListModel`。模型中的每个 `ListElement` 都应具有可用于显示的属性（例如 `text` 或 `value`）。
 
@@ -50,6 +58,10 @@ ComboBox {
 ```
 
 ## 可编辑组合框
+
+<div align="center">
+  <img src="/assets/images/docs/ComboBox/可编辑组合框.png" alt="可编辑组合框 示例">
+</div>
 
 将 `editable` 设置为 `true` 以允许用户键入值。`accepted()` 信号可用于处理新的输入。输入字段是一个 `TextField`。
 
@@ -98,7 +110,7 @@ ComboBox {
 *   `headerText`: `string` - 下拉菜单中可选的标题文本。
 *   `controlRadius`: `real` - ComboBox 控件的圆角半径。
 *   `enabled`: `bool` - 控件是否可交互。
-*   `popup`: `Popup` (在 RinUI 中特指 `ContextMenu`) - 下拉列表。
+*   `popup`: `Popup` - 下拉列表。
 *   `indicator`: `Item` - 下拉箭头指示器项。
 
 ## 信号

@@ -5,7 +5,7 @@
 RinUI provides a lightweight theme manager. 
 
 You only need to `import RinUI` in QML to get global theme support immediately. 
-The theme module exists as a singleton `prama Singleton` by default, which is suitable for style switching and consistency maintenance of the entire application.
+The theme module exists as a singleton `pragma Singleton`, which keeps style switching consistent across the application.
 
 You can use the `Theme` manager like this: 
 ```qml
@@ -27,21 +27,35 @@ The `setTheme` function is used to switch the light and dark theme of all RinUI 
 - `Theme.mode.Dark`: Switch to dark theme
 - `Theme.mode.Auto`: Auto switch theme, based on the current system theme mode to decide whether to switch to light or dark theme
 
-### `toggleTheme()`
-The `toggleTheme` function is used to switch the current theme mode. If the current mode is light, it will switch to dark; otherwise, it will switch to light.
+### `toggleMode()`
+`toggleMode` switches between `Theme.mode.Light` and `Theme.mode.Dark` based on the effective appearance. A dark interface becomes light, and a light interface becomes dark:
+
+```qml
+Theme.toggleMode()
+```
+
+It does not cycle through the `Light`, `Dark`, and `Auto` configuration modes. Call `setTheme()` directly to enter or leave automatic mode.
 
 ### `getTheme() -> str`
-The `getTheme` function is used to get the current theme mode. The function will return the following values:
+The `getTheme` function returns the stored theme configuration mode:
 
 - `"Light"`: The current theme is light
 - `"Dark"`: The current theme is dark
 - `"Auto"`: The current theme is auto mode
 
-### `setThemeColor(color: str)`
-The `setThemeColor` function is used to set the theme color of RinUI components. This function accepts a hexadecimal color value, for example, `#FF0000` represents red.
+In `Auto` mode, `getTheme()` still returns `"Auto"` rather than resolving to the effective light or dark appearance. Read the effective appearance separately:
 
-### `getThemeColor() -> str`
-The `getThemeColor` function is used to get the current theme color of the component. The function will return a hexadecimal color value.
+```qml
+let darkNow = Theme.currentTheme.isDark
+```
+
+You can also call `Theme.isDark()`, which returns `currentTheme.isDark`.
+
+### `setThemeColor(color)`
+`setThemeColor` sets the RinUI accent color. It accepts a hexadecimal string or a QML `color` value, for example `"#FF0000"` for red.
+
+### `getThemeColor() -> color`
+`getThemeColor` returns the current accent color as a QML `color` value. It returns `"transparent"` when the theme manager is not initialized.
 
 ## Background Effects
 

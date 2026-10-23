@@ -4,11 +4,12 @@
 
 ## 基本日期选择器
 
-默认情况下，`DatePicker` 在用户未交互时显示占位符或当前系统日期。一旦选定日期，该日期将显示在按钮上。
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/DatePicker/datepicker-basic.png"> <!-- 占位符：图片路径待确认或创建 -->
+  <img src="/assets/images/docs/DatePicker/基本日期选择器.png" alt="基本日期选择器 示例">
 </div>
+
+默认情况下，`DatePicker` 在用户未交互时显示占位符或当前系统日期。一旦选定日期，该日期将显示在按钮上。
 
 ```qml
 import QtQuick 2.15
@@ -38,11 +39,12 @@ DatePicker {
 
 ## 隐藏年份
 
-通过将 `yearVisible` 属性设置为 `false`，可以从选择器和显示中隐藏年份列。
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/DatePicker/datepicker-no-year.png"> <!-- 占位符：图片路径待确认或创建 -->
+  <img src="/assets/images/docs/DatePicker/隐藏年份.png" alt="隐藏年份 示例">
 </div>
+
+通过将 `yearVisible` 属性设置为 `false`，可以从选择器和显示中隐藏年份列。
 
 ```qml
 import RinUI // Consistent import
@@ -54,6 +56,11 @@ DatePicker {
 ```
 
 ## 以编程方式设置日期
+
+
+<div align="center">
+  <img src="/assets/images/docs/DatePicker/以编程方式设置日期.png" alt="以编程方式设置日期 示例">
+</div>
 
 `setDate()` 方法允许您设置选择器的日期。它接受 "YYYY-MM-DD" 或 "YYYY/MM/DD" 格式的字符串。
 

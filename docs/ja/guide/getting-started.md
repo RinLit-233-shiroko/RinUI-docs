@@ -26,7 +26,6 @@ import QtQuick.Controls
 import QtQuick.Window
 import RinUI  // 既存のプロジェクトにこのライブラリをインポートするだけ // [!code highlight]
 
-
 Window {
     width: 640
     height: 480
@@ -67,7 +66,6 @@ from PySide6.QtWidgets import QApplication
 import RinUI
 from RinUI import RinUIWindow
 
-
 if __name__ == '__main__':
     print(RinUI.__file__)
     app = QApplication(sys.argv)
@@ -79,7 +77,6 @@ if __name__ == '__main__':
 最後に、次のような効果が表示されるはずです：
 
 ![簡易示例](/assets/images/simple-demo.png)
-
 
 ## さらなる探求…
 
