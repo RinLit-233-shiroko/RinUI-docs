@@ -7,7 +7,11 @@ The `Frame` component in RinUI is a styled container that inherits from `QtQuick
 A `Frame` can be used to visually group content. You can place child items directly within a `Frame`; these children are parented to the `Frame`'s `contentItem`. Standard padding properties can be used to create space between the frame's edges and its content.
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/Frame/frame-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Frame/example.png" alt="Basic Frame">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/Frame/frame-basic.png" alt="Basic Frame">
 </div>
 
 ```qml

@@ -3,6 +3,10 @@
 ## ギャラリーの例
 RinUI リポジトリの[リリース](https://github.com/RinLit-233-shiroko/Rin-UI/releases)ページからギャラリーのサンプルプログラムをダウンロードし、実行することで RinUI の基本的な機能を体験できます。
 
+<div align="center">
+  <img src="/assets/images/home/gallery-light.png" alt="ギャラリーの例">
+</div>
+
 ## インストールとテスト
 ### Python
 

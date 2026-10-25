@@ -9,7 +9,11 @@
 `Flyout` は、ボタンのクリックやその他のユーザーアクションに応じて開かれることがよくあります。テキストやカスタムボタンを含めることができます。`target` プロパティを使用すると、フライアウトを開いたコントロールに関連付けることができ、これは配置に役立ちます。
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Flyout/example.png" alt="基本的なフライアウト">
+</div>
+
+<div align="center">
+  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-basic.png" alt="基本的なフライアウト">
 </div>
 
 ```qml
@@ -45,7 +49,7 @@ Flyout {
 フライアウトは上部に画像を表示し、`position` プロパティを使用して親コントロールまたは `target` コントロールに対して配置できます。このプロパティは RinUI 固有の `Position` 列挙型を使用します。
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-image-positioned.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-image-positioned.png" alt="画像と配置のあるフライアウト">
 </div>
 
 ```qml

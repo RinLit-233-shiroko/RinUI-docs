@@ -13,6 +13,10 @@
 
 ## 基本的な使い方
 
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="基本的な使い方">
+</div>
+
 ```qml
 import QtQuick
 import RinUI
@@ -79,15 +83,20 @@ sys.exit(app.exec())
 
 ## タイトルバーの内容
 
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example-2.png" alt="タイトルバーの内容">
+</div>
+
 ```qml
 FluentWindow {
     title: "RinUI Gallery"
 
     titleBarArea: AutoSuggestBox {
         width: 320
-        placeholderText: qsTr("コントロールを検索…")
+        placeholderText: qsTr("Search controls...")
     }
 }
+```
 ```
 
 `titleBarArea` はタイトルバー中央に配置されます。先頭のアイコン、戻るボタン、ウィンドウボタンはナビゲーションバーと `FluentWindowBase` が管理します。
@@ -101,6 +110,10 @@ FluentWindow {
 ## ページコンテンツ
 
 ナビゲーションページは通常 `FluentPage` を継承します：
+
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="ページコンテンツ">
+</div>
 
 ```qml
 // pages/Home.qml

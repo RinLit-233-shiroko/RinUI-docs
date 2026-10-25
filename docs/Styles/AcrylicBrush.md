@@ -1,13 +1,13 @@
 # AcrylicBrush
 
-`AcrylicBrush` is RinUI's in-app translucent material. It blurs a supplied `sourceItem` and blends a tint over it, making it useful for panels and overlays. This is an in-content effect, not the Windows system-level Acrylic window backdrop.
+`AcrylicBrush` is RinUI's in-app translucent material. It blurs a supplied `sourceItem` and blends a tint over it, making it useful for panels and overlays. This is an in-content effect, not a system-level window backdrop.
 
 ## Basic Usage
 
-Place the brush in a surface background and set `sourceItem` to the item behind that surface.
+Set `sourceItem` to the background item behind the acrylic surface.
 
 <div align="center">
-  <img src="/assets/images/examples/AcrylicBrush-light.png" alt="AcrylicBrush rendered in the RinUI Gallery">
+  <img src="/assets/images/docs/AcrylicBrush/default-in-app-acrylic.png" alt="Basic Usage">
 </div>
 
 ```qml
@@ -33,10 +33,15 @@ Item {
     }
 }
 ```
+```
 
 ## Blur and Tint
 
-Use `blur` to adjust blur strength and `tintColor` with `tintOpacity` to tune the overlay.
+Use `blur`, `tintColor`, and `tintOpacity` to tune the material. `fallbackColor` provides a solid color if the effect cannot be rendered.
+
+<div align="center">
+  <img src="/assets/images/docs/AcrylicBrush/custom-in-app-acrylic.png" alt="Blur and Tint">
+</div>
 
 ```qml
 AcrylicBrush {
@@ -46,10 +51,15 @@ AcrylicBrush {
     tintOpacity: 0.85
 }
 ```
+```
 
-## Luminosity
+## Luminosity Blend
 
-`tintLuminosityOpacity` controls the luminosity blend:
+`tintLuminosityOpacity` controls luminosity blending in addition to the tint.
+
+<div align="center">
+  <img src="/assets/images/docs/AcrylicBrush/luminosity-acrylic.png" alt="Luminosity Blend">
+</div>
 
 ```qml
 AcrylicBrush {
@@ -59,10 +69,15 @@ AcrylicBrush {
     tintLuminosityOpacity: 0.85
 }
 ```
+```
 
 ## Fallback and Enable State
 
-Set `fallbackColor` for cases where the effect cannot be rendered, and use `enabled` to toggle the effect at runtime.
+Set `enabled` to toggle the effect. When it is disabled or unavailable, the brush can use `fallbackColor`.
+
+<div align="center">
+  <img src="/assets/images/docs/AcrylicBrush/fallback-and-enabled.png" alt="Fallback and Enable State">
+</div>
 
 ```qml
 AcrylicBrush {
@@ -70,6 +85,7 @@ AcrylicBrush {
     fallbackColor: "darkgreen"
     enabled: true
 }
+```
 ```
 
 ## Properties
@@ -86,5 +102,5 @@ AcrylicBrush {
 
 ## Related
 
-- [Theme](/core/theme): RinUI theme colors and appearance.
+- [Theme](/core/theme): theme colors and appearance.
 - [FluentWindow](/Windowing/FluentWindow): window-level backdrops and window behavior.

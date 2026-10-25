@@ -7,7 +7,11 @@
 `Switch` は、2つの状態間をスライドする視覚的なノブを表示します。デフォルトでは、メインの `text` プロパティが設定されていない場合、状態に基づいて「On」または「Off」のテキストを表示できます。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Switch/switch-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Switch/example-2.png" alt="基本的なスイッチ">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Switch/switch-basic.png" alt="基本的なスイッチ">
 </div>
 
 ```qml
@@ -17,7 +21,7 @@ import RinUI
 // ...
 
 Switch {
-    // checked: true // 初期状態で「オン」にする場合
+    // checked: true // 用于初始设为“开”状态
     onCheckedChanged: {
         if (checked) {
             console.log("Switch is ON. Default text might be '" + checkedText + "'");
@@ -27,13 +31,18 @@ Switch {
     }
 }
 ```
+```
 
 ## カスタムラベルテキスト付きスイッチ
 
 `text` プロパティを使用して、`Switch` に永続的なカスタムテキストラベルを提供できます。このラベルは、オン/オフの状態に関係なく同じままです。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Switch/switch-custom-text.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Switch/example-3.png" alt="カスタムラベルテキスト付きスイッチ">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Switch/switch-custom-text.png" alt="カスタムラベルテキスト付きスイッチ">
 </div>
 
 ```qml
@@ -48,7 +57,11 @@ Switch {
 メインの `text` プロパティが空の場合、`Switch` は `checkedText` および `uncheckedText` を設定することにより、`checked` 状態に応じて異なるテキストラベルを表示できます。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Switch/switch-on-off-text.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Switch/example.png" alt="カスタムオン/オフ状態テキスト付きスイッチ">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Switch/switch-on-off-text.png" alt="カスタムオン/オフ状態テキスト付きスイッチ">
 </div>
 
 ```qml

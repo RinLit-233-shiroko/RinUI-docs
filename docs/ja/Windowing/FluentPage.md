@@ -13,6 +13,10 @@
 
 ## 基本的なページ
 
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example-2.png" alt="基本的なページ">
+</div>
+
 ```qml
 import QtQuick
 import QtQuick.Layouts
@@ -44,6 +48,10 @@ FluentPage {
 
 `title` を設定すると統一されたタイトル行が表示されます。`extraHeaderItems` はタイトル右側の追加操作、`customHeader` と `contentHeader` はヘッダー内容と本文上部の独立コンテンツに使用できます。
 
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example-3.png" alt="ヘッダー">
+</div>
+
 ```qml
 FluentPage {
     title: qsTr("アカウント")
@@ -67,6 +75,10 @@ FluentPage {
 ## フッター
 
 `pageFooter` は Qt Quick `Page.footer` に対応し、ページ下部に固定する操作領域に適しています：
+
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example-4.png" alt="フッター">
+</div>
 
 ```qml
 FluentPage {
@@ -96,12 +108,17 @@ FluentPage {
 
 既定値は `wrapperWidth: 1000`、`horizontalPadding: 56` です。`contentSpacing` は本文の列間隔、`spacing` はページ全体の間隔を制御します。狭いウィンドウでは余白を減らし、全幅コンテンツでは `wrapperWidth` を増やしてください。
 
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example.png" alt="コンテンツ幅と余白">
+</div>
+
 ```qml
 FluentPage {
     horizontalPadding: 24
     wrapperWidth: 1400
     contentSpacing: 18
 }
+```
 ```
 
 ## 主なプロパティ

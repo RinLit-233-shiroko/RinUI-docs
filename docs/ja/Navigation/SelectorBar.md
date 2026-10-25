@@ -2,16 +2,11 @@
 
 `SelectorBar` は少数のコンテンツビューを切り替えるためのコントロールです。Qt Quick `TabBar` を継承しますが、外周コンテナの背景は描画しません。各 `SelectorBarItem` は下部インジケーターで選択状態を示し、タイトル領域やコンテンツ上部に適しています。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/SelectorBar-light.png',
-    dark: '/assets/images/examples/SelectorBar-dark.png',
-    alt: 'SelectorBar コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本的な使い方
+
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example-2.png" alt="基本的な使い方">
+</div>
 
 ```qml
 SelectorBar {
@@ -39,6 +34,10 @@ SelectorBar {
 ## コンテンツの切り替え
 
 `currentIndex` と `Loader` または `StackLayout` を組み合わせると、選択タブとコンテンツを同期できます：
+
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example-3.png" alt="コンテンツの切り替え">
+</div>
 
 ```qml
 Column {
@@ -71,6 +70,10 @@ Column {
 
 `SelectorBar` は `TabBar` を継承するため、`Repeater` で項目を生成できます：
 
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example-4.png" alt="動的な項目">
+</div>
+
 ```qml
 SelectorBar {
     id: selector
@@ -95,6 +98,10 @@ SelectorBar {
 - `enabled`：バー全体を無効化。
 - `SelectorBarItem.text`：項目のラベル。
 - `SelectorBarItem.icon.name`：Fluent アイコン名。
+
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example.png" alt="状態とイベント">
+</div>
 
 ```qml
 SelectorBar {

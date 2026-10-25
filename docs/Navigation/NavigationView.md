@@ -2,18 +2,13 @@
 
 `NavigationView` combines a vertical navigation bar, page stack, and content card. It handles top-level page navigation in RinUI applications. `FluentWindow` already contains one, so manual creation is only needed for custom windows or embedded layouts.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/NavigationView-light.png',
-    dark: '/assets/images/examples/NavigationView-dark.png',
-    alt: 'NavigationView examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Using It in FluentWindow
 
 Declare navigation items directly on `FluentWindow`:
+
+<div align="center">
+  <img src="/assets/images/docs/NavigationView/example-2.png" alt="Using It in FluentWindow">
+</div>
 
 ```qml
 FluentWindow {
@@ -51,23 +46,36 @@ FluentWindow {
 
 ## Standalone Usage
 
-```qml
-NavigationView {
-    id: navigationView
-    anchors.fill: parent
-    window: parent
+<div align="center">
+  <img src="/assets/images/docs/NavigationView/example-3.png" alt="Standalone Usage">
+</div>
 
-    navExpandWidth: 280
-    defaultPage: Qt.resolvedUrl("pages/Home.qml")
+```qml
+FluentWindow {
+    width: 1100
+    height: 720
+    defaultPage: homePage
 
     navigationItems: [
         {
             title: qsTr("Home"),
-            page: Qt.resolvedUrl("pages/Home.qml"),
+            page: homePage,
             icon: "ic_fluent_home_20_regular"
         }
     ]
+
+    Component {
+        id: homePage
+        Item {
+            Text {
+                anchors.centerIn: parent
+                text: qsTr("Home page")
+                font.pixelSize: 24
+            }
+        }
+    }
 }
+```
 ```
 
 When used standalone, provide the owning window through `window` so window size, title, and window-control state are available.
@@ -90,6 +98,7 @@ Navigate to a page and add the current page to history. `properties` are passed 
 navigationView.push(Qt.resolvedUrl("pages/Detail.qml"), {
     itemId: 42
 })
+```
 ```
 
 ### `pushStack(page, properties)`

@@ -1,34 +1,46 @@
-# RinUI 紹介
+# RinUI とは？
 
-## RinUIとは？
-RinUI は、Qt Quick (QML) 向けの [Fluent Design](https://fluent2.microsoft.design/) に似たUIライブラリで、高品質なコンポーネントと実用的な機能を提供します。簡単な設定で、FluentスタイルのエレガントなUIインターフェースを迅速に開発できます。
-
-> [!WARNING]
-> RinUI はまだ開発中であり、使用準備ができていません！
+RinUI は **Qt Quick (QML)** アプリケーション向けの UI コンポーネントライブラリです。Fluent Design に着想を得たコントロール、テーマ機能、ユーティリティを提供し、統一感のある外観と分かりやすい操作性を備えたデスクトップアプリの開発を支援します。
 
 > [!TIP]
-> RinUI を体験したい場合は、[はじめに](getting-started.md)セクションで関連情報を見つけることができます。
+> RinUI を試すには、[はじめに](getting-started)を参照してインストールし、サンプルを実行してください。
 
-## 特徴
-- エレガントな Fluent Design コントロール (開発中)
-- ダークモードとライトモード、自動切り替え
-- オリジナルの QML コントロール名との互換性
+```qml
+import QtQuick
+import QtQuick.Controls
+import RinUI
+```
 
-### 将来の計画
-- 多言語サポート
-- 完全なテーマシステム
+`RinUI` モジュールをインポートすれば、既存の Qt Quick プロジェクトで各コントロールを組み合わせて使用できます。Python アプリケーションでは PySide6 でアプリを起動し、QML を読み込みます。別の言語やフレームワークへ UI を書き換える必要はなく、アプリの画面は引き続き QML で構築できます。
+
+## RinUI が提供するもの
+
+- **一般的な UI コンポーネント**：ボタン、入力、ナビゲーション、ポップアップ、レイアウト、状態表示など。各コンポーネントのプロパティ、シグナル、使用例はドキュメントを参照してください。
+- **Fluent に着想を得たデザイン**：明確な階層、軽やかなサーフェス、一貫した操作性。
+- **テーマ機能**：ライト・ダークの外観設定。[テーマ](/ja/core/theme)で設定方法を確認できます。
+- **QML ワークフロー**：モジュールをインポートし、Qt Quick のレイアウト、バインディング、コンポーネント構成をそのまま活用できます。
+
+## 適したプロジェクト
+
+Qt Quick / QML でデスクトップアプリを構築し、一般的な UI の重複実装を減らしたい場合や、Fluent に着想を得た一貫したデザインを採用したい場合に、RinUI を UI 開発の基盤として利用できます。RinUI が提供するのは UI コンポーネントと関連ユーティリティです。業務ロジック、データモデル、アプリケーション構成はアプリ側で管理します。
+
+## プロジェクトの状態
+
+RinUI は現在も開発が続いています。コンポーネント、API、テーマ機能はバージョン間で変更される可能性があります。インストール済みバージョンのドキュメントを参照し、リリースするアプリでは依存バージョンを固定して、アップグレード時に影響を確認してください。
+
+## 次に読むページ
+
+- 初めて使う場合：[はじめに](getting-started)でインストールしてサンプルを実行します。
+- QML ページとリソースの構成：[プロジェクト構成とリソース](/ja/guide/project-structure)を参照してください。
+- コントロールを探す場合：サイドバーからコンポーネントを選択し、使用方法と実行可能な例を確認してください。
+- 全体設定：[テーマ](/ja/core/theme)と[ユーティリティ](/ja/core/utils)を参照してください。
 
 ## 謝辞
-### リソース
-- [PySide6 & Qt Quick](https://www.qt.io/)
+
+RinUI の実装とデザインは、次のプロジェクトやリソースを参考にしています。
+
+- [Qt / Qt Quick](https://www.qt.io/)
 - [Fluent Design System](https://fluent2.microsoft.design/)
 - [Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons/)
 
-### 貢献者
-このプロジェクトに貢献してくださった優秀な開発者の皆様に感謝します。
-[![Contributors](http://contrib.nn.ci/api?repo=rinlit-233-shiroko/Rin-UI)](https://github.com/RinLit-233-shiroko/Rin-UI/graphs/contributors)
-
-## ライセンス
-このプロジェクトは MIT ライセンスの下でライセンスされています。詳細については、[ライセンスファイル](https://github.com/RinLit-233-shiroko/Rin-UI/blob/master/LICENSE)をご覧ください。
-
-Copyright © 2025 RinLit
+[RinUI](https://github.com/RinLit-233-shiroko/Rin-UI) に貢献してくださる皆様に感謝します。

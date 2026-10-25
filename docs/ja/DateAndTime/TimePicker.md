@@ -7,7 +7,7 @@
 デフォルトでは、`TimePicker` は AM/PM セレクター付きの12時間形式の時計を使用します。表示される時、分、AM/PM の値は、コンポーネントの現在の選択に基づきます。
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/TimePicker/timepicker-12hr.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/TimePicker/12.png" alt="基本的な時刻ピッカー（12時間形式）">
 </div>
 
 ```qml
@@ -40,7 +40,7 @@ TimePicker {
 `use24Hour` プロパティを `true` に設定すると、24時間形式の時計が使用されます。これにより、AM/PM セレクターが非表示になります。
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/TimePicker/timepicker-24hr.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/TimePicker/24.png" alt="24時間形式の時刻ピッカー">
 </div>
 
 ```qml
@@ -57,6 +57,10 @@ TimePicker {
 ## プログラムによる時刻の設定
 
 `setTime()` メソッドを使用すると、ピッカーの時刻を設定できます。"HH:MM"（24時間）形式の文字列を受け付けます。
+
+<div align="center">
+  <img src="/assets/images/docs/TimePicker/example.png" alt="プログラムによる時刻の設定">
+</div>
 
 ```qml
 TimePicker {

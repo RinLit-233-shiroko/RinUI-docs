@@ -7,7 +7,7 @@ The `DatePicker` provides a standardized way to let users select a date (year, m
 A `DatePicker` by default shows placeholders or the current system date if not interacted with. Once a date is selected, it's displayed on the button.
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/DatePicker/datepicker-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/DatePicker/example-2.png" alt="Basic DatePicker">
 </div>
 
 ```qml
@@ -41,7 +41,7 @@ DatePicker {
 You can hide the year column from the picker and the display by setting the `yearVisible` property to `false`.
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/DatePicker/datepicker-no-year.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/DatePicker/example-3.png" alt="Hiding the Year">
 </div>
 
 ```qml
@@ -56,6 +56,10 @@ DatePicker {
 ## Setting the Date Programmatically
 
 The `setDate()` method allows you to set the date of the picker. It accepts a string in "YYYY-MM-DD" or "YYYY/MM/DD" format.
+
+<div align="center">
+  <img src="/assets/images/docs/DatePicker/example.png" alt="Setting the Date Programmatically">
+</div>
 
 ```qml
 import RinUI // Consistent import

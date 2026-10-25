@@ -7,7 +7,7 @@
 デフォルトでは、`DatePicker` はユーザーが操作していない場合、プレースホルダーまたは現在のシステム日付を表示します。日付が選択されると、その日付がボタンに表示されます。
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/DatePicker/datepicker-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/DatePicker/example-2.png" alt="基本的な日付ピッカー">
 </div>
 
 ```qml
@@ -41,7 +41,7 @@ DatePicker {
 `yearVisible` プロパティを `false` に設定することで、ピッカーと表示から年列を非表示にできます。
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/DatePicker/datepicker-no-year.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/DatePicker/example-3.png" alt="年を非表示にする">
 </div>
 
 ```qml
@@ -56,6 +56,10 @@ DatePicker {
 ## プログラムによる日付の設定
 
 `setDate()` メソッドを使用すると、ピッカーの日付を設定できます。"YYYY-MM-DD" または "YYYY/MM/DD" 形式の文字列を受け付けます。
+
+<div align="center">
+  <img src="/assets/images/docs/DatePicker/example.png" alt="プログラムによる日付の設定">
+</div>
 
 ```qml
 import RinUI // Consistent import

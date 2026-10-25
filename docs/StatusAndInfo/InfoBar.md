@@ -2,16 +2,11 @@
 
 InfoBar is a control that displays informational messages to users. It can show different types of messages (Info, Success, Warning, Error) with customizable content and automatic dismissal.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/InfoBar-light.png',
-    dark: '/assets/images/examples/InfoBar-dark.png',
-    alt: 'InfoBar examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic InfoBar
+
+<div align="center">
+  <img src="/assets/images/docs/InfoBar/example-2.png" alt="Basic InfoBar">
+</div>
 
 ```qml
 InfoBar {
@@ -22,6 +17,10 @@ InfoBar {
 ```
 
 ## InfoBar with Custom Content
+
+<div align="center">
+  <img src="/assets/images/docs/InfoBar/example-3.png" alt="InfoBar with Custom Content">
+</div>
 
 ```qml
 InfoBar {
@@ -42,6 +41,10 @@ InfoBar {
 ```
 
 ## Different Severity Levels
+
+<div align="center">
+  <img src="/assets/images/docs/InfoBar/example-4.png" alt="Different Severity Levels">
+</div>
 
 ```qml
 // Success InfoBar
@@ -68,6 +71,10 @@ InfoBar {
 
 ## Auto-dismiss InfoBar
 
+<div align="center">
+  <img src="/assets/images/docs/InfoBar/example.png" alt="Auto-dismiss InfoBar">
+</div>
+
 ```qml
 InfoBar {
     title: qsTr("Auto Dismiss")
@@ -90,4 +97,4 @@ InfoBar {
 
 ## Important Signals
 
-- `closed()`: Emitted when the info bar is closed
+- `InfoBar` does not provide a `closed()` signal. Use `close()` to start the closing animation.

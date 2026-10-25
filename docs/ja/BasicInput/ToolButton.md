@@ -7,7 +7,11 @@
 `ToolButton` は、アイコンのみのボタンとして頻繁に使用され、ツールバーに適した控えめな外観のために `flat: true` に設定されることがよくあります。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ToolButton/toolbutton-icon.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/ToolButton/combobox.png" alt="基本的なツールボタン（アイコンのみ）">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ToolButton/toolbutton-icon.png" alt="基本的なツールボタン（アイコンのみ）">
 </div>
 
 ```qml
@@ -22,6 +26,7 @@ ToolButton {
         console.log("Settings ToolButton clicked");
     }
 }
+```
 ```
 
 ## 主なプロパティ
@@ -38,16 +43,22 @@ ToolButton {
 ## 例：ComboBox インジケータとしての使用
 
 RinUI の `ComboBox` は、内部で `ToolButton` をドロップダウン矢印インジケータとして使用します：
+<div align="center">
+  <img src="/assets/images/docs/ToolButton/example.png" alt="例：ComboBox インジケータとしての使用">
+</div>
+
 ```qml
-// ComboBox.qml のインジケータからのスニペット
+// ComboBox.qml 中指示器的代码片段
 ToolButton {
     flat: true
     icon.name: "ic_fluent_chevron_down_20_regular"
     size: 14 
     color: Theme.currentTheme.colors.textSecondaryColor
-    // ... その他のプロパティ
+    // ... 其他属性
 }
 ```
+```
+
 これは、フラットなアイコンのみの `ToolButton` の一般的な使用例を示しています。
 
 ```

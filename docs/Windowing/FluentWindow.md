@@ -13,6 +13,10 @@
 
 ## Basic Usage
 
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="Basic Usage">
+</div>
+
 ```qml
 import QtQuick
 import RinUI
@@ -81,6 +85,10 @@ The default property of `FluentWindow` is `content`, so direct child items go in
 
 ## Title Bar Content
 
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example-2.png" alt="Title Bar Content">
+</div>
+
 ```qml
 FluentWindow {
     title: "RinUI Gallery"
@@ -90,6 +98,7 @@ FluentWindow {
         placeholderText: qsTr("Search controls...")
     }
 }
+```
 ```
 
 `titleBarArea` sits in the center of the title bar. The leading icon, back button, and window buttons are provided by the navigation bar and `FluentWindowBase`.
@@ -103,6 +112,10 @@ See [Theme](/core/theme) for theme calls.
 ## Page Content
 
 Navigation pages usually subclass `FluentPage`:
+
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="Page Content">
+</div>
 
 ```qml
 // pages/Home.qml

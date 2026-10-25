@@ -7,7 +7,11 @@ A `ToolButton` is a specialized `Button` typically used for actions in toolbars 
 ToolButtons are frequently used as icon-only buttons, often with `flat: true` for a less intrusive look suitable for toolbars.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ToolButton/toolbutton-icon.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/ToolButton/combobox.png" alt="Basic ToolButton (Icon-Only)">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ToolButton/toolbutton-icon.png" alt="Basic ToolButton (Icon-Only)">
 </div>
 
 ```qml
@@ -22,6 +26,7 @@ ToolButton {
         console.log("Settings ToolButton clicked");
     }
 }
+```
 ```
 
 ## Key Properties
@@ -38,16 +43,22 @@ As `ToolButton` inherits from `Button`, all standard `Button` properties (like `
 ## Example: Usage as ComboBox Indicator
 
 RinUI's `ComboBox` uses a `ToolButton` internally as its dropdown arrow indicator:
+<div align="center">
+  <img src="/assets/images/docs/ToolButton/example.png" alt="Example: Usage as ComboBox Indicator">
+</div>
+
 ```qml
-// Snippet from ComboBox.qml's indicator
+// ComboBox.qml 中指示器的代码片段
 ToolButton {
     flat: true
     icon.name: "ic_fluent_chevron_down_20_regular"
     size: 14 
     color: Theme.currentTheme.colors.textSecondaryColor
-    // ... other properties
+    // ... 其他属性
 }
 ```
+```
+
 This demonstrates a common use case for a flat, icon-only `ToolButton`.
 
 ```

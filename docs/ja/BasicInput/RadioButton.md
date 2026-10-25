@@ -7,7 +7,11 @@
 `RadioButton` は通常、一度に1つしかアクティブにできない関連オプションのセットを提示するためにグループで使用されます。相互排他性を強制するには、`ButtonGroup` に割り当てる必要があります。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/RadioButton/radiobutton-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/RadioButton/example.png" alt="基本的なラジオボタン">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/RadioButton/radiobutton-basic.png" alt="基本的なラジオボタン">
 </div>
 
 ```qml

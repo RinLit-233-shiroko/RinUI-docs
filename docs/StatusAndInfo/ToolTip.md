@@ -1,58 +1,82 @@
 # ToolTip
 
-ToolTip is a small popup that provides helpful information when users hover over or focus on a control. It's commonly used to explain the function of a button or provide additional context.
+`ToolTip` is a lightweight popup for adding short explanations to controls such as buttons and icons. RinUI's ToolTip is based on Qt Quick Controls and uses the current theme for its background, border, text, and shadow.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/ToolTip-light.png',
-    dark: '/assets/images/examples/ToolTip-dark.png',
-    alt: 'ToolTip examples in light and dark themes'
-  }"
-  width="1000"
-/>
+## Basic Usage
 
-## Basic ToolTip
+Declare `ToolTip` as a child of the target control and set its text. Bind `visible` to the control's hover state to show it when the pointer enters.
+
+<div align="center">
+  <img src="/assets/images/docs/ToolTip/example-2.png" alt="Basic Usage">
+</div>
 
 ```qml
 Button {
     text: qsTr("Save")
-    tooltip: qsTr("Save your work")
-}
-```
+    hoverEnabled: true
 
-## ToolTip with Rich Content
-
-```qml
-Button {
-    text: qsTr("Delete")
-    tooltip: qsTr("This action cannot be undone")
-    
     ToolTip {
-        text: root.tooltip
-        delay: 1000
-        timeout: 3000
-    }
-}
-```
-
-## ToolTip with Custom Positioning
-
-```qml
-Button {
-    text: qsTr("Help")
-    
-    ToolTip {
-        text: qsTr("Click for more information about this feature")
-        delay: 500
+        text: qsTr("Save your changes")
         visible: parent.hovered
     }
 }
 ```
+```
 
-## Important Properties
+## Set Delay and Timeout
 
-- `text`: The tooltip text
-- `delay`: Delay before showing tooltip (milliseconds)
-- `timeout`: Auto-hide timeout (milliseconds)
-- `visible`: Whether the tooltip is visible
-- `parent`: The parent control for positioning
+`delay` controls how long to wait before showing the tooltip; `timeout` controls how long it remains visible. RinUI's `timeout` defaults to `-1`, which means it does not close automatically. Set a duration when automatic dismissal is needed.
+
+<div align="center">
+  <img src="/assets/images/docs/ToolTip/example-3.png" alt="Set Delay and Timeout">
+</div>
+
+```qml
+Button {
+    text: qsTr("Delete")
+    hoverEnabled: true
+
+    ToolTip {
+        text: qsTr("This action cannot be undone")
+        visible: parent.hovered
+        delay: 500
+        timeout: 3000
+    }
+}
+```
+```
+
+## Customize Theme Colors
+
+Override color properties for a specific context. If they are not overridden, colors follow the current RinUI theme.
+
+<div align="center">
+  <img src="/assets/images/docs/ToolTip/example.png" alt="Customize Theme Colors">
+</div>
+
+```qml
+Button {
+    text: qsTr("Help")
+    hoverEnabled: true
+
+    ToolTip {
+        text: qsTr("Open help")
+        visible: parent.hovered
+        backgroundColor: "#202020"
+        borderColor: "#505050"
+        textColor: "white"
+    }
+}
+```
+```
+
+## Properties
+
+- `text`: Tooltip content.
+- `visible`: Whether to show the tooltip; usually bound to the target's hover or focus state.
+- `delay`: Delay before display, in milliseconds.
+- `timeout`: Display duration, in milliseconds; `-1` disables automatic dismissal.
+- `backgroundColor`: Background color; defaults to the theme acrylic background.
+- `borderColor`: Border color; defaults to the theme card border.
+- `textColor`: Text color; defaults to the theme text color.
+- `controlRadius`: Background corner radius; defaults to the theme control radius.

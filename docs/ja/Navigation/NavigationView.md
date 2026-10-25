@@ -2,18 +2,13 @@
 
 `NavigationView` は縦方向のナビゲーションバー、ページスタック、コンテンツカードを組み合わせ、RinUI アプリのトップレベルページ切り替えを担当します。`FluentWindow` には既に含まれているため、手動で作成するのはカスタムウィンドウや埋め込みレイアウトの場合だけです。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/NavigationView-light.png',
-    dark: '/assets/images/examples/NavigationView-dark.png',
-    alt: 'NavigationView コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## FluentWindow での使用
 
 最も簡単な方法は `FluentWindow` にナビゲーション項目を宣言することです：
+
+<div align="center">
+  <img src="/assets/images/docs/NavigationView/example-2.png" alt="FluentWindow での使用">
+</div>
 
 ```qml
 FluentWindow {
@@ -51,23 +46,36 @@ FluentWindow {
 
 ## 単体での使用
 
-```qml
-NavigationView {
-    id: navigationView
-    anchors.fill: parent
-    window: parent
+<div align="center">
+  <img src="/assets/images/docs/NavigationView/example-3.png" alt="単体での使用">
+</div>
 
-    navExpandWidth: 280
-    defaultPage: Qt.resolvedUrl("pages/Home.qml")
+```qml
+FluentWindow {
+    width: 1100
+    height: 720
+    defaultPage: homePage
 
     navigationItems: [
         {
-            title: qsTr("ホーム"),
-            page: Qt.resolvedUrl("pages/Home.qml"),
+            title: qsTr("Home"),
+            page: homePage,
             icon: "ic_fluent_home_20_regular"
         }
     ]
+
+    Component {
+        id: homePage
+        Item {
+            Text {
+                anchors.centerIn: parent
+                text: qsTr("Home page")
+                font.pixelSize: 24
+            }
+        }
+    }
 }
+```
 ```
 
 単体で使用する場合は、ウィンドウサイズ、タイトル、ウィンドウ操作状態を参照できるよう `window` を指定する必要があります。
@@ -90,6 +98,7 @@ NavigationView {
 navigationView.push(Qt.resolvedUrl("pages/Detail.qml"), {
     itemId: 42
 })
+```
 ```
 
 ### `pushStack(page, properties)`

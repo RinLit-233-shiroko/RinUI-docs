@@ -2,16 +2,11 @@
 
 `SelectorBar` switches between a small set of content views. It extends Qt Quick `TabBar` but does not draw its own outer container background. Each `SelectorBarItem` uses an underline indicator to show selection, making it suitable above a title area or content region.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/SelectorBar-light.png',
-    dark: '/assets/images/examples/SelectorBar-dark.png',
-    alt: 'SelectorBar examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic Usage
+
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example-2.png" alt="Basic Usage">
+</div>
 
 ```qml
 SelectorBar {
@@ -39,6 +34,10 @@ The surrounding container belongs to the application. Place it inside a `Frame`,
 ## Switching Content
 
 Combine `currentIndex` with `Loader` or `StackLayout` to keep the selected tab and content synchronized:
+
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example-3.png" alt="Switching Content">
+</div>
 
 ```qml
 Column {
@@ -71,6 +70,10 @@ For complete application pages with back history, use [`NavigationView`](/Naviga
 
 `SelectorBar` inherits `TabBar`, so `Repeater` can create its items:
 
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example-4.png" alt="Dynamic Items">
+</div>
+
 ```qml
 SelectorBar {
     id: selector
@@ -95,6 +98,10 @@ SelectorBar {
 - `enabled`: disables the entire bar.
 - `SelectorBarItem.text`: item label.
 - `SelectorBarItem.icon.name`: Fluent icon name.
+
+<div align="center">
+  <img src="/assets/images/docs/SelectorBar/example.png" alt="States and Events">
+</div>
 
 ```qml
 SelectorBar {

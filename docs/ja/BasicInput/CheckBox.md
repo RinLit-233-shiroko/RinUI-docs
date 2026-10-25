@@ -7,7 +7,11 @@ CheckBox コントロールを使用すると、ユーザーはオプション�
 CheckBox は、単純なブール値の選択に使用できます。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png">
+  <img src="/assets/images/docs/CheckBox/example-2.png" alt="基本的なチェックボックス">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png" alt="基本的なチェックボックス">
 </div>
 
 ```qml
@@ -18,8 +22,9 @@ import RinUI
 
 CheckBox {
     text: qsTr("Standard CheckBox")
-    // checked: true // 初期状態でチェックする場合
+    // checked: true // 用于初始选中
 }
+```
 ```
 
 ## 3ステートチェックボックス
@@ -32,16 +37,21 @@ CheckBox {
 - `Qt.PartiallyChecked` （部分的にチェック済み、`tristate` が true の場合）
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png">
+  <img src="/assets/images/docs/CheckBox/example-3.png" alt="3ステートチェックボックス">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png" alt="3ステートチェックボックス">
 </div>
 
 ```qml
 CheckBox {
     text: qsTr("Three-state CheckBox")
     tristate: true
-    // プログラムで設定する場合:
+    // P编程方式设置:
     // checkState: Qt.PartiallyChecked 
 }
+```
 ```
 
 ## グループ化されたチェックボックス
@@ -49,30 +59,36 @@ CheckBox {
 チェックボックスを使用して、親の「すべて選択」チェックボックスを制御できます。 `examples/pages/controls/CheckBox.qml` の例では、`ButtonGroup` を使用してこれを示しています。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-grouped.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/CheckBox/example.png" alt="グループ化されたチェックボックス">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-grouped.png" alt="グループ化されたチェックボックス">
 </div>
 
 ```qml
-// 簡略化された概念。ButtonGroup を使用した完全な使用法については examples/pages/controls/CheckBox.qml を参照してください
+// 简化概念；完整用法请参考 examples/pages/controls/CheckBox.qml 中的 ButtonGroup
 Column {
     CheckBox {
         id: parentBox
         text: qsTr("Select all")
         tristate: true 
-        // 実際のシナリオでは、parentBox.checkState は子の状態に基づいて管理されます
+        // 实际场景中，parentBox.checkState 会根据子项状态进行管理
     }
 
     CheckBox {
         text: qsTr("Option 1")
-        // チェック状態を parentBox を更新するロジックに接続
+        // 将选中状态连接到更新 parentBox 的逻辑
     }
 
     CheckBox {
         text: qsTr("Option 2")
-        // チェック状態を parentBox を更新するロジックに接続
+        // 将选中状态连接到更新 parentBox 的逻辑
     }
 }
 ```
+```
+
 > 注：`Rin-UI/examples/pages/controls/CheckBox.qml` の例では、`ButtonGroup` を使用したグループ化されたチェックボックスの完全な実装が提供されています。
 
 ## 主なプロパティ

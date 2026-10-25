@@ -13,6 +13,10 @@ ScrollableTextArea は、スクロール可能な TextArea を含むコントロ
 
 ## 基本スクロール可能なテキストエリア
 
+<div align="center">
+  <img src="/assets/images/docs/ScrollableTextArea/example-2.png" alt="基本スクロール可能なテキストエリア">
+</div>
+
 ```qml
 ScrollableTextArea {
     id: control
@@ -24,16 +28,25 @@ ScrollableTextArea {
 
 ## プレースホルダー付きスクロール可能なテキストエリア
 
+<div align="center">
+  <img src="/assets/images/docs/ScrollableTextArea/example-3.png" alt="プレースホルダー付きスクロール可能なテキストエリア">
+</div>
+
 ```qml
 ScrollableTextArea {
     id: control
-    placeholderText: qsTr("ここにテキストを入力...")
+    placeholderText: qsTr("Type here...")
     width: 300
     height: 150
 }
 ```
+```
 
 ## 読み取り専用スクロール可能なテキストエリア
+
+<div align="center">
+  <img src="/assets/images/docs/ScrollableTextArea/example.png" alt="読み取り専用スクロール可能なテキストエリア">
+</div>
 
 ```qml
 ScrollableTextArea {

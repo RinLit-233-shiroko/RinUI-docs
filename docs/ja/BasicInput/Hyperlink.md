@@ -7,7 +7,11 @@ Hyperlink コンポーネントは、リンクとして機能するテキスト�
 デフォルトのWebブラウザで外部リンクを開くハイパーリンクを作成するには、表示用の `text` と `openUrl`（またはそのエイリアス `url`）プロパティを設定します。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-url.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Hyperlink/example.png" alt="URLへの基本的なハイパーリンク">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-url.png" alt="URLへの基本的なハイパーリンク">
 </div>
 
 ```qml
@@ -21,24 +25,30 @@ Hyperlink {
     openUrl: "https://github.com/RinLit-233-shiroko/Rin-UI"
 }
 ```
+```
 
 ## アプリ内アクション用のハイパーリンク
 
 また、`Hyperlink` を使用して、`onClicked` シグナルを処理することにより、内部アプリケーションアクションをトリガーすることもできます。アプリ内アクションのみを実行し、URLにナビゲートしない場合は、`openUrl` プロパティを設定しないでください。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-action.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Hyperlink/url.png" alt="アプリ内アクション用のハイパーリンク">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-action.png" alt="アプリ内アクション用のハイパーリンク">
 </div>
 
 ```qml
 Hyperlink {
     text: qsTr("Go to Settings")
     onClicked: {
-        // アプリ内の設定ページにナビゲートするロジック
+        // 导航到应用内设置页面的逻辑
         console.log("Settings link clicked");
-        // 例: stackView.push(settingsPageComponent)
+        // 示例: stackView.push(settingsPageComponent)
     }
 }
+```
 ```
 
 ## 主なプロパティ

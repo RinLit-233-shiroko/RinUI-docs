@@ -17,6 +17,7 @@ Component {
     }
 }
 ```
+```
 
 ## テーマモード
 
@@ -33,6 +34,7 @@ Component {
 ```qml
 Theme.toggleMode()
 ```
+```
 
 `Light`、`Dark`、`Auto` の設定モードを順番に切り替える関数ではありません。自動モードへ入る、または自動モードから抜ける場合は `setTheme()` を直接呼び出してください。
 
@@ -47,6 +49,7 @@ Theme.toggleMode()
 
 ```qml
 let darkNow = Theme.currentTheme.isDark
+```
 ```
 
 `Theme.isDark()` を呼び出すこともできます。これは `currentTheme.isDark` を返します。

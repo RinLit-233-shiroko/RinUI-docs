@@ -9,7 +9,11 @@ Unlike `SettingExpander`, `SettingCard` does not have a collapsible content area
 A `SettingCard` typically includes an `icon`, a `title`, and a `description`. The `content` property (which is the default property) can be used to place controls or other items on the right side of the card.
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/SettingCard/example-2.png" alt="Basic SettingCard">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-basic.png" alt="Basic SettingCard">
 </div>
 
 ```qml
@@ -30,13 +34,18 @@ SettingCard {
     }
 }
 ```
+```
 
 ## SettingCard for Information Display
 
 If no control is needed on the right (i.e., the `content` property is not populated with any items), the card can be used to display information with consistent styling.
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-info.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/SettingCard/example-3.png" alt="SettingCard for Information Display">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-info.png" alt="SettingCard for Information Display">
 </div>
 
 ```qml
@@ -49,6 +58,7 @@ SettingCard {
     description: qsTr("All systems operational. No issues detected.")
     // No child items provided for the 'content' slot on the right
 }
+```
 ```
 
 ## Key Properties
@@ -72,6 +82,10 @@ SettingCard {
 ## Example Usage in a List
 
 `SettingCard` is suitable for lists of settings or options where each item is distinct and does not require an expandable section.
+
+<div align="center">
+  <img src="/assets/images/docs/SettingCard/example.png" alt="Example Usage in a List">
+</div>
 
 ```qml
 import QtQuick.Layouts 1.15 // For ColumnLayout
@@ -104,6 +118,7 @@ ColumnLayout { // Using ColumnLayout for automatic sizing and spacing
         // No control in 'content', just info
     }
 }
+```
 ```
 
 ## Related Components

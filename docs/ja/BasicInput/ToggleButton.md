@@ -7,7 +7,11 @@
 `ToggleButton` はテキストやアイコンを表示し、チェック状態を維持します。デフォルトで `checkable` です。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/ToggleButton/example.png" alt="基本的なトグルボタン">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-basic.png" alt="基本的なトグルボタン">
 </div>
 
 ```qml

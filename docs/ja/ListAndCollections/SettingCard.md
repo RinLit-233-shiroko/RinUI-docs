@@ -9,7 +9,11 @@
 `SettingCard` は通常、`icon`（アイコン）、`title`（タイトル）、`description`（説明）を含みます。右側には `content`（デフォルトプロパティ）を使ってコントロールを配置できます。
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-basic.png">
+  <img src="/assets/images/docs/SettingCard/example-2.png" alt="基本的な使い方">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-basic.png" alt="基本的な使い方">
 </div>
 
 ```qml
@@ -30,13 +34,18 @@ SettingCard {
     }
 }
 ```
+```
 
 ## 情報表示としての使用
 
 右側にコントロールが不要な場合（つまり `content` を指定しない場合）、統一されたスタイルで情報を表示するカードとして使用できます。
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-info.png">
+  <img src="/assets/images/docs/SettingCard/example-3.png" alt="情報表示としての使用">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/SettingCard/settingcard-info.png" alt="情報表示としての使用">
 </div>
 
 ```qml
@@ -49,6 +58,7 @@ SettingCard {
     description: qsTr("All systems operational. No issues detected.")
     // No child items provided for the 'content' slot on the right
 }
+```
 ```
 
 ## 主なプロパティ
@@ -73,6 +83,10 @@ SettingCard {
 ## リストでの使用例
 
 `SettingCard` は、それぞれ独立した設定項目の表示に適しており、展開が不要な場面にぴったりです。
+
+<div align="center">
+  <img src="/assets/images/docs/SettingCard/example.png" alt="リストでの使用例">
+</div>
 
 ```qml
 import QtQuick.Layouts 1.15 // For ColumnLayout
@@ -105,6 +119,7 @@ ColumnLayout { // Using ColumnLayout for automatic sizing and spacing
         // No control in 'content', just info
     }
 }
+```
 ```
 
 ## 関連コンポーネント

@@ -2,16 +2,11 @@
 
 MenuItem is a component that represents a single item in a menu. It can contain text, an icon, or both. MenuItems can be used to perform actions or to represent options that can be selected.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/MenuItem-light.png',
-    dark: '/assets/images/examples/MenuItem-dark.png',
-    alt: 'MenuItem examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic MenuItem
+
+<div align="center">
+  <img src="/assets/images/docs/MenuItem/example-2.png" alt="Basic MenuItem">
+</div>
 
 ```qml
 MenuItem {
@@ -23,6 +18,10 @@ MenuItem {
 
 ## MenuItem with CheckBox
 
+<div align="center">
+  <img src="/assets/images/docs/MenuItem/example-3.png" alt="MenuItem with CheckBox">
+</div>
+
 ```qml
 MenuItem {
     text: qsTr("Bold")
@@ -33,6 +32,10 @@ MenuItem {
 ```
 
 ## MenuItem with Radio Button
+
+<div align="center">
+  <img src="/assets/images/docs/MenuItem/example.png" alt="MenuItem with Radio Button">
+</div>
 
 ```qml
 MenuItemGroup {

@@ -1,56 +1,62 @@
 # BusyIndicator
 
-BusyIndicator is a control that shows a user that some operation is in progress. It displays an animated circular indicator that provides visual feedback during long-running operations.
+`BusyIndicator` signals that an operation is still in progress with a looping animation. Use it for loading data or submitting a request when a definite completion percentage is not available.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/BusyIndicator-light.png',
-    dark: '/assets/images/examples/BusyIndicator-dark.png',
-    alt: 'BusyIndicator examples in light and dark themes'
-  }"
-  width="1000"
-/>
+## Basic Usage
 
-## Basic BusyIndicator
+<div align="center">
+  <img src="/assets/images/docs/BusyIndicator/example-2.png" alt="Basic Usage">
+</div>
 
 ```qml
 BusyIndicator {
-    visible: isLoading
-    Layout.alignment: Qt.AlignHCenter
+    running: true
 }
 ```
+```
 
-## BusyIndicator with Text
+## Combine with Status Text
+
+<div align="center">
+  <img src="/assets/images/docs/BusyIndicator/example-3.png" alt="Combine with Status Text">
+</div>
 
 ```qml
-ColumnLayout {
+Column {
+    spacing: 12
+
     BusyIndicator {
-        Layout.alignment: Qt.AlignHCenter
-        visible: isLoading
+        anchors.horizontalCenter: parent.horizontalCenter
+        running: isLoading
     }
-    
-    Label {
-        Layout.alignment: Qt.AlignHCenter
-        text: isLoading ? qsTr("Loading...") : ""
-        visible: isLoading
+
+    Text {
+        anchors.horizontalCenter: parent.horizontalCenter
+        text: isLoading ? qsTr("Loading...") : qsTr("Complete")
     }
 }
 ```
 
-## Custom Size BusyIndicator
+Provide `isLoading` from application logic and update it when the asynchronous operation starts and finishes.
+
+## Custom Size
+
+<div align="center">
+  <img src="/assets/images/docs/BusyIndicator/example.png" alt="Custom Size">
+</div>
 
 ```qml
 BusyIndicator {
     width: 60
     height: 60
-    visible: isLoading
-    Layout.alignment: Qt.AlignHCenter
+    running: true
 }
 ```
+```
 
-## Important Properties
+## Properties
 
-- `visible`: Whether the indicator is visible
-- `implicitWidth`: The implicit width of the indicator
-- `implicitHeight`: The implicit height of the indicator
-- `enabled`: Whether the indicator is enabled
+- `running`: Whether the busy animation is shown and running; this is a compatibility property provided by BusyIndicator.
+- `state`: Inherited from ProgressRing; can be used to set running, paused, or error state.
+- `width`, `height`: Display size of the indicator.
+- `indeterminate`: Internal indeterminate-animation setting controlled by `running`.

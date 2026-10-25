@@ -2,142 +2,92 @@
 
 TableView is a control for displaying data in rows and columns. It extends the standard QML TableView with custom styling and functionality.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/TableView-light.png',
-    dark: '/assets/images/examples/TableView-dark.png',
-    alt: 'TableView examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic TableView
 
+<div align="center">
+  <img src="/assets/images/docs/TableView/example-2.png" alt="Basic TableView">
+</div>
+
 ```qml
+import Qt.labs.qmlmodels
 TableView {
     id: tableView
     width: 600
-    height: 300
+    height: 180
     
-    TableViewColumn {
-        role: "name"
-        title: qsTr("Name")
-        width: tableView.width * 0.33
-    }
-    TableViewColumn {
-        role: "age"
-        title: qsTr("Age")
-        width: tableView.width * 0.33
-    }
-    TableViewColumn {
-        role: "city"
-        title: qsTr("City")
-        width: tableView.width * 0.33
-    }
-    
-    model: ListModel {
-        ListElement {
-            name: "John Doe"
-            age: "30"
-            city: "New York"
-        }
-        ListElement {
-            name: "Jane Smith"
-            age: "25"
-            city: "Los Angeles"
-        }
-        ListElement {
-            name: "Robert Johnson"
-            age: "35"
-            city: "Chicago"
-        }
+    columnWidthProvider: function(column) { return [200, 100, 200][column] }
+    rowHeightProvider: function(row) { return 40 }
+    model: TableModel {
+        TableModelColumn { display: "name" }
+        TableModelColumn { display: "age" }
+        TableModelColumn { display: "city" }
+        rows: [
+            { name: "Alex Morgan", age: 30, city: "Beijing" },
+            { name: "Jamie Lee", age: 25, city: "Shanghai" },
+            { name: "Taylor Kim", age: 35, city: "Guangzhou" }
+        ]
     }
 }
+```
 ```
 
 ## Custom Column Widths
 
+<div align="center">
+  <img src="/assets/images/docs/TableView/example-3.png" alt="Custom Column Widths">
+</div>
+
 ```qml
+import Qt.labs.qmlmodels
 TableView {
     id: tableView
     width: 600
-    height: 300
+    height: 180
     
-    TableViewColumn {
-        role: "name"
-        title: qsTr("Name")
-        width: 150
+    columnWidthProvider: function(column) {
+        return [150, 100, 350][column]
     }
-    TableViewColumn {
-        role: "age"
-        title: qsTr("Age")
-        width: 100
-    }
-    TableViewColumn {
-        role: "city"
-        title: qsTr("City")
-        width: 350
-    }
-    
-    model: ListModel {
-        ListElement {
-            name: "John Doe"
-            age: "30"
-            city: "New York"
-        }
-        ListElement {
-            name: "Jane Smith"
-            age: "25"
-            city: "Los Angeles"
-        }
-        ListElement {
-            name: "Robert Johnson"
-            age: "35"
-            city: "Chicago"
-        }
+    rowHeightProvider: function(row) { return 40 }
+    model: TableModel {
+        TableModelColumn { display: "name" }
+        TableModelColumn { display: "age" }
+        TableModelColumn { display: "city" }
+        rows: [
+            { name: "Alex Morgan", age: 30, city: "Beijing" },
+            { name: "Jamie Lee", age: 25, city: "Shanghai" },
+            { name: "Taylor Kim", age: 35, city: "Guangzhou" }
+        ]
     }
 }
+```
 ```
 
 ## Sorting by Column
 
+<div align="center">
+  <img src="/assets/images/docs/TableView/example.png" alt="Sorting by Column">
+</div>
+
 ```qml
+import Qt.labs.qmlmodels
 TableView {
     id: tableView
     width: 600
-    height: 300
+    height: 180
     
-    property bool sortAscending: true
-    property string sortRole: "name"
-    
-    TableViewColumn {
-        role: "name"
-        title: qsTr("Name")
-        width: 200
-        onClicked: {
-            tableView.sortAscending = !tableView.sortAscending
-            tableView.sortRole = "name"
-            tableView.model.sort(tableView.sortRole, tableView.sortAscending)
-        }
+    columnWidthProvider: function(column) { return [200, 100, 300][column] }
+    model: TableModel {
+        TableModelColumn { display: "name" }
+        TableModelColumn { display: "age" }
+        TableModelColumn { display: "city" }
+        rows: [
+            { name: "Alex Morgan", age: 30, city: "Beijing" },
+            { name: "Jamie Lee", age: 25, city: "Shanghai" },
+            { name: "Taylor Kim", age: 35, city: "Guangzhou" }
+        ]
     }
-    TableViewColumn {
-        role: "age"
-        title: qsTr("Age")
-        width: 100
-        onClicked: {
-            tableView.sortAscending = !tableView.sortAscending
-            tableView.sortRole = "age"
-            tableView.model.sort(tableView.sortRole, tableView.sortAscending)
-        }
-    }
-    TableViewColumn {
-        role: "city"
-        title: qsTr("City")
-        width: 300
-    }
-    
-    model: PersonModel {}
 }
+```
 ```
 
 ## Important Properties

@@ -7,19 +7,24 @@ The `CheckBox` control allows users to make a binary choice, such as selecting o
 A `CheckBox` can be used for simple boolean selections.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png">
+  <img src="/assets/images/docs/CheckBox/example-2.png" alt="Basic CheckBox">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-basic.png" alt="Basic CheckBox">
 </div>
 
 ```qml
 import QtQuick 2.15
-import RinUI // Consistent with Button.md
+import RinUI
 
 // ...
 
 CheckBox {
     text: qsTr("Standard CheckBox")
-    // checked: true // for initially checked
+    // checked: true // 用于初始选中
 }
+```
 ```
 
 ## Three-State CheckBox
@@ -32,16 +37,21 @@ The `checkState` property can be:
 - `Qt.PartiallyChecked` (when `tristate` is true)
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png">
+  <img src="/assets/images/docs/CheckBox/example-3.png" alt="Three-State CheckBox">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-tristate.png" alt="Three-State CheckBox">
 </div>
 
 ```qml
 CheckBox {
     text: qsTr("Three-state CheckBox")
     tristate: true
-    // To set programmatically:
+    // P编程方式设置:
     // checkState: Qt.PartiallyChecked 
 }
+```
 ```
 
 ## Grouped CheckBoxes
@@ -49,30 +59,36 @@ CheckBox {
 CheckBoxes can be used to control a parent "select all" CheckBox. The example `examples/pages/controls/CheckBox.qml` demonstrates this using `ButtonGroup`.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/CheckBox/checkbox-grouped.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/CheckBox/example.png" alt="Grouped CheckBoxes">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/CheckBox/checkbox-grouped.png" alt="Grouped CheckBoxes">
 </div>
 
 ```qml
-// Simplified concept; refer to examples/pages/controls/CheckBox.qml for full usage with ButtonGroup
+// 简化概念；完整用法请参考 examples/pages/controls/CheckBox.qml 中的 ButtonGroup
 Column {
     CheckBox {
         id: parentBox
         text: qsTr("Select all")
         tristate: true 
-        // In a real scenario, parentBox.checkState would be managed based on child states
+        // 实际场景中，parentBox.checkState 会根据子项状态进行管理
     }
 
     CheckBox {
         text: qsTr("Option 1")
-        // Connect checked state to logic updating parentBox
+        // 将选中状态连接到更新 parentBox 的逻辑
     }
 
     CheckBox {
         text: qsTr("Option 2")
-        // Connect checked state to logic updating parentBox
+        // 将选中状态连接到更新 parentBox 的逻辑
     }
 }
 ```
+```
+
 > Note: The example in `Rin-UI/examples/pages/controls/CheckBox.qml` provides a complete implementation for grouped checkboxes using `ButtonGroup`.
 
 ## Key Properties

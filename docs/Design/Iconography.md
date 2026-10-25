@@ -2,7 +2,13 @@
 
 Iconography is a visual design language that can be used to communicate information quickly and effectively. RinUI provides a comprehensive set of icons that follow consistent design principles and can be easily integrated into your applications.
 
+<IconSearch />
+
 ## Basic Icon Usage
+
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-2.png" alt="Basic Icon Usage">
+</div>
 
 ```qml
 import RinUI
@@ -12,8 +18,11 @@ Icon {
     size: 24
 }
 ```
-
 ## Icon with Different Sizes
+
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-3.png" alt="Icon with Different Sizes">
+</div>
 
 ```qml
 Column {
@@ -43,6 +52,10 @@ Column {
 
 ## Icon with Colors
 
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-4.png" alt="Icon with Colors">
+</div>
+
 ```qml
 Row {
     spacing: 12
@@ -71,6 +84,10 @@ Row {
 
 ## Icon in Buttons
 
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-5.png" alt="Icon in Buttons">
+</div>
+
 ```qml
 Row {
     spacing: 12
@@ -92,6 +109,10 @@ Row {
 ```
 
 ## Icon in Navigation
+
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example.png" alt="Icon in Navigation">
+</div>
 
 ```qml
 NavigationBar {

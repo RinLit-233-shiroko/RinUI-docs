@@ -7,7 +7,11 @@ DropDownButton は、クリックするとオプションのメニューを表�
 DropDownButton には通常、テキストラベルとドロップダウンインジケータがあります。メニュー項目は子として定義され、内部メニューを構成します。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/DropDownButton/example-2.png" alt="基本的なドロップダウンボタン">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-basic.png" alt="基本的なドロップダウンボタン">
 </div>
 
 ```qml
@@ -27,7 +31,7 @@ DropDownButton {
         text: qsTr("Open")
         onTriggered: console.log("Open clicked")
     }
-    // MenuSeparator が利用可能で互換性があると仮定：
+    // 假设 MenuSeparator 可用且兼容：
     // MenuSeparator { } 
     MenuItem {
         text: qsTr("Save")
@@ -35,13 +39,18 @@ DropDownButton {
     }
 }
 ```
+```
 
 ## アイコン付きドロップダウンボタン
 
 ボタン自体とそのメニュー項目の両方にアイコンを含めることができます。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-icons.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/DropDownButton/example.png" alt="アイコン付きドロップダウンボタン">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-icons.png" alt="アイコン付きドロップダウンボタン">
 </div>
 
 ```qml

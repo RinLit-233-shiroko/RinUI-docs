@@ -2,16 +2,13 @@
 
 アイコングラフィは、情報を迅速かつ効果的に伝えるために使用できる視覚的なデザイン言語です。RinUI は、一貫したデザイン原則に従い、アプリケーションに簡単に統合できる包括的なアイコンセットを提供します。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Iconography-light.png',
-    dark: '/assets/images/examples/Iconography-dark.png',
-    alt: 'Iconography コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
+<IconSearch />
 
 ## 基本的なアイコンの使用
+
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-2.png" alt="基本的なアイコンの使用">
+</div>
 
 ```qml
 import RinUI
@@ -23,6 +20,10 @@ Icon {
 ```
 
 ## 異なるサイズのアイコン
+
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-3.png" alt="異なるサイズのアイコン">
+</div>
 
 ```qml
 Column {
@@ -52,6 +53,10 @@ Column {
 
 ## 色付きのアイコン
 
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-4.png" alt="色付きのアイコン">
+</div>
+
 ```qml
 Row {
     spacing: 12
@@ -80,6 +85,10 @@ Row {
 
 ## ボタン内のアイコン
 
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example-5.png" alt="ボタン内のアイコン">
+</div>
+
 ```qml
 Row {
     spacing: 12
@@ -101,6 +110,10 @@ Row {
 ```
 
 ## ナビゲーション内のアイコン
+
+<div align="center">
+  <img src="/assets/images/docs/Iconography/example.png" alt="ナビゲーション内のアイコン">
+</div>
 
 ```qml
 NavigationBar {

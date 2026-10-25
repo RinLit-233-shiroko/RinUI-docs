@@ -7,7 +7,7 @@ The `TimePicker` allows users to select a time (hours and minutes, with an optio
 By default, `TimePicker` uses a 12-hour clock format with an AM/PM selector. The displayed values for hour, minute, and AM/PM are based on the component's current selection.
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/TimePicker/timepicker-12hr.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/TimePicker/12.png" alt="Basic TimePicker (12-hour format)">
 </div>
 
 ```qml
@@ -40,7 +40,7 @@ TimePicker {
 Set the `use24Hour` property to `true` to use a 24-hour clock format. This hides the AM/PM selector.
 
 <div align="center">
-  <img src="/assets/images/DateAndTime/TimePicker/timepicker-24hr.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/TimePicker/24.png" alt="24-Hour Format TimePicker">
 </div>
 
 ```qml
@@ -59,6 +59,10 @@ TimePicker {
 ## Setting the Time Programmatically
 
 The `setTime()` method allows you to set the time of the picker. It accepts a string in "HH:MM" (24-hour) format.
+
+<div align="center">
+  <img src="/assets/images/docs/TimePicker/example.png" alt="Setting the Time Programmatically">
+</div>
 
 ```qml
 import RinUI // Consistent import

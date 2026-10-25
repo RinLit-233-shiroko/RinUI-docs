@@ -9,7 +9,11 @@ Flyouts inherit from `QtQuick.Controls.Basic.Popup`.
 A `Flyout` is often opened in response to a button click or other user action. It can contain text and custom buttons. The `target` property can be used to associate the flyout with the control that opens it, which helps in positioning.
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Flyout/example.png" alt="Basic Flyout">
+</div>
+
+<div align="center">
+  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-basic.png" alt="Basic Flyout">
 </div>
 
 ```qml
@@ -45,7 +49,7 @@ Flyout {
 Flyouts can display an image at the top and be positioned relative to their parent or `target` control using the `position` property. This property uses a RinUI-specific `Position` enum.
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-image-positioned.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/DialogsAndFlyouts/Flyout/flyout-image-positioned.png" alt="Flyout with Image and Positioning">
 </div>
 
 ```qml

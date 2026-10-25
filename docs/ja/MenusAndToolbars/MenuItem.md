@@ -2,16 +2,11 @@
 
 MenuItem は、メニュー内の単一の項目を表すコンポーネントです。テキスト、アイコン、またはその両方を含めることができます。MenuItem はアクションを実行するため、または選択可能なオプションを表すために使用できます。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/MenuItem-light.png',
-    dark: '/assets/images/examples/MenuItem-dark.png',
-    alt: 'MenuItem コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本的な MenuItem
+
+<div align="center">
+  <img src="/assets/images/docs/MenuItem/example-2.png" alt="基本的な MenuItem">
+</div>
 
 ```qml
 MenuItem {
@@ -23,6 +18,10 @@ MenuItem {
 
 ## チェックボックス付き MenuItem
 
+<div align="center">
+  <img src="/assets/images/docs/MenuItem/example-3.png" alt="チェックボックス付き MenuItem">
+</div>
+
 ```qml
 MenuItem {
     text: qsTr("太字")
@@ -33,6 +32,10 @@ MenuItem {
 ```
 
 ## ラジオボタン付き MenuItem
+
+<div align="center">
+  <img src="/assets/images/docs/MenuItem/example.png" alt="ラジオボタン付き MenuItem">
+</div>
 
 ```qml
 MenuItemGroup {

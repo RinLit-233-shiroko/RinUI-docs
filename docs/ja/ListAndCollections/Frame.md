@@ -7,7 +7,11 @@ RinUI の `Frame` コンポーネントは、`QtQuick.Controls.Basic.Frame` か�
 `Frame` は、コンテンツを視覚的にグループ化するために使用できます。子アイテムを `Frame` 内に直接配置できます。これらの子は `Frame` の `contentItem` に親子化されます。標準のパディングプロパティを使用して、フレームの端とそのコンテンツの間にスペースを作成できます。
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/Frame/frame-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Frame/example.png" alt="基本的なフレーム">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/Frame/frame-basic.png" alt="基本的なフレーム">
 </div>
 
 ```qml
@@ -38,42 +42,9 @@ Frame {
 
 `frameless` プロパティを `true` に設定すると、`Frame` の表示される背景（色と境界線）が非表示になります。`Frame` 自体はレイアウトコンテナとして引き続き存在し、`clip` が `true` の場合はコンテンツをクリッピングします。これは、視覚的な装飾を追加せずにグループ化およびクリッピングする場合に便利です。
 
-```qml
-Frame {
-    width: 150
-    height: 100
-    frameless: true
-    padding: 5 // パディングはコンテンツの配置に引き続き適用されます
-    clip: true // コンテンツは Frame の境界にクリップされます
-
-    Rectangle {
-        // この矩形は Frame の contentItem の子です
-        anchors.fill: parent
-        // マージンが負であるか、コンテンツがフレームより大きい場合、クリップされます
-        anchors.margins: -10 // 例：コンテンツがフレームより大きい
-        color: "lightblue" 
-        Text { anchors.centerIn: parent; text: "Clipped Content"; }
-    }
-}
-```
-
 ## ホバー効果
 
 `hoverable` が `true`（デフォルト）の場合、マウスホバー時に `Frame` の背景の不透明度がわずかに変化し、視覚的なフィードバックを提供します。`hover` プロパティを使用して、この状態に反応できます。
-
-```qml
-Frame {
-    width: 100
-    height: 100
-    color: "lightgray"
-    hoverable: true // デフォルト
-
-    Text {
-        anchors.centerIn: parent
-        text: parent.hover ? qsTr("Hovered!") : qsTr("Hover me")
-    }
-}
-```
 
 ## 主なプロパティ
 

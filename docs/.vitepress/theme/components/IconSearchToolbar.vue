@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { iconCategories } from './iconCategories'
+import { useData } from 'vitepress'
+import { getIconCategoryLabel, iconCategories } from './iconCategories'
 
 type IconStyle = 'all' | 'regular' | 'filled'
 
@@ -9,6 +10,8 @@ const props = defineProps<{
   styleFilter: IconStyle
   typeFilter: string
 }>()
+const { lang } = useData()
+const locale = computed(() => lang.value.startsWith('zh') ? 'zh' : lang.value.startsWith('ja') ? 'ja' : 'en')
 
 const emit = defineEmits<{
   'update:query': [value: string]
@@ -17,11 +20,11 @@ const emit = defineEmits<{
   reset: []
 }>()
 
-const styleOptions: Array<{ value: IconStyle; label: string }> = [
-  { value: 'all', label: '全部' },
+const styleOptions = computed<Array<{ value: IconStyle; label: string }>>(() => [
+  { value: 'all', label: locale.value === 'zh' ? '全部' : locale.value === 'ja' ? 'すべて' : 'All' },
   { value: 'regular', label: 'Regular' },
   { value: 'filled', label: 'Filled' }
-]
+])
 
 const hasFilters = computed(
   () => props.query !== '' || props.styleFilter !== 'all' || props.typeFilter !== 'all'
@@ -29,25 +32,25 @@ const hasFilters = computed(
 </script>
 
 <template>
-  <div class="icon-search-toolbar" role="search" aria-label="搜索和过滤图标">
+  <div class="icon-search-toolbar" role="search" :aria-label="locale === 'zh' ? '搜索和过滤图标' : locale === 'ja' ? 'アイコンの検索と絞り込み' : 'Search and filter icons'">
     <label class="icon-toolbar-search">
       <svg viewBox="0 0 20 20" aria-hidden="true">
         <path
           d="m13.5 12.4 3.55 3.55a.75.75 0 1 1-1.06 1.06l-3.55-3.55a6.5 6.5 0 1 1 1.06-1.06ZM9 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
         />
       </svg>
-      <span class="sr-only">搜索图标</span>
+      <span class="sr-only">{{ locale === 'zh' ? '搜索图标' : locale === 'ja' ? 'アイコンを検索' : 'Search icons' }}</span>
       <input
         :value="query"
         type="search"
-        placeholder="搜索图标名称，例如 home、search..."
+        :placeholder="locale === 'zh' ? '搜索图标名称，例如 home、search...' : locale === 'ja' ? 'アイコン名で検索（例: home、search）...' : 'Search icon names, e.g. home, search...'"
         @input="emit('update:query', ($event.target as HTMLInputElement).value)"
       />
       <button
         v-if="query"
         class="icon-toolbar-clear"
         type="button"
-        aria-label="清除搜索"
+        :aria-label="locale === 'zh' ? '清除搜索' : locale === 'ja' ? '検索をクリア' : 'Clear search'"
         @click="emit('update:query', '')"
       >
         ×
@@ -55,7 +58,7 @@ const hasFilters = computed(
     </label>
 
     <div class="icon-toolbar-options">
-      <div class="icon-toolbar-segments" role="group" aria-label="图标样式">
+      <div class="icon-toolbar-segments" role="group" :aria-label="locale === 'zh' ? '图标样式' : locale === 'ja' ? 'アイコンのスタイル' : 'Icon style'">
         <button
           v-for="option in styleOptions"
           :key="option.value"
@@ -69,13 +72,13 @@ const hasFilters = computed(
       </div>
 
       <label class="icon-toolbar-category">
-        <span class="sr-only">图标分类</span>
+        <span class="sr-only">{{ locale === 'zh' ? '图标分类' : locale === 'ja' ? 'アイコンカテゴリ' : 'Icon category' }}</span>
         <select
           :value="typeFilter"
           @change="emit('update:typeFilter', ($event.target as HTMLSelectElement).value)"
         >
           <option v-for="option in iconCategories" :key="option.value" :value="option.value">
-            {{ option.label }}
+            {{ getIconCategoryLabel(option.value, locale) }}
           </option>
         </select>
       </label>
@@ -86,7 +89,7 @@ const hasFilters = computed(
         :disabled="!hasFilters"
         @click="emit('reset')"
       >
-        恢复默认
+        {{ locale === 'zh' ? '恢复默认' : locale === 'ja' ? 'リセット' : 'Reset' }}
       </button>
     </div>
   </div>

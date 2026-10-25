@@ -1,10 +1,27 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useData } from 'vitepress'
 import iconIndex from '../../../public/assets/data/fluent-system-icons.json'
 import IconSearchToolbar from './IconSearchToolbar.vue'
 import { matchesIconCategory } from './iconCategories'
 
 const query = ref('')
+const { lang } = useData()
+const locale = computed(() => lang.value.startsWith('zh') ? 'zh' : lang.value.startsWith('ja') ? 'ja' : 'en')
+const labels = computed(() => ({
+  zh: {
+    aria: 'Fluent 图标搜索', count: '个图标', results: '搜索结果', name: '图标名称', usage: 'QML 用法',
+    copyName: '复制图标名称', copyUsage: '复制 QML 用法', empty: '没有找到匹配的图标，请尝试其他关键词。'
+  },
+  ja: {
+    aria: 'Fluent アイコン検索', count: '個のアイコン', results: '検索結果', name: 'アイコン名', usage: 'QML の使用例',
+    copyName: 'アイコン名をコピー', copyUsage: 'QML の使用例をコピー', empty: '一致するアイコンがありません。別のキーワードをお試しください。'
+  },
+  en: {
+    aria: 'Fluent icon search', count: 'icons', results: 'Search results', name: 'Icon name', usage: 'QML usage',
+    copyName: 'Copy icon name', copyUsage: 'Copy QML usage', empty: 'No matching icons found. Try another keyword.'
+  }
+} as const)[locale.value])
 const styleFilter = ref('all')
 const typeFilter = ref('all')
 const selectedIcon = ref('ic_fluent_apps_16_regular')
@@ -122,10 +139,10 @@ async function copy(text: string) {
 </script>
 
 <template>
-  <section aria-label="Fluent 图标搜索">
+  <section :aria-label="labels.aria">
     <div class="icon-search-heading">
       <strong>Fluent System Icons</strong>
-      <span>{{ filteredIcons.length.toLocaleString() }} / {{ icons.length.toLocaleString() }} 个图标</span>
+      <span>{{ filteredIcons.length.toLocaleString(locale) }} / {{ icons.length.toLocaleString(locale) }} {{ labels.count }}</span>
     </div>
     <IconSearchToolbar
       v-model:query="query"
@@ -140,7 +157,7 @@ async function copy(text: string) {
           ref="grid"
           class="icon-search-grid"
           role="listbox"
-          aria-label="搜索结果"
+          :aria-label="labels.results"
           :style="{ paddingTop: `${visibleRange.top}px`, paddingBottom: `${visibleRange.bottom}px` }"
         >
           <button
@@ -161,23 +178,23 @@ async function copy(text: string) {
       <aside>
         <p class="icon-search-preview" aria-hidden="true">{{ glyph(selectedIcon) }}</p>
         <strong>{{ selectedIcon.replace('ic_fluent_', '') }}</strong>
-        <p>图标名称</p>
+        <p>{{ labels.name }}</p>
         <div class="icon-search-copy-row">
           <code>{{ selectedIcon }}</code>
-          <button class="icon-search-copy" type="button" aria-label="复制图标名称" @click="copy(selectedIcon)">
+          <button class="icon-search-copy" type="button" :aria-label="labels.copyName" @click="copy(selectedIcon)">
             <span class="icon-search-copy-glyph" aria-hidden="true">{{ glyph('ic_fluent_copy_20_regular') }}</span>
           </button>
         </div>
-        <p>QML 用法</p>
+        <p>{{ labels.usage }}</p>
         <div class="icon-search-copy-row">
           <code>{{ code }}</code>
-          <button class="icon-search-copy" type="button" aria-label="复制 QML 用法" @click="copy(code)">
+          <button class="icon-search-copy" type="button" :aria-label="labels.copyUsage" @click="copy(code)">
             <span class="icon-search-copy-glyph" aria-hidden="true">{{ glyph('ic_fluent_copy_20_regular') }}</span>
           </button>
         </div>
       </aside>
     </div>
-    <p v-else>没有找到匹配的图标，请尝试其他关键词。</p>
+    <p v-else>{{ labels.empty }}</p>
   </section>
 </template>
 

@@ -9,14 +9,15 @@ You can use the utility tools `Utils` like this:
 import RinUI
 
 Component {
-    // get Utils property
+    // 获取 Utils 属性
     property var property: Utils.property;
     
-    // modify Utils property
+    // 修改 Utils 属性
     Component.onCompleted: {
         Utils.property = newValue;
     }
 }
+```
 ```
 
 ## Appearance and Theme
@@ -60,6 +61,7 @@ Rectangle {
     height: 48
     font.pixelSize: 14
 }
+```
 ```
 
 Avoid `Utils.dp(320)` and do not manually multiply by `Utils.dpiScale`; doing so applies HiDPI scaling twice.

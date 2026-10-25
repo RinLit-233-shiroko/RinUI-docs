@@ -7,7 +7,11 @@ The `SettingExpander` is a specialized version of the `Expander` component, tail
 The collapsible content area of a `SettingExpander` is often populated with `SettingItem` components to maintain a consistent layout for lists of sub-settings.
 
 <div align="center">
-  <img src="/assets/images/Layout/SettingExpander/settingexpander-with-items.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/SettingExpander/settingitem.png" alt="Using `SettingItem` in Collapsible Area">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/SettingExpander/settingexpander-with-items.png" alt="Using `SettingItem` in Collapsible Area">
 </div>
 
 ```qml

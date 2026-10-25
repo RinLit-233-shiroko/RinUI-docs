@@ -7,7 +7,11 @@ The `ListView` component is used to display a list of data items that can scroll
 A `ListView` requires a `model` to provide data. The default delegate (an instance of `ListViewDelegate`) can display simple text if the `textRole` property of the `ListView` is set correctly for the model.
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/ListView/listview-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/ListView/example.png" alt="Basic ListView with Default Delegate">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/ListView/listview-basic.png" alt="Basic ListView with Default Delegate">
 </div>
 
 ```qml
@@ -37,7 +41,7 @@ The default `ListViewDelegate` places this text in its `middleArea`.
 To create richer list items, you provide a custom instance of `ListViewDelegate` to the `delegate` property of the `ListView`. `ListViewDelegate` is itself a component that structures its content into three main areas: `leftArea`, `middleArea`, and `rightArea`.
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/ListView/listview-custom-delegate.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/ListAndCollections/ListView/listview-custom-delegate.png" alt="Customizing Item Appearance with `ListViewDelegate`">
 </div>
 
 ```qml

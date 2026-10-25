@@ -2,16 +2,11 @@
 
 Popup is a control for displaying floating content on top of the interface. It can be used for tooltips, confirmations, or other content that needs to float above the main interface.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Popup-light.png',
-    dark: '/assets/images/examples/Popup-dark.png',
-    alt: 'Popup examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic Popup
+
+<div align="center">
+  <img src="/assets/images/docs/Popup/example-2.png" alt="Basic Popup">
+</div>
 
 ```qml
 Popup {
@@ -26,6 +21,10 @@ Popup {
 ```
 
 ## Popup with Position
+
+<div align="center">
+  <img src="/assets/images/docs/Popup/example-3.png" alt="Popup with Position">
+</div>
 
 ```qml
 Button {
@@ -50,6 +49,10 @@ Popup {
 ```
 
 ## Popup with Anchor Item
+
+<div align="center">
+  <img src="/assets/images/docs/Popup/example.png" alt="Popup with Anchor Item">
+</div>
 
 ```qml
 Rectangle {

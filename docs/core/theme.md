@@ -17,6 +17,7 @@ Component {
     }
 }
 ```
+```
 
 ## Theme Modes
 
@@ -33,6 +34,7 @@ The `setTheme` function is used to switch the light and dark theme of all RinUI 
 ```qml
 Theme.toggleMode()
 ```
+```
 
 It does not cycle through the `Light`, `Dark`, and `Auto` configuration modes. Call `setTheme()` directly to enter or leave automatic mode.
 
@@ -47,6 +49,7 @@ In `Auto` mode, `getTheme()` still returns `"Auto"` rather than resolving to the
 
 ```qml
 let darkNow = Theme.currentTheme.isDark
+```
 ```
 
 You can also call `Theme.isDark()`, which returns `currentTheme.isDark`.

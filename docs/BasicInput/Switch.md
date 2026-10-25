@@ -7,12 +7,21 @@ The `Switch` control is a toggle that allows users to choose between two mutuall
 A `Switch` displays a visual knob that slides between two states. By default, it can display "On" or "Off" text based on its state if the main `text` property is not set.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Switch/switch-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Switch/example-2.png" alt="Basic Switch">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Switch/switch-basic.png" alt="Basic Switch">
 </div>
 
 ```qml
+import QtQuick 2.15
+import RinUI
+
+// ...
+
 Switch {
-    // checked: true // To make it initially "on"
+    // checked: true // 用于初始设为“开”状态
     onCheckedChanged: {
         if (checked) {
             console.log("Switch is ON. Default text might be '" + checkedText + "'");
@@ -22,13 +31,18 @@ Switch {
     }
 }
 ```
+```
 
 ## Switch with Custom Label Text
 
 You can provide a persistent custom text label for the `Switch` using its `text` property. This label remains the same regardless of the on/off state.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Switch/switch-custom-text.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Switch/example-3.png" alt="Switch with Custom Label Text">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Switch/switch-custom-text.png" alt="Switch with Custom Label Text">
 </div>
 
 ```qml
@@ -45,7 +59,11 @@ Switch {
 If the main `text` property is empty, the `Switch` can display different text labels depending on its `checked` state by setting `checkedText` and `uncheckedText`.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Switch/switch-on-off-text.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Switch/example.png" alt="Switch with Custom On/Off State Text">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Switch/switch-on-off-text.png" alt="Switch with Custom On/Off State Text">
 </div>
 
 ```qml

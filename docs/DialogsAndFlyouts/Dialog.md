@@ -7,7 +7,11 @@ The `Dialog` component provides a modal window that can be used to display impor
 A basic dialog consists of a title, content, and standard buttons (e.g., Ok, Cancel). Content items are added as direct children of the `Dialog` component.
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Dialog/example-2.png" alt="Basic Dialog">
+</div>
+
+<div align="center">
+  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-basic.png" alt="Basic Dialog">
 </div>
 
 ```qml
@@ -24,23 +28,24 @@ Button {
 Dialog {
     id: basicDialog
     title: qsTr("Basic Dialog Title")
-    // modal: true is default via Overlay.modal usage in the component
+    // modal: true 在组件中通过 Overlay.modal 使用，因此是默认行为
     standardButtons: Dialog.Ok | Dialog.Cancel
 
-    // Content items are added as children here
+    // 内容项在此处作为子项添加
     Text {
         text: qsTr("This is the main content of the dialog.")
     }
 
     onAccepted: {
         console.log("Dialog accepted!");
-        // Perform action on OK
+        // 执行“确定”操作
     }
     onRejected: {
         console.log("Dialog rejected or closed.");
-        // Handle cancellation
+        // 处理取消操作
     }
 }
+```
 ```
 
 ## Custom Content
@@ -48,7 +53,11 @@ Dialog {
 You can place any QML components as children of the `Dialog` to create custom layouts and interactions within the dialog's content area. These children are automatically parented to an internal `ColumnLayout` within the `Dialog`'s `contentItem`.
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-custom.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Dialog/example.png" alt="Custom Content">
+</div>
+
+<div align="center">
+  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-custom.png" alt="Custom Content">
 </div>
 
 ```qml

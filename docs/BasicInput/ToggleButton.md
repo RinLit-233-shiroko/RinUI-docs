@@ -7,7 +7,11 @@ The `ToggleButton` is a button that can be toggled between two states: checked (
 A `ToggleButton` displays text and/or an icon and maintains a checked state. It is `checkable` by default.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/ToggleButton/example.png" alt="Basic ToggleButton">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ToggleButton/togglebutton-basic.png" alt="Basic ToggleButton">
 </div>
 
 ```qml

@@ -2,16 +2,11 @@
 
 Popup は、インターフェースの上にフローティングコンテンツを表示するためのコントロールです。ツールチップ、確認、またはメインインターフェースの上にフロートする必要がある他のコンテンツに使用できます。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Popup-light.png',
-    dark: '/assets/images/examples/Popup-dark.png',
-    alt: 'Popup コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本ポップアップ
+
+<div align="center">
+  <img src="/assets/images/docs/Popup/example-2.png" alt="基本ポップアップ">
+</div>
 
 ```qml
 Popup {
@@ -26,6 +21,10 @@ Popup {
 ```
 
 ## 位置付きポップアップ
+
+<div align="center">
+  <img src="/assets/images/docs/Popup/example-3.png" alt="位置付きポップアップ">
+</div>
 
 ```qml
 Button {
@@ -50,6 +49,10 @@ Popup {
 ```
 
 ## アンカー付きポップアップ
+
+<div align="center">
+  <img src="/assets/images/docs/Popup/example.png" alt="アンカー付きポップアップ">
+</div>
 
 ```qml
 Rectangle {

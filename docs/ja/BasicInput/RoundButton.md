@@ -10,7 +10,11 @@
 
 **ピル形状 (幅 > 高さ):**
 <div align="center">
-  <img src="/assets/images/BasicInput/RoundButton/roundbutton-pill.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/RoundButton/example.png" alt="基本的なラウンドボタンの例">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/RoundButton/roundbutton-pill.png" alt="基本的なラウンドボタンの例">
 </div>
 
 ```qml

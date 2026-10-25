@@ -2,60 +2,71 @@
 
 TextArea 是一个多行文本输入控件，类似于标准 QML TextArea，但增加了自定义样式和功能。它支持多行文本输入，可以调整大小，并支持文本选择和编辑。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/TextArea-light.png',
-    dark: '/assets/images/examples/TextArea-dark.png',
-    alt: 'TextArea examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## 基本使用
+
+<div align="center">
+  <img src="/assets/images/docs/TextArea/example-2.png" alt="基本使用">
+</div>
 
 ```qml
 TextArea {
     id: control
     width: 300
     height: 120
-    placeholderText: qsTr("Type your text here...")
+    placeholderText: qsTr("Type here...")
 }
+```
 ```
 
 ## 自定义样式
 
+<div align="center">
+  <img src="/assets/images/docs/TextArea/example-3.png" alt="自定义样式">
+</div>
+
 ```qml
 TextArea {
     id: control
     width: 300
     height: 120
-    placeholderText: qsTr("Type your text here...")
+    placeholderText: qsTr("Type here...")
     primaryColor: "#3A86FF"
 }
+```
 ```
 
 ## 无边框模式
 
+<div align="center">
+  <img src="/assets/images/docs/TextArea/example-4.png" alt="无边框模式">
+</div>
+
 ```qml
 TextArea {
     id: control
     width: 300
     height: 120
-    placeholderText: qsTr("Type your text here...")
+    placeholderText: qsTr("Type here...")
     frameless: true
 }
+```
 ```
 
 ## 只读模式
 
+<div align="center">
+  <img src="/assets/images/docs/TextArea/example.png" alt="只读模式">
+</div>
+
 ```qml
 TextArea {
     id: control
     width: 300
     height: 120
-    text: qsTr("This is a read-only text area")
+    text: qsTr("This is a read-only multiline text field.")
     editable: false
 }
+```
 ```
 
 ## 重要属性

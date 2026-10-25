@@ -84,6 +84,10 @@ Web コンポーネントライブラリの代替ではなく、Qt Widgets だ�
 
 ## 使い慣れた QML から始める
 
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="使い慣れた QML から始める">
+</div>
+
 ```qml
 import QtQuick
 import RinUI
@@ -125,3 +129,9 @@ sys.exit(app.exec())
 ::: info プロジェクトの状態
 RinUI は現在も開発中です。API と視覚的な詳細は変更される可能性があります。プロトタイプ、社内ツール、反復コストを受け入れられるプロジェクトでの利用を推奨し、アップグレード前に変更内容を確認してください。
 :::
+
+## 謝辞
+
+RinUI の開発に参加するコントリビューターとメンテナーに感謝します。
+
+[![コントリビューター](http://contrib.nn.ci/api?repo=rinlit-233-shiroko/Rin-UI)](https://github.com/RinLit-233-shiroko/Rin-UI/graphs/contributors)

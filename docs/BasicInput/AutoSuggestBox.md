@@ -5,7 +5,7 @@ AutoSuggestBox 是文本输入控件，当用户开始输入时提供建议，�
 ## 基本使用
 
 <div align="center">
-<img src="/assets/images/BasicInput/AutoSuggestBox/autosuggestbox-basic.png">
+  <img src="/assets/images/docs/AutoSuggestBox/example-2.png" alt="基本使用">
 </div>
 
 ```qml
@@ -26,11 +26,12 @@ AutoSuggestBox {
     ]
 }
 ```
+```
 
 ## 使用自定义模型
 
 <div align="center">
-<img src="/assets/images/BasicInput/AutoSuggestBox/autosuggestbox-model.png">
+  <img src="/assets/images/docs/AutoSuggestBox/example-3.png" alt="使用自定义模型">
 </div>
 
 ```qml
@@ -41,15 +42,20 @@ AutoSuggestBox {
     
     textRole: "name"
     suggestions: ListModel {
-        ListElement { name: "China"; code: "CN" }
         ListElement { name: "United States"; code: "US" }
+        ListElement { name: "United Kingdom"; code: "GB" }
         ListElement { name: "Japan"; code: "JP" }
         ListElement { name: "Germany"; code: "DE" }
     }
 }
 ```
+```
 
 ## 处理选择
+
+<div align="center">
+  <img src="/assets/images/docs/AutoSuggestBox/example.png" alt="处理选择">
+</div>
 
 ```qml
 AutoSuggestBox {
@@ -65,10 +71,11 @@ AutoSuggestBox {
         "Purple"
     ]
     
-    onSuggestionChosen: (suggestion) => {
+    onSuggestionChosen: function(suggestion) {
         console.log("Selected:", suggestion)
     }
 }
+```
 ```
 
 ## 重要属性

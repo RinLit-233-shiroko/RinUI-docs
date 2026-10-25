@@ -7,7 +7,11 @@ A `ComboBox` allows users to select one option from a dropdown list. It can be c
 A standard ComboBox with a list of string items.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ComboBox/combobox-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/ComboBox/example-2.png" alt="Basic ComboBox">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ComboBox/combobox-basic.png" alt="Basic ComboBox">
 </div>
 
 ```qml
@@ -20,8 +24,9 @@ ComboBox {
     width: 200
     model: ["Blue", "Green", "Red", "Yellow"]
     placeholderText: qsTr("Pick a color")
-    // currentIndex: 0 // To select "Blue" initially
+    // currentIndex: 0 // 用于初始选择 "Blue"
 }
+```
 ```
 
 ## ComboBox with ListModel
@@ -29,7 +34,11 @@ ComboBox {
 For more complex items or when the model needs to be dynamic, a `ListModel` can be used. Each `ListElement` in the model should have a property that can be used for display (e.g., `text` or `value`).
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ComboBox/combobox-listmodel.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/ComboBox/example.png" alt="ComboBox with ListModel">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ComboBox/combobox-listmodel.png" alt="ComboBox with ListModel">
 </div>
 
 ```qml
@@ -55,7 +64,11 @@ ComboBox {
 Set `editable` to `true` to allow users to type in values. The `accepted()` signal can be used to handle new input. The input field is a `TextField`.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ComboBox/combobox-editable.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/ComboBox/listmodel.png" alt="Editable ComboBox">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ComboBox/combobox-editable.png" alt="Editable ComboBox">
 </div>
 
 ```qml

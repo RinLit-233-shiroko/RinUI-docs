@@ -13,6 +13,10 @@
 
 ## Basic Page
 
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example-2.png" alt="Basic Page">
+</div>
+
 ```qml
 import QtQuick
 import QtQuick.Layouts
@@ -44,6 +48,10 @@ The page body is laid out in an internal `ColumnLayout`, so layout attached prop
 
 Setting `title` shows a consistent title row. `extraHeaderItems` places additional controls on the right side, while `customHeader` and `contentHeader` provide custom header content and content above the main body.
 
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example-3.png" alt="Header Content">
+</div>
+
 ```qml
 FluentPage {
     title: qsTr("Account")
@@ -67,6 +75,10 @@ FluentPage {
 ## Footer
 
 `pageFooter` maps to Qt Quick `Page.footer` and is useful for actions that stay at the bottom of the page:
+
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example-4.png" alt="Footer">
+</div>
 
 ```qml
 FluentPage {
@@ -98,12 +110,17 @@ Pages default to `wrapperWidth: 1000` and `horizontalPadding: 56`, constraining 
 
 Reduce the padding for narrow windows, or increase `wrapperWidth` for full-width content while keeping text lines readable:
 
+<div align="center">
+  <img src="/assets/images/docs/FluentPage/example.png" alt="Content Width and Spacing">
+</div>
+
 ```qml
 FluentPage {
     horizontalPadding: 24
     wrapperWidth: 1400
     contentSpacing: 18
 }
+```
 ```
 
 ## Key Properties

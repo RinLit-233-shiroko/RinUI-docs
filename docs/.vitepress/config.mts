@@ -41,6 +41,7 @@ export default defineConfig({
             items: [
               { text: 'What is RinUI?', link: '/guide/' },
               { text: 'Getting Started', link: '/guide/getting-started' },
+              { text: 'Project Structure and Resources', link: '/guide/project-structure' },
             ]
           },
           {
@@ -113,7 +114,7 @@ export default defineConfig({
             text: 'Lists and Collections',
             collapsed: true,
             items: [
-              { text: 'Clip (Interactive Surface)', link: '/ListAndCollections/Clip.md' },
+              { text: 'Card (Interactive Surface)', link: '/ListAndCollections/Card.md' },
               { text: 'Frame', link: '/ListAndCollections/Frame.md' },
               { text: 'ListView', link: '/ListAndCollections/ListView.md' },
               { text: 'SettingCard', link: '/ListAndCollections/SettingCard.md' },
@@ -141,7 +142,6 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'NavigationView', link: '/Navigation/NavigationView.md' },
-              { text: 'PageIndicator', link: '/PageIndicator.md' },
               { text: 'PageIndicator', link: '/PageIndicator.md' },
               { text: 'Segmented', link: '/Navigation/Segmented.md' },
               { text: 'SelectorBar', link: '/Navigation/SelectorBar.md' },
@@ -301,6 +301,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: '导航视图 (NavigationView)', link: '/zh/Navigation/NavigationView.md' },
+              { text: '页面指示器 (PageIndicator)', link: '/zh/PageIndicator.md' },
               { text: '分段控件 (Segmented)', link: '/zh/Navigation/Segmented.md' },
               { text: '选择器栏 (SelectorBar)', link: '/zh/Navigation/SelectorBar.md' }
             ]
@@ -359,6 +360,7 @@ export default defineConfig({
             items: [
               { text: 'RinUIとは？', link: '/ja/guide/' },
               { text: 'はじめに', link: '/ja/guide/getting-started' },
+              { text: 'プロジェクト構成とリソース', link: '/ja/guide/project-structure' },
             ]
           },
           {
@@ -375,117 +377,116 @@ export default defineConfig({
             text: 'スタイル',
             collapsed: true,
             items: [
-              { text: 'AcrylicBrush', link: '/ja/Styles/AcrylicBrush.md' }
+              { text: 'アクリルブラシ (AcrylicBrush)', link: '/ja/Styles/AcrylicBrush.md' }
             ]
           },
           {
             text: '基本入力',
             collapsed: true,
             items: [
-              { text: 'ボタン', link: '/ja/BasicInput/Button.md' },
-              { text: 'チェックボックス', link: '/ja/BasicInput/CheckBox.md' },
-              { text: 'カラーピッカー', link: '/ja/BasicInput/ColorPicker.md' },
-              { text: 'コンボボックス', link: '/ja/BasicInput/ComboBox.md' },
-              { text: 'ドロップダウンボタン', link: '/ja/BasicInput/DropDownButton.md' },
-              { text: 'ハイパーリンク', link: '/ja/BasicInput/Hyperlink.md' },
-              { text: 'ピルボタン', link: '/ja/BasicInput/PillButton.md' },
-              { text: 'ラジオボタン', link: '/ja/BasicInput/RadioButton.md' },
-              { text: 'ラウンドボタン', link: '/ja/BasicInput/RoundButton.md' },
-              { text: 'スライダー', link: '/ja/BasicInput/Slider.md' },
-              { text: 'スイッチ', link: '/ja/BasicInput/Switch.md' },
-              { text: 'テキストエリア', link: '/ja/BasicInput/TextArea.md' },
-              { text: 'テキストフィールド', link: '/ja/BasicInput/TextField.md' },
-              { text: 'トグルボタン', link: '/ja/BasicInput/ToggleButton.md' },
-              { text: 'ツールボタン', link: '/ja/BasicInput/ToolButton.md' }
+              { text: 'ボタン (Button)', link: '/ja/BasicInput/Button.md' },
+              { text: 'チェックボックス (CheckBox)', link: '/ja/BasicInput/CheckBox.md' },
+              { text: 'カラーピッカー (ColorPicker)', link: '/ja/BasicInput/ColorPicker.md' },
+              { text: 'コンボボックス (ComboBox)', link: '/ja/BasicInput/ComboBox.md' },
+              { text: 'ドロップダウンボタン (DropDownButton)', link: '/ja/BasicInput/DropDownButton.md' },
+              { text: 'ハイパーリンク (Hyperlink)', link: '/ja/BasicInput/Hyperlink.md' },
+              { text: 'ピルボタン (PillButton)', link: '/ja/BasicInput/PillButton.md' },
+              { text: 'ラジオボタン (RadioButton)', link: '/ja/BasicInput/RadioButton.md' },
+              { text: 'ラウンドボタン (RoundButton)', link: '/ja/BasicInput/RoundButton.md' },
+              { text: 'スライダー (Slider)', link: '/ja/BasicInput/Slider.md' },
+              { text: 'スイッチ (Switch)', link: '/ja/BasicInput/Switch.md' },
+              { text: 'テキストエリア (TextArea)', link: '/ja/BasicInput/TextArea.md' },
+              { text: 'テキストフィールド (TextField)', link: '/ja/BasicInput/TextField.md' },
+              { text: 'トグルボタン (ToggleButton)', link: '/ja/BasicInput/ToggleButton.md' },
+              { text: 'ツールボタン (ToolButton)', link: '/ja/BasicInput/ToolButton.md' }
             ]
           },
           {
             text: '日付と時刻',
             collapsed: true,
             items: [
-              { text: 'カレンダー', link: '/ja/DateAndTime/Calendar.md' },
-              { text: 'カレンダー日付ピッカー', link: '/ja/DateAndTime/CalendarDatePicker.md' },
-              { text: '日付ピッカー', link: '/ja/DateAndTime/DatePicker.md' },
-              { text: '時刻ピッカー', link: '/ja/DateAndTime/TimePicker.md' }
+              { text: 'カレンダー (Calendar)', link: '/ja/DateAndTime/Calendar.md' },
+              { text: 'カレンダー日付ピッカー (CalendarDatePicker)', link: '/ja/DateAndTime/CalendarDatePicker.md' },
+              { text: '日付ピッカー (DatePicker)', link: '/ja/DateAndTime/DatePicker.md' },
+              { text: '時刻ピッカー (TimePicker)', link: '/ja/DateAndTime/TimePicker.md' }
             ]
           },
           {
             text: 'ダイアログとフライアウト',
             collapsed: true,
             items: [
-              { text: 'ダイアログ', link: '/ja/DialogsAndFlyouts/Dialog.md' },
-              { text: 'フライアウト', link: '/ja/DialogsAndFlyouts/Flyout.md' },
-              { text: 'ポップアップ', link: '/ja/DialogsAndFlyouts/Popup.md' }
+              { text: 'ダイアログ (Dialog)', link: '/ja/DialogsAndFlyouts/Dialog.md' },
+              { text: 'フライアウト (Flyout)', link: '/ja/DialogsAndFlyouts/Flyout.md' },
+              { text: 'ポップアップ (Popup)', link: '/ja/DialogsAndFlyouts/Popup.md' }
             ]
           },
           {
             text: 'レイアウト',
             collapsed: true,
             items: [
-              { text: 'エキスパンダー', link: '/ja/Layout/Expander.md' },
-              { text: '設定エキスパンダー', link: '/ja/Layout/SettingExpander.md' },
-              { text: '設定項目', link: '/ja/Layout/SettingItem.md' },
+              { text: 'エキスパンダー (Expander)', link: '/ja/Layout/Expander.md' },
+              { text: '設定エキスパンダー (SettingExpander)', link: '/ja/Layout/SettingExpander.md' },
+              { text: '設定項目 (SettingItem)', link: '/ja/Layout/SettingItem.md' },
             ]
           },
           {
             text: 'リストとコレクション',
             collapsed: true,
             items: [
-              { text: 'Clip (インタラクティブサーフェス)', link: '/ja/ListAndCollections/Clip.md' },
-              { text: 'フレーム', link: '/ja/ListAndCollections/Frame.md' },
-              { text: 'リストビュー', link: '/ja/ListAndCollections/ListView.md' },
-              { text: '設定カード', link: '/ja/ListAndCollections/SettingCard.md' },
-              { text: 'スワイプビュー', link: '/ja/ListAndCollections/SwipeView.md' },
-              { text: 'テーブルビュー', link: '/ja/ListAndCollections/TableView.md' }
+              { text: 'Card (インタラクティブサーフェス)', link: '/ja/ListAndCollections/Card.md' },
+              { text: 'フレーム (Frame)', link: '/ja/ListAndCollections/Frame.md' },
+              { text: 'リストビュー (ListView)', link: '/ja/ListAndCollections/ListView.md' },
+              { text: '設定カード (SettingCard)', link: '/ja/ListAndCollections/SettingCard.md' },
+              { text: 'スワイプビュー (SwipeView)', link: '/ja/ListAndCollections/SwipeView.md' },
+              { text: 'テーブルビュー (TableView)', link: '/ja/ListAndCollections/TableView.md' }
             ]
           },
           {
             text: 'メディア',
             collapsed: true,
             items: [
-              { text: 'アバター', link: '/ja/Media/Avatar.md' }
+              { text: 'アバター (Avatar)', link: '/ja/Media/Avatar.md' }
             ]
           },
           {
             text: 'メニューとツールバー',
             collapsed: true,
             items: [
-              { text: 'メニュー', link: '/ja/MenusAndToolbars/Menu.md' },
-              { text: 'メニューバー', link: '/ja/MenusAndToolbars/MenuBar.md' },
+              { text: 'メニュー (Menu)', link: '/ja/MenusAndToolbars/Menu.md' },
+              { text: 'メニューバー (MenuBar)', link: '/ja/MenusAndToolbars/MenuBar.md' },
             ]
           },
           {
             text: 'ナビゲーション',
             collapsed: true,
             items: [
-              { text: 'ナビゲーションビュー', link: '/ja/Navigation/NavigationView.md' },
-              { text: 'ページインジケーター', link: '/ja/PageIndicator.md' },
+              { text: 'ナビゲーションビュー (NavigationView)', link: '/ja/Navigation/NavigationView.md' },
               { text: 'ページインジケーター (PageIndicator)', link: '/ja/PageIndicator.md' },
-              { text: 'セグメント', link: '/ja/Navigation/Segmented.md' },
-              { text: 'セレクターバー', link: '/ja/Navigation/SelectorBar.md' }
+              { text: 'セグメント (Segmented)', link: '/ja/Navigation/Segmented.md' },
+              { text: 'セレクターバー (SelectorBar)', link: '/ja/Navigation/SelectorBar.md' }
             ]
           },
           {
             text: '状態と情報',
             collapsed: true,
             items: [
-              { text: 'ビジーインジケーター', link: '/ja/StatusAndInfo/BusyIndicator.md' },
-              { text: '情報バッジ', link: '/ja/StatusAndInfo/InfoBadge.md' },
-              { text: 'インフォバー', link: '/ja/StatusAndInfo/InfoBar.md' },
-              { text: 'プログレスバー', link: '/ja/StatusAndInfo/ProgressBar.md' },
-              { text: 'プログレスリング', link: '/ja/StatusAndInfo/ProgressRing.md' },
-              { text: 'ツールチップ', link: '/ja/StatusAndInfo/ToolTip.md' }
+              { text: 'ビジーインジケーター (BusyIndicator)', link: '/ja/StatusAndInfo/BusyIndicator.md' },
+              { text: '情報バッジ (InfoBadge)', link: '/ja/StatusAndInfo/InfoBadge.md' },
+              { text: 'インフォバー (InfoBar)', link: '/ja/StatusAndInfo/InfoBar.md' },
+              { text: 'プログレスバー (ProgressBar)', link: '/ja/StatusAndInfo/ProgressBar.md' },
+              { text: 'プログレスリング (ProgressRing)', link: '/ja/StatusAndInfo/ProgressRing.md' },
+              { text: 'ツールチップ (ToolTip)', link: '/ja/StatusAndInfo/ToolTip.md' }
             ]
           },
           {
             text: 'テキスト',
             collapsed: true,
             items: [
-              { text: 'オートサジェストボックス', link: '/ja/BasicInput/AutoSuggestBox.md' },
-              { text: 'スクロール可能テキストエリア', link: '/ja/Text/ScrollableTextArea.md' },
-              { text: 'スピンボックス', link: '/ja/BasicInput/SpinBox.md' },
-              { text: 'テキストエリア', link: '/ja/BasicInput/TextArea.md' },
-              { text: 'テキストフィールド', link: '/ja/BasicInput/TextField.md' }
+              { text: 'オートサジェストボックス (AutoSuggestBox)', link: '/ja/BasicInput/AutoSuggestBox.md' },
+              { text: 'スクロール可能テキストエリア (ScrollableTextArea)', link: '/ja/Text/ScrollableTextArea.md' },
+              { text: 'スピンボックス (SpinBox)', link: '/ja/BasicInput/SpinBox.md' },
+              { text: 'テキストエリア (TextArea)', link: '/ja/BasicInput/TextArea.md' },
+              { text: 'テキストフィールド (TextField)', link: '/ja/BasicInput/TextField.md' }
             ]
           },
           {

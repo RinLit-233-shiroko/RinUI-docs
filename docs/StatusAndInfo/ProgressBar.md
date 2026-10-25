@@ -1,27 +1,27 @@
 # ProgressBar
 
-ProgressBar is a control that displays the progress of a task. It can show either a definite or indefinite progress state.
-
-<VPImage
-  :image="{
-    light: '/assets/images/examples/ProgressBar-light.png',
-    dark: '/assets/images/examples/ProgressBar-dark.png',
-    alt: 'ProgressBar examples in light and dark themes'
-  }"
-  width="1000"
-/>
+`ProgressBar` displays the progress of a task and supports both determinate and indeterminate states.
 
 ## Basic ProgressBar
+
+<div align="center">
+  <img src="/assets/images/docs/ProgressBar/example-2.png" alt="Basic ProgressBar">
+</div>
 
 ```qml
 ProgressBar {
     id: control
     width: 200
-    value: 50
+    value: 0.5
 }
 ```
+```
 
-## 不确定进度条
+## Indeterminate ProgressBar
+
+<div align="center">
+  <img src="/assets/images/docs/ProgressBar/example-3.png" alt="Indeterminate ProgressBar">
+</div>
 
 ```qml
 ProgressBar {
@@ -30,24 +30,29 @@ ProgressBar {
     indeterminate: true
 }
 ```
+```
 
-## 自定义颜色进度条
+## Custom Color
+
+<div align="center">
+  <img src="/assets/images/docs/ProgressBar/example.png" alt="Custom Color">
+</div>
 
 ```qml
 ProgressBar {
     id: control
     width: 200
-    value: 75
-    backgroundColor: "#E0E0E0"
-    primaryColor: "#4CAF50"
+    value: 0.75
+    primaryColor: "#107C10"
 }
 ```
+```
 
-## 重要属性
+## Properties
 
-- `value`: 当前进度值（0 到 1 之间的数字）
-- `indeterminate`: 是否显示不确定的进度
-- `backgroundColor`: 背景轨道的颜色
-- `primaryColor`: 进度条的颜色
-- `radius`: 进度条的圆角半径
-- `state`: 进度条的状态（Running、Paused、Error）
+- `value`: Current progress value as a number from `0` to `1`.
+- `indeterminate`: Whether to show indeterminate progress.
+- `backgroundColor`: Background track color.
+- `primaryColor`: Progress fill color.
+- `radius`: Progress bar corner radius.
+- `state`: Progress state: `ProgressBar.Running`, `ProgressBar.Paused`, or `ProgressBar.Error`.

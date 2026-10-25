@@ -7,7 +7,11 @@
 `from` および `to` プロパティを使用してスライダーの範囲を定義し、`stepSize` を使用して増分を制御します。`value` プロパティはスライダーの現在の位置を設定します。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-range.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Slider/example-2.png" alt="範囲とステップ付きスライダー">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Slider/slider-range.png" alt="範囲とステップ付きスライダー">
 </div>
 
 ```qml
@@ -25,7 +29,11 @@ Slider {
 `tickmarks` を `true` に設定すると、視覚的なマーカーが表示されます。`tickFrequency` はこれらの目盛りの間隔を制御します。`tickFrequency` が `0` または設定されていない場合、目盛りは `stepSize` に揃うことがあります。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-ticks.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Slider/example-3.png" alt="目盛り付きスライダー">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Slider/slider-ticks.png" alt="目盛り付きスライダー">
 </div>
 
 ```qml
@@ -44,7 +52,11 @@ Slider {
 `orientation` を `Qt.Vertical` に設定すると、垂直スライダーになります。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-vertical.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Slider/example.png" alt="垂直スライダー">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Slider/slider-vertical.png" alt="垂直スライダー">
 </div>
 
 ```qml

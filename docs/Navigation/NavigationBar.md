@@ -2,16 +2,11 @@
 
 NavigationBar is a control that provides a vertical navigation area. It can be collapsed or expanded and contains navigation items that can be clicked to navigate between different pages.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/NavigationBar-light.png',
-    dark: '/assets/images/examples/NavigationBar-dark.png',
-    alt: 'NavigationBar examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic NavigationBar
+
+<div align="center">
+  <img src="/assets/images/docs/NavigationBar/example-2.png" alt="Basic NavigationBar">
+</div>
 
 ```qml
 NavigationBar {
@@ -29,6 +24,10 @@ NavigationBar {
 ```
 
 ## Collapsed NavigationBar
+
+<div align="center">
+  <img src="/assets/images/docs/NavigationBar/example.png" alt="Collapsed NavigationBar">
+</div>
 
 ```qml
 NavigationBar {

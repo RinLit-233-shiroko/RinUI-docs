@@ -2,16 +2,11 @@
 
 MenuBar is a horizontal bar that contains Menu objects, typically found at the top of a window. It provides a standard way to provide menu items that are consistent across different applications.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/MenuBar-light.png',
-    dark: '/assets/images/examples/MenuBar-dark.png',
-    alt: 'MenuBar examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic MenuBar
+
+<div align="center">
+  <img src="/assets/images/docs/MenuBar/example.png" alt="Basic MenuBar">
+</div>
 
 ```qml
 MenuBar {

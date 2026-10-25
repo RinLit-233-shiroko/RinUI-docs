@@ -7,6 +7,19 @@
 
 このようにフロートレイヤーマネージャー (`FloatLayer`) を使用できます：
 
+```qml
+import RinUI
+
+Window {
+    Component.onCompleted: {
+        floatLayer.createInfoBar({
+            text: "args.text"
+        })
+    }
+}
+```
+```
+
 ## 構造
 ```bash
 Item (FloatLayer)
@@ -51,7 +64,7 @@ Item (FloatLayer)
 
 ```qml
 Button {
-    // カスタムコンポーネント
+    // 自定义组件
     Component {
         id: customInfoBar
         InfoBar {
@@ -72,9 +85,11 @@ Button {
     
     text: qsTr("Popup a custom InfoBar")
     
-    // アクション
+    // 触发
     onClicked: {
         floatLayer.createCustom(customInfoBar)
     }
 }
 ```
+```
+

@@ -7,7 +7,11 @@ The `Hyperlink` component is used to create text that acts as a link. It's style
 To create a hyperlink that opens an external URL in the default web browser, set the `text` for display and the `openUrl` (or its alias `url`) property.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-url.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Hyperlink/example.png" alt="Basic Hyperlink to URL">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-url.png" alt="Basic Hyperlink to URL">
 </div>
 
 ```qml
@@ -21,24 +25,30 @@ Hyperlink {
     openUrl: "https://github.com/RinLit-233-shiroko/Rin-UI"
 }
 ```
+```
 
 ## Hyperlink for In-App Actions
 
 You can also use a `Hyperlink` to trigger internal application actions by handling its `onClicked` signal. If you only want to perform an in-app action and not navigate to a URL, do not set the `openUrl` property.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-action.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Hyperlink/url.png" alt="Hyperlink for In-App Actions">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Hyperlink/hyperlink-action.png" alt="Hyperlink for In-App Actions">
 </div>
 
 ```qml
 Hyperlink {
     text: qsTr("Go to Settings")
     onClicked: {
-        // Logic to navigate to the settings page within the app
+        // 导航到应用内设置页面的逻辑
         console.log("Settings link clicked");
-        // Example: stackView.push(settingsPageComponent)
+        // 示例: stackView.push(settingsPageComponent)
     }
 }
+```
 ```
 
 ## Key Properties

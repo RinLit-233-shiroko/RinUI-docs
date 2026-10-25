@@ -2,142 +2,92 @@
 
 TableView は、行と列にデータを表示するためのコントロールです。標準の QML TableView を拡張し、カスタムスタイルと機能を追加しています。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/TableView-light.png',
-    dark: '/assets/images/examples/TableView-dark.png',
-    alt: 'TableView コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本テーブルビュー
 
+<div align="center">
+  <img src="/assets/images/docs/TableView/example-2.png" alt="基本テーブルビュー">
+</div>
+
 ```qml
+import Qt.labs.qmlmodels
 TableView {
     id: tableView
     width: 600
-    height: 300
+    height: 180
     
-    TableViewColumn {
-        role: "name"
-        title: qsTr("名前")
-        width: tableView.width * 0.33
-    }
-    TableViewColumn {
-        role: "age"
-        title: qsTr("年齢")
-        width: tableView.width * 0.33
-    }
-    TableViewColumn {
-        role: "city"
-        title: qsTr("都市")
-        width: tableView.width * 0.33
-    }
-    
-    model: ListModel {
-        ListElement {
-            name: "山田太郎"
-            age: "30"
-            city: "東京"
-        }
-        ListElement {
-            name: "佐藤花子"
-            age: "25"
-            city: "大阪"
-        }
-        ListElement {
-            name: "鈴木一郎"
-            age: "35"
-            city: "名古屋"
-        }
+    columnWidthProvider: function(column) { return [200, 100, 200][column] }
+    rowHeightProvider: function(row) { return 40 }
+    model: TableModel {
+        TableModelColumn { display: "name" }
+        TableModelColumn { display: "age" }
+        TableModelColumn { display: "city" }
+        rows: [
+            { name: "Alex Morgan", age: 30, city: "Beijing" },
+            { name: "Jamie Lee", age: 25, city: "Shanghai" },
+            { name: "Taylor Kim", age: 35, city: "Guangzhou" }
+        ]
     }
 }
+```
 ```
 
 ## カスタム列幅
 
+<div align="center">
+  <img src="/assets/images/docs/TableView/example-3.png" alt="カスタム列幅">
+</div>
+
 ```qml
+import Qt.labs.qmlmodels
 TableView {
     id: tableView
     width: 600
-    height: 300
+    height: 180
     
-    TableViewColumn {
-        role: "name"
-        title: qsTr("名前")
-        width: 150
+    columnWidthProvider: function(column) {
+        return [150, 100, 350][column]
     }
-    TableViewColumn {
-        role: "age"
-        title: qsTr("年齢")
-        width: 100
-    }
-    TableViewColumn {
-        role: "city"
-        title: qsTr("都市")
-        width: 350
-    }
-    
-    model: ListModel {
-        ListElement {
-            name: "山田太郎"
-            age: "30"
-            city: "東京"
-        }
-        ListElement {
-            name: "佐藤花子"
-            age: "25"
-            city: "大阪"
-        }
-        ListElement {
-            name: "鈴木一郎"
-            age: "35"
-            city: "名古屋"
-        }
+    rowHeightProvider: function(row) { return 40 }
+    model: TableModel {
+        TableModelColumn { display: "name" }
+        TableModelColumn { display: "age" }
+        TableModelColumn { display: "city" }
+        rows: [
+            { name: "Alex Morgan", age: 30, city: "Beijing" },
+            { name: "Jamie Lee", age: 25, city: "Shanghai" },
+            { name: "Taylor Kim", age: 35, city: "Guangzhou" }
+        ]
     }
 }
+```
 ```
 
 ## 列によるソート
 
+<div align="center">
+  <img src="/assets/images/docs/TableView/example.png" alt="列によるソート">
+</div>
+
 ```qml
+import Qt.labs.qmlmodels
 TableView {
     id: tableView
     width: 600
-    height: 300
+    height: 180
     
-    property bool sortAscending: true
-    property string sortRole: "name"
-    
-    TableViewColumn {
-        role: "name"
-        title: qsTr("名前")
-        width: 200
-        onClicked: {
-            tableView.sortAscending = !tableView.sortAscending
-            tableView.sortRole = "name"
-            tableView.model.sort(tableView.sortRole, tableView.sortAscending)
-        }
+    columnWidthProvider: function(column) { return [200, 100, 300][column] }
+    model: TableModel {
+        TableModelColumn { display: "name" }
+        TableModelColumn { display: "age" }
+        TableModelColumn { display: "city" }
+        rows: [
+            { name: "Alex Morgan", age: 30, city: "Beijing" },
+            { name: "Jamie Lee", age: 25, city: "Shanghai" },
+            { name: "Taylor Kim", age: 35, city: "Guangzhou" }
+        ]
     }
-    TableViewColumn {
-        role: "age"
-        title: qsTr("年齢")
-        width: 100
-        onClicked: {
-            tableView.sortAscending = !tableView.sortAscending
-            tableView.sortRole = "age"
-            tableView.model.sort(tableView.sortRole, tableView.sortAscending)
-        }
-    }
-    TableViewColumn {
-        role: "city"
-        title: qsTr("都市")
-        width: 300
-    }
-    
-    model: PersonModel {}
 }
+```
 ```
 
 ## 重要なプロパティ

@@ -7,7 +7,11 @@
 `ListView` にはデータを提供するための `model` が必要です。モデルの `textRole` プロパティが正しく設定されていれば、デフォルトのデリゲート（`ListViewDelegate` のインスタンス）は単純なテキストを表示できます。
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/ListView/listview-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/ListView/example.png" alt="デフォルトデリゲートを使用した基本的なリストビュー">
+</div>
+
+<div align="center">
+  <img src="/assets/images/ListAndCollections/ListView/listview-basic.png" alt="デフォルトデリゲートを使用した基本的なリストビュー">
 </div>
 
 ```qml
@@ -37,7 +41,7 @@ ListView {
 よりリッチなリストアイテムを作成するには、`ListView` の `delegate` プロパティに `ListViewDelegate` のカスタムインスタンスを提供します。`ListViewDelegate` 自体は、そのコンテンツを `leftArea`、`middleArea`、`rightArea` の3つの主要な領域に構成するコンポーネントです。
 
 <div align="center">
-  <img src="/assets/images/ListAndCollections/ListView/listview-custom-delegate.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/ListAndCollections/ListView/listview-custom-delegate.png" alt="`ListViewDelegate` を使用したアイテムの外観のカスタマイズ">
 </div>
 
 ```qml

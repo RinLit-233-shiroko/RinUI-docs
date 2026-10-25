@@ -13,6 +13,10 @@ ScrollableTextArea is a control that contains a TextArea that can be scrolled. I
 
 ## Basic ScrollableTextArea
 
+<div align="center">
+  <img src="/assets/images/docs/ScrollableTextArea/example-2.png" alt="Basic ScrollableTextArea">
+</div>
+
 ```qml
 ScrollableTextArea {
     id: control
@@ -24,16 +28,25 @@ ScrollableTextArea {
 
 ## ScrollableTextArea with Placeholder
 
+<div align="center">
+  <img src="/assets/images/docs/ScrollableTextArea/example-3.png" alt="ScrollableTextArea with Placeholder">
+</div>
+
 ```qml
 ScrollableTextArea {
     id: control
-    placeholderText: qsTr("Enter your text here...")
+    placeholderText: qsTr("Type here...")
     width: 300
     height: 150
 }
 ```
+```
 
 ## Read-Only ScrollableTextArea
+
+<div align="center">
+  <img src="/assets/images/docs/ScrollableTextArea/example.png" alt="Read-Only ScrollableTextArea">
+</div>
 
 ```qml
 ScrollableTextArea {

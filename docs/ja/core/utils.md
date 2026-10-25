@@ -9,14 +9,15 @@ RinUI はシングルトンオブジェクト `Utils` を提供し、グロー�
 import RinUI
 
 Component {
-    // Utils プロパティを取得
+    // 获取 Utils 属性
     property var property: Utils.property;
     
-    // Utils プロパティを変更
+    // 修改 Utils 属性
     Component.onCompleted: {
         Utils.property = newValue;
     }
 }
+```
 ```
 
 ## 外観とテーマ
@@ -60,6 +61,7 @@ Rectangle {
     height: 48
     font.pixelSize: 14
 }
+```
 ```
 
 `Utils.dp(320)` や `Utils.dpiScale` を手動で掛けると、HiDPI 環境で二重にスケーリングされます。

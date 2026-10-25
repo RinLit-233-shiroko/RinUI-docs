@@ -7,7 +7,11 @@
 `SettingExpander` の折りたたみ可能なコンテンツ領域は、サブ設定のリストの一貫したレイアウトを維持するために、`SettingItem` コンポーネントで設定されることがよくあります。
 
 <div align="center">
-  <img src="/assets/images/Layout/SettingExpander/settingexpander-with-items.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/SettingExpander/settingitem.png" alt="折りたたみ可能領域での `SettingItem` の使用">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/SettingExpander/settingexpander-with-items.png" alt="折りたたみ可能領域での `SettingItem` の使用">
 </div>
 
 ```qml

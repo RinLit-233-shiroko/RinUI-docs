@@ -1,83 +1,73 @@
 # CalendarDatePicker
 
-CalendarDatePicker is a button-like control that opens a Calendar when clicked, allowing users to select a date. It's a convenient way to provide date selection functionality in a compact form factor.
-
-<VPImage
-  :image="{
-    light: '/assets/images/examples/CalendarDatePicker-light.png',
-    dark: '/assets/images/examples/CalendarDatePicker-dark.png',
-    alt: 'CalendarDatePicker examples in light and dark themes'
-  }"
-  width="1000"
-/>
+`CalendarDatePicker` displays the selected date or placeholder text as a button. Users open a calendar to choose a date, making it suitable for forms where a visual calendar is helpful.
 
 ## Basic Usage
 
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example-2.png" alt="Basic Usage">
+</div>
+
 ```qml
 CalendarDatePicker {
-    id: datePicker
     selectedDate: new Date()
 }
 ```
+```
 
-## Custom Display Format
+## Set a Date Range
+
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example-3.png" alt="Set a Date Range">
+</div>
 
 ```qml
 CalendarDatePicker {
-    id: datePicker
     selectedDate: new Date()
-    textFormat: "MMMM dd, yyyy"
+    minimumDate: new Date(2026, 0, 1)
+    maximumDate: new Date(2026, 11, 31)
+}
+```
+```
+
+## Placeholder and Date Format
+
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example-4.png" alt="Placeholder and Date Format">
+</div>
+
+```qml
+CalendarDatePicker {
     placeholderText: qsTr("Select a date")
+    textFormat: "MM/dd/yyyy"
 }
 ```
 
-## With Constraints
+## Handle Date Selection
+
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example.png" alt="Handle Date Selection">
+</div>
 
 ```qml
 CalendarDatePicker {
-    id: datePicker
-    selectedDate: new Date()
-    minimumDate: new Date(2025, 0, 1)   // January 1, 2025
-    maximumDate: new Date(2025, 11, 31) // December 31, 2025
-}
-```
-
-## With Custom Icon
-
-```qml
-CalendarDatePicker {
-    id: datePicker
-    selectedDate: new Date()
-    iconName: "ic_fluent_calendar_ltr_20_regular"
-    iconSize: 20
-    iconColor: "#3A86FF"
-}
-```
-
-## Handling Date Selection
-
-```qml
-CalendarDatePicker {
-    id: datePicker
-    selectedDate: new Date()
-    
-    onDateSelected: (date) => {
-        console.log("Selected date:", Qt.formatDate(date, "yyyy-MM-dd"))
+    onDateSelected: function(date) {
+        console.log(Qt.formatDate(date, "yyyy-MM-dd"))
     }
 }
 ```
+```
 
-## Important Properties
+## Properties
 
-- `selectedDate`: The currently selected date
-- `placeholderText`: Text displayed when no date is selected
-- `textFormat`: The format string for displaying the selected date
-- `minimumDate` and `maximumDate`: The minimum and maximum selectable dates
-- `iconName`: The icon name to display in the button
-- `iconSize`: The size of the icon
-- `iconColor`: The color of the icon
-- `iconVisible`: Whether the icon is visible
+- `selectedDate`: Currently selected date; `null` when no date is selected.
+- `minimumDate`, `maximumDate`: Selectable date range.
+- `placeholderText`: Text shown when no date is selected.
+- `textFormat`: Date format shown in the button; defaults to `MM/dd/yyyy`.
+- `calendarLocale`: Locale used by the calendar.
+- `useISOWeek`: Whether Monday is the first day of the week.
+- `iconName`, `iconSize`, `iconColor`, `iconVisible`: Calendar icon name, size, color, and visibility.
 
-## Important Signals
+## Signals
 
-- `dateSelected(date date)`: Emitted when a date is selected
+- `dateSelected(date date)`: Emitted when the user selects a date.

@@ -7,7 +7,11 @@ The `Slider` component allows users to select a value from a continuous or discr
 Define the slider's range using `from` and `to`, and control the increment with `stepSize`. The `value` property sets the slider's current position.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-range.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Slider/example-2.png" alt="Slider with Range and Steps">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Slider/slider-range.png" alt="Slider with Range and Steps">
 </div>
 
 ```qml
@@ -25,7 +29,11 @@ Slider {
 Set `tickmarks` to `true` to display visual markers. `tickFrequency` controls the interval of these ticks. If `tickFrequency` is `0` or not set, ticks might align with `stepSize`.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-ticks.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Slider/example-3.png" alt="Slider with Tick Marks">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Slider/slider-ticks.png" alt="Slider with Tick Marks">
 </div>
 
 ```qml
@@ -44,7 +52,11 @@ Slider {
 Set `orientation` to `Qt.Vertical` for a vertical slider.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/Slider/slider-vertical.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Slider/example.png" alt="Vertical Slider">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/Slider/slider-vertical.png" alt="Vertical Slider">
 </div>
 
 ```qml

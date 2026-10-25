@@ -2,16 +2,11 @@
 
 Menu is a component that displays a list of MenuItem objects. It can be used to present commands, options, or other actions to the user. Menus can be displayed as context menus or as part of a menu bar.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Menu-light.png',
-    dark: '/assets/images/examples/Menu-dark.png',
-    alt: 'Menu examples in light and dark themes'
-  }"
-  width="1000"
-/>
-
 ## Basic Menu
+
+<div align="center">
+  <img src="/assets/images/docs/Menu/example-2.png" alt="Basic Menu">
+</div>
 
 ```qml
 Menu {
@@ -43,6 +38,10 @@ Menu {
 ```
 
 ## Menu with Submenu
+
+<div align="center">
+  <img src="/assets/images/docs/Menu/example.png" alt="Menu with Submenu">
+</div>
 
 ```qml
 Menu {

@@ -7,7 +7,11 @@ The `PillButton` is a type of toggle button that is styled to have a pill-like o
 A `PillButton` can be used to represent an on/off state or a selection. It is `checkable` by default.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/PillButton/pillbutton-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/PillButton/example-2.png" alt="Basic PillButton">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/PillButton/pillbutton-basic.png" alt="Basic PillButton">
 </div>
 
 ```qml
@@ -18,7 +22,7 @@ import RinUI
 
 PillButton {
     text: qsTr("Toggle Option")
-    // checked: true // To make it initially checked/on
+    // checked: true // 用于初始选中/开启
     onCheckedChanged: {
         if (checked) {
             console.log("PillButton is ON");
@@ -28,13 +32,18 @@ PillButton {
     }
 }
 ```
+```
 
 ## PillButton with Icon
 
 Icons can be added to a `PillButton`, similar to a standard `Button`.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/PillButton/pillbutton-icon.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/PillButton/example.png" alt="PillButton with Icon">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/PillButton/pillbutton-icon.png" alt="PillButton with Icon">
 </div>
 
 ```qml

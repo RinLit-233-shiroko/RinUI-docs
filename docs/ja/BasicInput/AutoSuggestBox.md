@@ -2,74 +2,80 @@
 
 AutoSuggestBox は、ユーザーが入力を開始すると提案を提供するテキスト入力コントロールです。これにより、ユーザーは正しいオプションを迅速に見つけて選択できます。これは TextField に基づいており、動的な提案機能を追加しています。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/AutoSuggestBox-light.png',
-    dark: '/assets/images/examples/AutoSuggestBox-dark.png',
-    alt: 'AutoSuggestBox コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本使用
+
+<div align="center">
+  <img src="/assets/images/docs/AutoSuggestBox/example-2.png" alt="基本使用">
+</div>
 
 ```qml
 AutoSuggestBox {
     id: control
     width: 240
-    placeholderText: qsTr("検索するには入力...")
+    placeholderText: qsTr("Type to search...")
     
     suggestions: [
-        "りんご",
-        "バナナ",
-        "さくらんぼ",
-        "ナツメヤシ",
-        "エルダーベリー",
-        "いちじく",
-        "ぶどう",
-        "メロン"
+        "Apple",
+        "Banana",
+        "Cherry",
+        "Date",
+        "Elderberry",
+        "Fig",
+        "Grape",
+        "Honeydew"
     ]
 }
+```
 ```
 
 ## カスタムモデルの使用
 
+<div align="center">
+  <img src="/assets/images/docs/AutoSuggestBox/example-3.png" alt="カスタムモデルの使用">
+</div>
+
 ```qml
 AutoSuggestBox {
     id: control
     width: 240
-    placeholderText: qsTr("国を選択...")
+    placeholderText: qsTr("Select a country...")
     
     textRole: "name"
     suggestions: ListModel {
-        ListElement { name: "中国"; code: "CN" }
-        ListElement { name: "アメリカ"; code: "US" }
-        ListElement { name: "日本"; code: "JP" }
-        ListElement { name: "ドイツ"; code: "DE" }
+        ListElement { name: "United States"; code: "US" }
+        ListElement { name: "United Kingdom"; code: "GB" }
+        ListElement { name: "Japan"; code: "JP" }
+        ListElement { name: "Germany"; code: "DE" }
     }
 }
+```
 ```
 
 ## 選択の処理
 
+<div align="center">
+  <img src="/assets/images/docs/AutoSuggestBox/example.png" alt="選択の処理">
+</div>
+
 ```qml
 AutoSuggestBox {
     id: control
     width: 240
-    placeholderText: qsTr("色を選択...")
+    placeholderText: qsTr("Select a color...")
     
     suggestions: [
-        "赤",
-        "緑",
-        "青",
-        "黄色",
-        "紫"
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow",
+        "Purple"
     ]
     
-    onSuggestionChosen: (suggestion) => {
-        console.log("選択:", suggestion)
+    onSuggestionChosen: function(suggestion) {
+        console.log("Selected:", suggestion)
     }
 }
+```
 ```
 
 ## 重要なプロパティ

@@ -2,16 +2,11 @@
 
 NavigationBar は、垂直のナビゲーション領域を提供するコントロールです。 折り畳み可能で、クリック可能なナビゲーション項目を含み、異なるページ間の移動に使用できます。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/NavigationBar-light.png',
-    dark: '/assets/images/examples/NavigationBar-dark.png',
-    alt: 'NavigationBar コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本ナビゲーションバー
+
+<div align="center">
+  <img src="/assets/images/docs/NavigationBar/example-2.png" alt="基本ナビゲーションバー">
+</div>
 
 ```qml
 NavigationBar {
@@ -29,6 +24,10 @@ NavigationBar {
 ```
 
 ## 折り畳まれたナビゲーションバー
+
+<div align="center">
+  <img src="/assets/images/docs/NavigationBar/example.png" alt="折り畳まれたナビゲーションバー">
+</div>
 
 ```qml
 NavigationBar {

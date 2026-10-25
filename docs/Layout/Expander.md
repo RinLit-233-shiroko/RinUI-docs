@@ -7,7 +7,11 @@ The `Expander` control allows content to be shown or hidden in a collapsible sec
 A basic `Expander` can have a text title in its default header and QML items as its content. Child items are added to the `contentData` property (which is the default property).
 
 <div align="center">
-  <img src="/assets/images/Layout/Expander/expander-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Expander/example-2.png" alt="Basic Expander">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/Expander/expander-basic.png" alt="Basic Expander">
 </div>
 
 ```qml
@@ -38,7 +42,11 @@ Expander {
 The header of the `Expander` can be entirely replaced with custom QML content by assigning an `Item` to the `header` property.
 
 <div align="center">
-  <img src="/assets/images/Layout/Expander/expander-custom-header.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Expander/example-3.png" alt="Custom Header">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/Expander/expander-custom-header.png" alt="Custom Header">
 </div>
 
 ```qml
@@ -93,12 +101,14 @@ The `expandDirection` property controls whether the content area expands upwards
 *   `Expander.Up`: Content expands above the header.
 
 <div align="center">
-  <img src="/assets/images/Layout/Expander/expander-direction.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/Expander/example.png" alt="Expansion Direction">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/Expander/expander-direction.png" alt="Expansion Direction">
 </div>
 
 ```qml
-import RinUI // Consistent import
-
 Expander {
     text: qsTr("Expand Upwards Example")
     expandDirection: Expander.Up
@@ -110,6 +120,7 @@ Expander {
         text: qsTr("This content expands upwards from the header.")
     }
 }
+```
 ```
 
 ## Key Properties

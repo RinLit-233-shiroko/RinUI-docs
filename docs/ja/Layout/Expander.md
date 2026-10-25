@@ -7,7 +7,11 @@
 基本的な `Expander` は、デフォルトのヘッダーにテキストタイトルを持ち、QML アイテムをコンテンツとして持つことができます。子アイテムは `contentData` プロパティ（デフォルトプロパティ）に追加されます。
 
 <div align="center">
-  <img src="/assets/images/Layout/Expander/expander-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Expander/example-2.png" alt="基本的なエキスパンダー">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/Expander/expander-basic.png" alt="基本的なエキスパンダー">
 </div>
 
 ```qml
@@ -38,7 +42,11 @@ Expander {
 `Expander` のヘッダーは、`header` プロパティに `Item` を割り当てることにより、カスタム QML コンテンツで完全に置き換えることができます。
 
 <div align="center">
-  <img src="/assets/images/Layout/Expander/expander-custom-header.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Expander/example-3.png" alt="カスタムヘッダー">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/Expander/expander-custom-header.png" alt="カスタムヘッダー">
 </div>
 
 ```qml
@@ -89,7 +97,11 @@ Expander {
 *   `Expander.Up`：コンテンツはヘッダーの上に展開されます。
 
 <div align="center">
-  <img src="/assets/images/Layout/Expander/expander-direction.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Expander/example.png" alt="展开方向">
+</div>
+
+<div align="center">
+  <img src="/assets/images/Layout/Expander/expander-direction.png" alt="展开方向">
 </div>
 
 ```qml
@@ -104,6 +116,7 @@ Expander {
         text: qsTr("This content expands upwards from the header.")
     }
 }
+```
 ```
 
 ## 主なプロパティ

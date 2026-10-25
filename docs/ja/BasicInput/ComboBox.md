@@ -7,7 +7,11 @@ ComboBox を使用すると、ユーザーはドロップダウンリストか�
 文字列アイテムのリストを持つ標準的なコンボボックス。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ComboBox/combobox-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/ComboBox/example-2.png" alt="基本的なコンボボックス">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ComboBox/combobox-basic.png" alt="基本的なコンボボックス">
 </div>
 
 ```qml
@@ -20,8 +24,9 @@ ComboBox {
     width: 200
     model: ["Blue", "Green", "Red", "Yellow"]
     placeholderText: qsTr("Pick a color")
-    // currentIndex: 0 // 初期状態で "Blue" を選択する場合
+    // currentIndex: 0 // 用于初始选择 "Blue"
 }
+```
 ```
 
 ## ListModel を使用したコンボボックス
@@ -29,7 +34,11 @@ ComboBox {
 より複雑なアイテムの場合や、モデルを動的にする必要がある場合は、`ListModel` を使用できます。モデル内の各 `ListElement` には、表示に使用できるプロパティ（例：`text` または `value`）が必要です。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ComboBox/combobox-listmodel.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/ComboBox/example.png" alt="ListModel を使用したコンボボックス">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ComboBox/combobox-listmodel.png" alt="ListModel を使用したコンボボックス">
 </div>
 
 ```qml
@@ -54,7 +63,11 @@ ComboBox {
 `editable` を `true` に設定すると、ユーザーが値を入力できるようになります。`accepted()` シグナルを使用して新しい入力を処理できます。入力フィールドは `TextField` です。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/ComboBox/combobox-editable.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/ComboBox/listmodel.png" alt="編集可能なコンボボックス">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/ComboBox/combobox-editable.png" alt="編集可能なコンボボックス">
 </div>
 
 ```qml

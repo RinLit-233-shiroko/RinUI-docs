@@ -1,63 +1,68 @@
 # InfoBadge
 
-InfoBadge is a control that displays a small badge with text or numbers, typically used to indicate notification counts, status indicators, or other small pieces of information.
+`InfoBadge` is a compact badge displayed beside another interface element. Use it for unread counts, status, or reminders. It supports numbers, status icons, dots, and both solid and outlined styles.
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/InfoBadge-light.png',
-    dark: '/assets/images/examples/InfoBadge-dark.png',
-    alt: 'InfoBadge examples in light and dark themes'
-  }"
-  width="1000"
-/>
+## Show a Count
 
-## Basic InfoBadge
+Set `count` to display a number. The default maximum is `99`; larger counts are shown as `99+`. Negative values hide the count.
+
+<div align="center">
+  <img src="/assets/images/docs/InfoBadge/example-2.png" alt="Show a Count">
+</div>
 
 ```qml
 InfoBadge {
-    value: 5
-    Layout.alignment: Qt.AlignTop | Qt.AlignRight
+    count: 5
 }
 ```
+```
 
-## InfoBadge with Text
+## Status Icons
+
+Set `severity` to specify a status. When neither text nor a count is set, the badge displays the corresponding status icon.
+
+<div align="center">
+  <img src="/assets/images/docs/InfoBadge/example-3.png" alt="Status Icons">
+</div>
 
 ```qml
-InfoBadge {
-    text: qsTr("New")
-    Layout.alignment: Qt.AlignTop | Qt.AlignRight
+Row {
+    spacing: 12
+
+    InfoBadge { severity: Severity.Info }
+    InfoBadge { severity: Severity.Success }
+    InfoBadge { severity: Severity.Warning }
+    InfoBadge { severity: Severity.Error }
 }
 ```
+```
 
-## InfoBadge with Severity
+## Dot and Outlined Styles
+
+Set `dot` for a small dot without text. Set `solid` to `false` for a transparent background with a status-colored outline.
+
+<div align="center">
+  <img src="/assets/images/docs/InfoBadge/example.png" alt="Dot and Outlined Styles">
+</div>
 
 ```qml
-// Success badge
-InfoBadge {
-    value: 1
-    severity: Severity.Success
-    Layout.alignment: Qt.AlignTop | Qt.AlignRight
-}
+Row {
+    spacing: 12
 
-// Warning badge
-InfoBadge {
-    value: 3
-    severity: Severity.Warning
-    Layout.alignment: Qt.AlignTop | Qt.AlignRight
-}
-
-// Error badge
-InfoBadge {
-    value: 2
-    severity: Severity.Error
-    Layout.alignment: Qt.AlignTop | Qt.AlignRight
+    InfoBadge { dot: true }
+    InfoBadge { count: 3; solid: false }
+    InfoBadge { severity: Severity.Warning; solid: false }
 }
 ```
+```
 
-## Important Properties
+## Properties
 
-- `value`: Numeric value to display (for numbers)
-- `text`: Text to display (for text badges)
-- `severity`: The severity level (Info, Success, Warning, Error)
-- `visible`: Whether the badge is visible
-- `enabled`: Whether the badge is enabled
+- `count`: Number to display; defaults to `-1`, which hides the number.
+- `maxCount`: Maximum count before displaying `maxCount+`; defaults to `99`.
+- `text`: Badge text. When set, it takes precedence over text generated from `count`.
+- `severity`: Status type: `Severity.Info`, `Severity.Success`, `Severity.Warning`, or `Severity.Error`.
+- `icon`: Status icon name; defaults to the Fluent icon associated with `severity`.
+- `dot`: Whether to display a dot without content.
+- `solid`: Whether to use a solid background. `false` uses a transparent background and status-colored border.
+- `primaryColor`: Main fill or border color; defaults to a theme color selected by severity.

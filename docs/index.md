@@ -84,6 +84,10 @@ RinUI is not a replacement for a web component library, nor is it intended for p
 
 ## Start with QML you already know
 
+<div align="center">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="Start with QML you already know">
+</div>
+
 ```qml
 import QtQuick
 import RinUI
@@ -125,3 +129,9 @@ Continue with:
 ::: info Project status
 RinUI is still under active development. APIs and visual details may continue to change. It is best suited to prototypes, internal tools, and projects that can absorb iteration costs; review release changes before upgrading.
 :::
+
+## Acknowledgments
+
+Thanks to the contributors and maintainers who help build RinUI.
+
+[![Contributors](http://contrib.nn.ci/api?repo=rinlit-233-shiroko/Rin-UI)](https://github.com/RinLit-233-shiroko/Rin-UI/graphs/contributors)

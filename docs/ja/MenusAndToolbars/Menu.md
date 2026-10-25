@@ -2,16 +2,11 @@
 
 Menu は、MenuItem オブジェクトのリストを表示するコンポーネントです。コマンド、オプション、またはその他のアクションをユーザーに表示するために使用できます。Menu は、コンテキストメニューまたはメニューバーの一部として表示できます。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Menu-light.png',
-    dark: '/assets/images/examples/Menu-dark.png',
-    alt: 'Menu コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本メニュー
+
+<div align="center">
+  <img src="/assets/images/docs/Menu/example-2.png" alt="基本メニュー">
+</div>
 
 ```qml
 Menu {
@@ -43,6 +38,10 @@ Menu {
 ```
 
 ## サブメニュー付きメニュー
+
+<div align="center">
+  <img src="/assets/images/docs/Menu/example.png" alt="サブメニュー付きメニュー">
+</div>
 
 ```qml
 Menu {

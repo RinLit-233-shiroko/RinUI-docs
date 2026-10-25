@@ -7,7 +7,11 @@ A `DropDownButton` is a type of button that, when clicked, displays a menu of op
 A `DropDownButton` typically has a text label and a dropdown indicator. Menu items are defined as children, which populate its internal menu.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/DropDownButton/example-2.png" alt="Basic DropDownButton">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-basic.png" alt="Basic DropDownButton">
 </div>
 
 ```qml
@@ -27,7 +31,7 @@ DropDownButton {
         text: qsTr("Open")
         onTriggered: console.log("Open clicked")
     }
-    // Assuming MenuSeparator is available and compatible:
+    // 假设 MenuSeparator 可用且兼容：
     // MenuSeparator { } 
     MenuItem {
         text: qsTr("Save")
@@ -35,13 +39,18 @@ DropDownButton {
     }
 }
 ```
+```
 
 ## DropDownButton with Icons
 
 Both the button itself and its menu items can include icons.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-icons.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/DropDownButton/example.png" alt="DropDownButton with Icons">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/DropDownButton/dropdownbutton-icons.png" alt="DropDownButton with Icons">
 </div>
 
 ```qml

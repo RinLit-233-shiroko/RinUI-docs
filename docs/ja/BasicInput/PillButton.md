@@ -7,7 +7,11 @@
 `PillButton` は、オン/オフ状態または選択を表すために使用できます。デフォルトで `checkable` です。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/PillButton/pillbutton-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/PillButton/example-2.png" alt="基本的なピルボタン">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/PillButton/pillbutton-basic.png" alt="基本的なピルボタン">
 </div>
 
 ```qml
@@ -18,7 +22,7 @@ import RinUI
 
 PillButton {
     text: qsTr("Toggle Option")
-    // checked: true // 初期状態でチェック/オンにする場合
+    // checked: true // 用于初始选中/开启
     onCheckedChanged: {
         if (checked) {
             console.log("PillButton is ON");
@@ -28,13 +32,18 @@ PillButton {
     }
 }
 ```
+```
 
 ## アイコン付きピルボタン
 
 標準の `Button` と同様に、`PillButton` にアイコンを追加できます。
 
 <div align="center">
-  <img src="/assets/images/BasicInput/PillButton/pillbutton-icon.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/PillButton/example.png" alt="アイコン付きピルボタン">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/PillButton/pillbutton-icon.png" alt="アイコン付きピルボタン">
 </div>
 
 ```qml

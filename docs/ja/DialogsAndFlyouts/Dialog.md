@@ -7,7 +7,11 @@
 基本的なダイアログは、タイトル、コンテンツ、および標準ボタン（OK、キャンセルなど）で構成されます。コンテンツアイテムは、`Dialog` コンポーネントの直接の子として追加されます。
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-basic.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Dialog/example-2.png" alt="基本的なダイアログ">
+</div>
+
+<div align="center">
+  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-basic.png" alt="基本的なダイアログ">
 </div>
 
 ```qml
@@ -24,23 +28,24 @@ Button {
 Dialog {
     id: basicDialog
     title: qsTr("Basic Dialog Title")
-    // modal: true はコンポーネント内で Overlay.modal を使用するためデフォルトです
+    // modal: true 在组件中通过 Overlay.modal 使用，因此是默认行为
     standardButtons: Dialog.Ok | Dialog.Cancel
 
-    // コンテンツアイテムはここに子として追加されます
+    // 内容项在此处作为子项添加
     Text {
         text: qsTr("This is the main content of the dialog.")
     }
 
     onAccepted: {
         console.log("Dialog accepted!");
-        // OKアクションを実行
+        // 执行“确定”操作
     }
     onRejected: {
         console.log("Dialog rejected or closed.");
-        // キャンセル処理
+        // 处理取消操作
     }
 }
+```
 ```
 
 ## カスタムコンテンツ
@@ -48,7 +53,11 @@ Dialog {
 `Dialog` の子として任意の QML コンポーネントを配置して、ダイアログのコンテンツ領域内にカスタムレイアウトとインタラクションを作成できます。これらの子は、`Dialog` の内部 `contentItem` 内の `ColumnLayout` に自動的に親子関係が設定されます。
 
 <div align="center">
-  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-custom.png"> <!-- Placeholder: 画像パスは確認または作成が必要です -->
+  <img src="/assets/images/docs/Dialog/example.png" alt="カスタムコンテンツ">
+</div>
+
+<div align="center">
+  <img src="/assets/images/DialogsAndFlyouts/Dialog/dialog-custom.png" alt="カスタムコンテンツ">
 </div>
 
 ```qml

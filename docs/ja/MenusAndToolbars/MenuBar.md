@@ -2,16 +2,11 @@
 
 MenuBar は、Menu オブジェクトを含む水平バーで、通常ウィンドウの上部に配置されます。 異なるアプリケーション間で一貫したメニュー項目を提供する標準的な方法を提供します。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/MenuBar-light.png',
-    dark: '/assets/images/examples/MenuBar-dark.png',
-    alt: 'MenuBar コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本メニューバー
+
+<div align="center">
+  <img src="/assets/images/docs/MenuBar/example.png" alt="基本メニューバー">
+</div>
 
 ```qml
 MenuBar {

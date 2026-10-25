@@ -2,16 +2,11 @@
 
 `Segmented` は、少数の排他的な選択肢を切り替えるためのコントロールです。Qt Quick `TabBar` を継承し、複数の `SegmentedItem` で構成されます。選択項目には Fluent スタイルの塗り、枠線、インジケーターが表示され、ビュー切り替え、フィルター、コンパクトな設定に適しています。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Segmented-light.png',
-    dark: '/assets/images/examples/Segmented-dark.png',
-    alt: 'Segmented コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
-
 ## 基本的な使い方
+
+<div align="center">
+  <img src="/assets/images/docs/Segmented/example-2.png" alt="基本的な使い方">
+</div>
 
 ```qml
 Segmented {
@@ -40,6 +35,10 @@ Segmented {
 
 テキストを省略し、`ToolTip` で意味を補足できます：
 
+<div align="center">
+  <img src="/assets/images/docs/Segmented/example-3.png" alt="アイコンのみ">
+</div>
+
 ```qml
 Segmented {
     SegmentedItem {
@@ -66,6 +65,10 @@ Segmented {
 
 `TabBar` を継承しているため、`Repeater` で項目を生成し、`currentIndex` で選択位置を取得できます：
 
+<div align="center">
+  <img src="/assets/images/docs/Segmented/example-4.png" alt="動的な項目">
+</div>
+
 ```qml
 Segmented {
     id: segmented
@@ -90,6 +93,10 @@ Segmented {
 - `SegmentedItem.icon.name`：Fluent アイコン名。
 
 選択変更の監視：
+
+<div align="center">
+  <img src="/assets/images/docs/Segmented/example.png" alt="状態と選択">
+</div>
 
 ```qml
 Segmented {

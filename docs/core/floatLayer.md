@@ -7,6 +7,19 @@ It can be mounted on any `Window`, `ApplicationWindow`, etc., based on native Qt
 
 You can use the float layer manager (`FloatLayer`) as follows:
 
+```qml
+import RinUI
+
+Window {
+    Component.onCompleted: {
+        floatLayer.createInfoBar({
+            text: "args.text"
+        })
+    }
+}
+```
+```
+
 ## Structure
 ```bash
 Item (FloatLayer)
@@ -51,7 +64,7 @@ You can refer to the following example:
 
 ```qml
 Button {
-    // Custom Component
+    // 自定义组件
     Component {
         id: customInfoBar
         InfoBar {
@@ -72,9 +85,11 @@ Button {
     
     text: qsTr("Popup a custom InfoBar")
     
-    // Action
+    // 触发
     onClicked: {
         floatLayer.createCustom(customInfoBar)
     }
 }
 ```
+```
+

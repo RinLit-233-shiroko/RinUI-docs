@@ -7,7 +7,11 @@
 RadioButtons are typically used in groups to present a set of related options where only one can be active at a time. To enforce mutual exclusivity, they should be assigned to a `ButtonGroup`.
 
 <div align="center">
-  <img src="/assets/images/BasicInput/RadioButton/radiobutton-basic.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/RadioButton/example.png" alt="Basic RadioButtons">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/RadioButton/radiobutton-basic.png" alt="Basic RadioButtons">
 </div>
 
 ```qml

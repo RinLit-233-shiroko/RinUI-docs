@@ -1,83 +1,73 @@
-# CalendarDatePicker（日付ピッカー）
+# カレンダー日付ピッカー (CalendarDatePicker)
 
-CalendarDatePicker は、クリックされたときにカレンダーを開くボタンスタイルのコントロールで、ユーザーが日付を選択できるようにします。コンパクトなフォームファクターで日付選択機能を提供する便利的な方法を提供します。
+`CalendarDatePicker` は選択した日付またはプレースホルダーをボタンとして表示します。クリックするとカレンダーが開き、日付を選択できます。カレンダーを視覚的に確認したいフォームに適しています。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/CalendarDatePicker-light.png',
-    dark: '/assets/images/examples/CalendarDatePicker-dark.png',
-    alt: 'CalendarDatePicker コンポーネントのライト／ダーク例'
-  }"
-  width="1000"
-/>
+## 基本的な使い方
 
-## 基本使用
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example-2.png" alt="基本的な使い方">
+</div>
 
 ```qml
 CalendarDatePicker {
-    id: datePicker
     selectedDate: new Date()
 }
 ```
+```
 
-## カスタム表示フォーマット
+## 日付範囲の設定
+
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example-3.png" alt="日付範囲の設定">
+</div>
 
 ```qml
 CalendarDatePicker {
-    id: datePicker
     selectedDate: new Date()
-    textFormat: "yyyy年MM月dd日"
+    minimumDate: new Date(2026, 0, 1)
+    maximumDate: new Date(2026, 11, 31)
+}
+```
+```
+
+## プレースホルダーと日付形式
+
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example-4.png" alt="プレースホルダーと日付形式">
+</div>
+
+```qml
+CalendarDatePicker {
     placeholderText: qsTr("日付を選択")
-}
-```
-
-## 制約付きピッカー
-
-```qml
-CalendarDatePicker {
-    id: datePicker
-    selectedDate: new Date()
-    minimumDate: new Date(2025, 0, 1)   // 2025年1月1日
-    maximumDate: new Date(2025, 11, 31) // 2025年12月31日
-}
-```
-
-## カスタムアイコン付きピッカー
-
-```qml
-CalendarDatePicker {
-    id: datePicker
-    selectedDate: new Date()
-    iconName: "ic_fluent_calendar_ltr_20_regular"
-    iconSize: 20
-    iconColor: "#3A86FF"
+    textFormat: "yyyy年MM月dd日"
 }
 ```
 
 ## 日付選択の処理
 
+<div align="center">
+  <img src="/assets/images/docs/CalendarDatePicker/example.png" alt="日付選択の処理">
+</div>
+
 ```qml
 CalendarDatePicker {
-    id: datePicker
-    selectedDate: new Date()
-    
-    onDateSelected: (date) => {
-        console.log("選択された日付:", Qt.formatDate(date, "yyyy-MM-dd"))
+    onDateSelected: function(date) {
+        console.log(Qt.formatDate(date, "yyyy-MM-dd"))
     }
 }
 ```
+```
 
-## 重要なプロパティ
+## 主なプロパティ
 
-- `selectedDate`: 現在選択されている日付
-- `placeholderText`: 日付が選択されていないときに表示されるテキスト
-- `textFormat`: 選択された日付を表示するためのフォーマット文字列
-- `minimumDate` と `maximumDate`: 選択できる最小および最大の日付
-- `iconName`: ボタン内に表示されるアイコン名
-- `iconSize`: アイコンのサイズ
-- `iconColor`: アイコンの色
-- `iconVisible`: アイコンが表示されるかどうか
+- `selectedDate`: 選択中の日付。未選択時は `null`。
+- `minimumDate`、`maximumDate`: 選択可能な日付範囲。
+- `placeholderText`: 日付未選択時に表示するテキスト。
+- `textFormat`: ボタンに表示する日付形式。既定値は `MM/dd/yyyy`。
+- `calendarLocale`: カレンダーで使用するロケール。
+- `useISOWeek`: 月曜日を週の最初の日にするかどうか。
+- `iconName`、`iconSize`、`iconColor`、`iconVisible`: カレンダーアイコンの名前、サイズ、色、表示状態。
 
-## 重要な信号
+## シグナル
 
-- `dateSelected(date date)`: 日付が選択されたときに发出される
+- `dateSelected(date date)`: ユーザーが日付を選択したときに発生します。

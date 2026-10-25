@@ -10,7 +10,11 @@ A `RoundButton` can be used just like a standard `Button`, with its shape adapti
 
 **Pill Shape (Width > Height):**
 <div align="center">
-  <img src="/assets/images/BasicInput/RoundButton/roundbutton-pill.png"> <!-- Placeholder: image path to be confirmed or created -->
+  <img src="/assets/images/docs/RoundButton/example.png" alt="Basic RoundButton Examples">
+</div>
+
+<div align="center">
+  <img src="/assets/images/BasicInput/RoundButton/roundbutton-pill.png" alt="Basic RoundButton Examples">
 </div>
 
 ```qml
