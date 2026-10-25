@@ -10,6 +10,17 @@ export default defineConfig({
       ['link', { rel: 'icon', href: '/assets/images/home/rinui-app.png' }]  // 添加网站图标
   ],
 
+  // Use VitePress's built-in MiniSearch index for multilingual documentation.
+  search: {
+    provider: 'local',
+    options: {
+      locales: {
+        zh: { translations: { button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' }, modal: { noResultsText: '无法找到相关结果', resetButtonTitle: '清除查询条件', footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' } } } },
+        ja: { translations: { button: { buttonText: 'ドキュメントを検索', buttonAriaLabel: 'ドキュメントを検索' }, modal: { noResultsText: '関連する結果が見つかりません', resetButtonTitle: '検索をクリア', footer: { selectText: '選択', navigateText: '移動', closeText: '閉じる' } } } }
+      }
+    }
+  },
+
   // 国际化 / internationalization
   locales: {
     root: {
@@ -34,6 +45,7 @@ export default defineConfig({
           },
           {
             text: 'RinUI Core',
+            collapsed: true,
             items: [
               { text: 'Theme', link: '/core/theme' },
               { text: 'Utils', link: '/core/utils' },
@@ -42,7 +54,15 @@ export default defineConfig({
             ]
           },
           {
+            text: 'Styles',
+            collapsed: true,
+            items: [
+              { text: 'AcrylicBrush', link: '/Styles/AcrylicBrush.md' }
+            ]
+          },
+          {
             text: 'BasicInput',
+            collapsed: true,
             items: [
               { text: 'Button', link: '/BasicInput/Button.md' },
               { text: 'CheckBox', link: '/BasicInput/CheckBox.md' },
@@ -63,6 +83,7 @@ export default defineConfig({
           },
           {
             text: 'Date and Time',
+            collapsed: true,
             items: [
               { text: 'Calendar', link: '/DateAndTime/Calendar.md' },
               { text: 'CalendarDatePicker', link: '/DateAndTime/CalendarDatePicker.md' },
@@ -72,6 +93,7 @@ export default defineConfig({
           },
           {
             text: 'Dialogs and Flyouts',
+            collapsed: true,
             items: [
               { text: 'Dialog', link: '/DialogsAndFlyouts/Dialog.md' },
               { text: 'Flyout', link: '/DialogsAndFlyouts/Flyout.md' },
@@ -80,6 +102,7 @@ export default defineConfig({
           },
           {
             text: 'Layout',
+            collapsed: true,
             items: [
               { text: 'Expander', link: '/Layout/Expander.md' },
               { text: 'SettingExpander', link: '/Layout/SettingExpander.md' },
@@ -88,22 +111,26 @@ export default defineConfig({
           },
           {
             text: 'Lists and Collections',
+            collapsed: true,
             items: [
               { text: 'Clip (Interactive Surface)', link: '/ListAndCollections/Clip.md' },
               { text: 'Frame', link: '/ListAndCollections/Frame.md' },
               { text: 'ListView', link: '/ListAndCollections/ListView.md' },
               { text: 'SettingCard', link: '/ListAndCollections/SettingCard.md' },
+              { text: 'SwipeView', link: '/ListAndCollections/SwipeView.md' },
               { text: 'TableView', link: '/ListAndCollections/TableView.md' }
             ]
           },
           {
             text: 'Media',
+            collapsed: true,
             items: [
               { text: 'Avatar', link: '/Media/Avatar.md' }
             ]
           },
           {
             text: 'Menus and Toolbars',
+            collapsed: true,
             items: [
               { text: 'Menu', link: '/MenusAndToolbars/Menu.md' },
               { text: 'MenuBar', link: '/MenusAndToolbars/MenuBar.md' },
@@ -111,14 +138,18 @@ export default defineConfig({
           },
           {
             text: 'Navigation',
+            collapsed: true,
             items: [
               { text: 'NavigationView', link: '/Navigation/NavigationView.md' },
+              { text: 'PageIndicator', link: '/PageIndicator.md' },
+              { text: 'PageIndicator', link: '/PageIndicator.md' },
               { text: 'Segmented', link: '/Navigation/Segmented.md' },
               { text: 'SelectorBar', link: '/Navigation/SelectorBar.md' },
             ]
           },
           {
             text: 'Status and Info',
+            collapsed: true,
             items: [
               { text: 'BusyIndicator', link: '/StatusAndInfo/BusyIndicator.md' },
               { text: 'InfoBadge', link: '/StatusAndInfo/InfoBadge.md' },
@@ -130,6 +161,7 @@ export default defineConfig({
           },
           {
             text: 'Text',
+            collapsed: true,
             items: [
               { text: 'AutoSuggestBox', link: '/BasicInput/AutoSuggestBox.md' },
               { text: 'ScrollableTextArea', link: '/Text/ScrollableTextArea.md' },
@@ -140,6 +172,7 @@ export default defineConfig({
           },
           {
             text: 'Windowing',
+            collapsed: true,
             items: [
               { text: 'FluentWindow', link: '/Windowing/FluentWindow.md' },
               { text: 'FluentPage', link: '/Windowing/FluentPage.md' }
@@ -172,6 +205,7 @@ export default defineConfig({
           },
           {
             text: 'RinUI 核心',
+            collapsed: true,
             items: [
               { text: '主题', link: '/zh/core/theme' },
               { text: '工具', link: '/zh/core/utils' },
@@ -180,7 +214,15 @@ export default defineConfig({
             ]
           },
           {
+            text: '样式',
+            collapsed: true,
+            items: [
+              { text: '亚克力材质 (AcrylicBrush)', link: '/zh/Styles/AcrylicBrush.md' }
+            ]
+          },
+          {
             text: '基本输入',
+            collapsed: true,
             items: [
               { text: '按钮 (Button)', link: '/zh/BasicInput/Button.md' },
               { text: '复选框 (CheckBox)', link: '/zh/BasicInput/CheckBox.md' },
@@ -201,6 +243,7 @@ export default defineConfig({
           },
           {
             text: '日期和时间',
+            collapsed: true,
             items: [
               { text: '日历 (Calendar)', link: '/zh/DateAndTime/Calendar.md' },
               { text: '日历日期选择器 (CalendarDatePicker)', link: '/zh/DateAndTime/CalendarDatePicker.md' },
@@ -210,6 +253,7 @@ export default defineConfig({
           },
           {
             text: '对话框和浮出控件',
+            collapsed: true,
             items: [
               { text: '对话框 (Dialog)', link: '/zh/DialogsAndFlyouts/Dialog.md' },
               { text: '浮出控件 (Flyout)', link: '/zh/DialogsAndFlyouts/Flyout.md' },
@@ -218,6 +262,7 @@ export default defineConfig({
           },
           {
             text: '布局',
+            collapsed: true,
             items: [
               { text: '展开器 (Expander)', link: '/zh/Layout/Expander.md' },
               { text: '设置展开器 (SettingExpander)', link: '/zh/Layout/SettingExpander.md' },
@@ -226,22 +271,26 @@ export default defineConfig({
           },
           {
             text: '列表和集合',
+            collapsed: true,
             items: [
-              { text: 'Clip (可交互表面) (Clip)', link: '/zh/ListAndCollections/Clip.md' },
+              { text: '卡片 (Card)', link: '/zh/ListAndCollections/Card.md' },
               { text: '框架 (Frame)', link: '/zh/ListAndCollections/Frame.md' },
               { text: '列表视图 (ListView)', link: '/zh/ListAndCollections/ListView.md' },
               { text: '设置卡片 (SettingCard)', link: '/zh/ListAndCollections/SettingCard.md' },
+              { text: '滑动视图 (SwipeView)', link: '/zh/ListAndCollections/SwipeView.md' },
               { text: '表格视图 (TableView)', link: '/zh/ListAndCollections/TableView.md' }
             ]
           },
           {
             text: '媒体',
+            collapsed: true,
             items: [
               { text: '头像 (Avatar)', link: '/zh/Media/Avatar.md' }
             ]
           },
           {
             text: '菜单和工具栏',
+            collapsed: true,
             items: [
               { text: '菜单 (Menu)', link: '/zh/MenusAndToolbars/Menu.md' },
               { text: '菜单栏 (MenuBar)', link: '/zh/MenusAndToolbars/MenuBar.md' },
@@ -249,6 +298,7 @@ export default defineConfig({
           },
           {
             text: '导航',
+            collapsed: true,
             items: [
               { text: '导航视图 (NavigationView)', link: '/zh/Navigation/NavigationView.md' },
               { text: '分段控件 (Segmented)', link: '/zh/Navigation/Segmented.md' },
@@ -257,6 +307,7 @@ export default defineConfig({
           },
           {
             text: '状态和信息',
+            collapsed: true,
             items: [
               { text: '忙碌指示器 (BusyIndicator)', link: '/zh/StatusAndInfo/BusyIndicator.md' },
               { text: '信息徽章 (InfoBadge)', link: '/zh/StatusAndInfo/InfoBadge.md' },
@@ -268,6 +319,7 @@ export default defineConfig({
           },
           {
             text: '文本',
+            collapsed: true,
             items: [
               { text: '自动建议框 (AutoSuggestBox)', link: '/zh/BasicInput/AutoSuggestBox.md' },
               { text: '可滚动文本域 (ScrollableTextArea)', link: '/zh/Text/ScrollableTextArea.md' },
@@ -278,6 +330,7 @@ export default defineConfig({
           },
           {
             text: '窗口管理',
+            collapsed: true,
             items: [
               { text: 'FluentWindow', link: '/zh/Windowing/FluentWindow.md' },
               { text: 'FluentPage', link: '/zh/Windowing/FluentPage.md' }
@@ -310,6 +363,7 @@ export default defineConfig({
           },
           {
             text: 'RinUI コア',
+            collapsed: true,
             items: [
               { text: 'テーマ', link: '/ja/core/theme' },
               { text: 'ユーティリティ', link: '/ja/core/utils' },
@@ -318,7 +372,15 @@ export default defineConfig({
             ]
           },
           {
+            text: 'スタイル',
+            collapsed: true,
+            items: [
+              { text: 'AcrylicBrush', link: '/ja/Styles/AcrylicBrush.md' }
+            ]
+          },
+          {
             text: '基本入力',
+            collapsed: true,
             items: [
               { text: 'ボタン', link: '/ja/BasicInput/Button.md' },
               { text: 'チェックボックス', link: '/ja/BasicInput/CheckBox.md' },
@@ -339,6 +401,7 @@ export default defineConfig({
           },
           {
             text: '日付と時刻',
+            collapsed: true,
             items: [
               { text: 'カレンダー', link: '/ja/DateAndTime/Calendar.md' },
               { text: 'カレンダー日付ピッカー', link: '/ja/DateAndTime/CalendarDatePicker.md' },
@@ -348,6 +411,7 @@ export default defineConfig({
           },
           {
             text: 'ダイアログとフライアウト',
+            collapsed: true,
             items: [
               { text: 'ダイアログ', link: '/ja/DialogsAndFlyouts/Dialog.md' },
               { text: 'フライアウト', link: '/ja/DialogsAndFlyouts/Flyout.md' },
@@ -356,6 +420,7 @@ export default defineConfig({
           },
           {
             text: 'レイアウト',
+            collapsed: true,
             items: [
               { text: 'エキスパンダー', link: '/ja/Layout/Expander.md' },
               { text: '設定エキスパンダー', link: '/ja/Layout/SettingExpander.md' },
@@ -364,22 +429,26 @@ export default defineConfig({
           },
           {
             text: 'リストとコレクション',
+            collapsed: true,
             items: [
               { text: 'Clip (インタラクティブサーフェス)', link: '/ja/ListAndCollections/Clip.md' },
               { text: 'フレーム', link: '/ja/ListAndCollections/Frame.md' },
               { text: 'リストビュー', link: '/ja/ListAndCollections/ListView.md' },
               { text: '設定カード', link: '/ja/ListAndCollections/SettingCard.md' },
+              { text: 'スワイプビュー', link: '/ja/ListAndCollections/SwipeView.md' },
               { text: 'テーブルビュー', link: '/ja/ListAndCollections/TableView.md' }
             ]
           },
           {
             text: 'メディア',
+            collapsed: true,
             items: [
               { text: 'アバター', link: '/ja/Media/Avatar.md' }
             ]
           },
           {
             text: 'メニューとツールバー',
+            collapsed: true,
             items: [
               { text: 'メニュー', link: '/ja/MenusAndToolbars/Menu.md' },
               { text: 'メニューバー', link: '/ja/MenusAndToolbars/MenuBar.md' },
@@ -387,14 +456,18 @@ export default defineConfig({
           },
           {
             text: 'ナビゲーション',
+            collapsed: true,
             items: [
               { text: 'ナビゲーションビュー', link: '/ja/Navigation/NavigationView.md' },
+              { text: 'ページインジケーター', link: '/ja/PageIndicator.md' },
+              { text: 'ページインジケーター (PageIndicator)', link: '/ja/PageIndicator.md' },
               { text: 'セグメント', link: '/ja/Navigation/Segmented.md' },
               { text: 'セレクターバー', link: '/ja/Navigation/SelectorBar.md' }
             ]
           },
           {
             text: '状態と情報',
+            collapsed: true,
             items: [
               { text: 'ビジーインジケーター', link: '/ja/StatusAndInfo/BusyIndicator.md' },
               { text: '情報バッジ', link: '/ja/StatusAndInfo/InfoBadge.md' },
@@ -406,6 +479,7 @@ export default defineConfig({
           },
           {
             text: 'テキスト',
+            collapsed: true,
             items: [
               { text: 'オートサジェストボックス', link: '/ja/BasicInput/AutoSuggestBox.md' },
               { text: 'スクロール可能テキストエリア', link: '/ja/Text/ScrollableTextArea.md' },
@@ -416,6 +490,7 @@ export default defineConfig({
           },
           {
             text: 'ウィンドウ管理',
+            collapsed: true,
             items: [
               { text: 'FluentWindow', link: '/ja/Windowing/FluentWindow.md' },
               { text: 'FluentPage', link: '/ja/Windowing/FluentPage.md' }
@@ -427,6 +502,7 @@ export default defineConfig({
   },
 
   themeConfig: {
+    search: { provider: 'local' },
     logo: '/assets/images/home/rinui-app.png',
 
     socialLinks: [

@@ -5,7 +5,7 @@ RinUI 中的 `Frame` 组件是一个带样式的容器，继承自 `QtQuick.Cont
 ## 基本框架
 
 <div align="center">
-  <img src="/assets/images/docs/Frame/基本框架.png" alt="基本框架 示例">
+  <img src="/assets/images/docs/Frame/example.png" alt="基本框架 示例">
 </div>
 
 `Frame` 可用于直观地对内容进行分组。您可以将子项直接放置在 `Frame` 内；这些子项将成为 `Frame` 的 `contentItem` 的父项。标准填充属性可用于在框架边缘及其内容之间创建空间。
@@ -65,7 +65,7 @@ Frame {
 
 RinUI 利用 `Frame` 作为其他组件的基础构建块。例如：
 *   `SettingItem` 继承自 `Frame`，为设置页面中的各个行提供一致的结构。
-*   `Clip` 组件内部使用 `Frame` 作为其带样式的背景。
+*   `Card` 组件内部使用 `Frame` 作为其带样式的背景。
 
 这展示了 `Frame` 在创建具有一致主题的带样式容器方面的实用性。
 ```
