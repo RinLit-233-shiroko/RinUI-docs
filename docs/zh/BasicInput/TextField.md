@@ -6,7 +6,7 @@ TextField 是一个单行文本输入控件，类似于标准 QML TextField，�
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextField/基本使用.png" alt="基本使用 示例">
+  <img src="/assets/images/docs/TextField/example-2.png" alt="基本使用 示例">
 </div>
 
 ```qml
@@ -21,7 +21,7 @@ TextField {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextField/带清除按钮的文本框.png" alt="带清除按钮的文本框 示例">
+  <img src="/assets/images/docs/TextField/example-3.png" alt="带清除按钮的文本框 示例">
 </div>
 
 ```qml
@@ -37,7 +37,7 @@ TextField {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextField/自定义样式.png" alt="自定义样式 示例">
+  <img src="/assets/images/docs/TextField/example-4.png" alt="自定义样式 示例">
 </div>
 
 ```qml
@@ -53,7 +53,7 @@ TextField {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextField/无边框模式.png" alt="无边框模式 示例">
+  <img src="/assets/images/docs/TextField/example-5.png" alt="无边框模式 示例">
 </div>
 
 ```qml
@@ -69,7 +69,7 @@ TextField {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextField/只读模式.png" alt="只读模式 示例">
+  <img src="/assets/images/docs/TextField/example.png" alt="只读模式 示例">
 </div>
 
 ```qml

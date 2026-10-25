@@ -8,7 +8,7 @@ Button 是一个按钮控件，用户可以按下或单击该控件。按钮通�
 ## 按钮
 
 <div align="center">
-  <img src="/assets/images/docs/Button/按钮.png" alt="按钮 示例">
+  <img src="/assets/images/docs/Button/example-2.png" alt="按钮 示例">
 </div>
 
 
@@ -25,7 +25,7 @@ Button {
 ## 图标按钮
 
 <div align="center">
-  <img src="/assets/images/docs/Button/图标按钮.png" alt="图标按钮 示例">
+  <img src="/assets/images/docs/Button/example.png" alt="图标按钮 示例">
 </div>
 
 <div align="center">
@@ -47,7 +47,7 @@ Button {
 ## 高亮按钮（Highlighted）
 
 <div align="center">
-  <img src="/assets/images/docs/Button/高亮按钮-highlighted.png" alt="高亮按钮（Highlighted） 示例">
+  <img src="/assets/images/docs/Button/flat.png" alt="高亮按钮（Highlighted） 示例">
 </div>
 
 <div align="center">
@@ -64,7 +64,7 @@ Button {
 ## 扁平按钮（Flat）
 
 <div align="center">
-  <img src="/assets/images/docs/Button/扁平按钮-flat.png" alt="扁平按钮（Flat） 示例">
+  <img src="/assets/images/docs/Button/highlighted-2.png" alt="扁平按钮（Flat） 示例">
 </div>
 
 <div align="center">
@@ -81,7 +81,7 @@ Button {
 ## 自定义按钮（Highlighted）
 
 <div align="center">
-  <img src="/assets/images/docs/Button/自定义按钮-highlighted.png" alt="自定义按钮（Highlighted） 示例">
+  <img src="/assets/images/docs/Button/highlighted.png" alt="自定义按钮（Highlighted） 示例">
 </div>
 
 <div align="center">

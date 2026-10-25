@@ -5,7 +5,7 @@
 ## 确定进度
 
 <div align="center">
-  <img src="/assets/images/docs/ProgressRing/确定进度.png" alt="确定进度示例">
+  <img src="/assets/images/docs/ProgressRing/example-2.png" alt="确定进度示例">
 </div>
 
 ```qml
@@ -23,7 +23,7 @@ ProgressRing {
 任务尚无可计算的完成比例时，将 `indeterminate` 设为 `true`。环形动画仅在 `Running` 状态下持续运行。
 
 <div align="center">
-  <img src="/assets/images/docs/ProgressRing/不确定进度.png" alt="不确定进度示例">
+  <img src="/assets/images/docs/ProgressRing/example-3.png" alt="不确定进度示例">
 </div>
 
 ```qml
@@ -39,7 +39,7 @@ ProgressRing {
 `state` 支持 `ProgressRing.Running`、`ProgressRing.Paused` 和 `ProgressRing.Error`。暂停状态使用主题中的警告色，错误状态使用严重错误色。
 
 <div align="center">
-  <img src="/assets/images/docs/ProgressRing/暂停与错误状态.png" alt="暂停与错误状态示例">
+  <img src="/assets/images/docs/ProgressRing/example.png" alt="暂停与错误状态示例">
 </div>
 
 ```qml

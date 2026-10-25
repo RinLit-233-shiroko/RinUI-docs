@@ -5,7 +5,7 @@ CheckBox 控件允许用户进行二元选择，例如选择或取消选择某�
 ## 基本复选框
 
 <div align="center">
-  <img src="/assets/images/docs/CheckBox/基本复选框.png" alt="基本复选框 示例">
+  <img src="/assets/images/docs/CheckBox/example-2.png" alt="基本复选框 示例">
 </div>
 
 CheckBox 可用于简单的布尔值选择。
@@ -29,7 +29,7 @@ CheckBox {
 ## 三态复选框
 
 <div align="center">
-  <img src="/assets/images/docs/CheckBox/三态复选框.png" alt="三态复选框 示例">
+  <img src="/assets/images/docs/CheckBox/example-3.png" alt="三态复选框 示例">
 </div>
 
 将 `tristate` 属性设置为 `true` 可启用第三种“不确定”状态。这种状态在视觉上是独特的，通常用于指示某个选项已为部分（而非全部）子项设置。
@@ -55,7 +55,7 @@ CheckBox {
 ## 复选框组
 
 <div align="center">
-  <img src="/assets/images/docs/CheckBox/复选框组.png" alt="复选框组 示例">
+  <img src="/assets/images/docs/CheckBox/example.png" alt="复选框组 示例">
 </div>
 
 复选框可用于控制父级的“全选”复选框。示例 `examples/pages/controls/CheckBox.qml` 演示了如何使用 `ButtonGroup` 实现此功能。

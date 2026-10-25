@@ -86,7 +86,7 @@ RinUI 更适合需要桌面窗口和完整交互、又希望保留 QML 开发效
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentWindow/基本用法.png" alt="使用 FluentWindow 与 SamplePage 的示例界面">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="使用 FluentWindow 与 SamplePage 的示例界面">
 </div>
 
 ```qml
@@ -130,3 +130,7 @@ sys.exit(app.exec())
 ::: info 项目状态
 RinUI 仍在持续开发中。接口和视觉细节可能继续调整，建议先用于原型、内部工具和可接受迭代成本的项目，并在升级前阅读版本变更。
 :::
+
+## 致谢
+
+[![Contributors](http://contrib.nn.ci/api?repo=rinlit-233-shiroko/Rin-UI)](https://github.com/RinLit-233-shiroko/Rin-UI/graphs/contributors)

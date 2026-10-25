@@ -6,7 +6,7 @@ MenuBar 是一个水平栏，包含 Menu 对象，通常位于窗口顶部。它
 
 
 <div align="center">
-  <img src="/assets/images/docs/MenuBar/基本菜单栏.png" alt="基本菜单栏 示例">
+  <img src="/assets/images/docs/MenuBar/example.png" alt="基本菜单栏 示例">
 </div>
 
 ```qml

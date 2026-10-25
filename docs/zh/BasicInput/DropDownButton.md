@@ -5,7 +5,7 @@ DropDownButton 是一种按钮，点击后会显示一个选项菜单。它结�
 ## 基本下拉按钮
 
 <div align="center">
-  <img src="/assets/images/docs/DropDownButton/基本下拉按钮.png" alt="基本下拉按钮 示例">
+  <img src="/assets/images/docs/DropDownButton/example-2.png" alt="基本下拉按钮 示例">
 </div>
 
 DropDownButton 通常有一个文本标签和一个下拉指示器。菜单项被定义为其子项，用以填充其内部菜单。
@@ -43,7 +43,7 @@ DropDownButton {
 ## 带图标的下拉按钮
 
 <div align="center">
-  <img src="/assets/images/docs/DropDownButton/带图标的下拉按钮.png" alt="带图标的下拉按钮 示例">
+  <img src="/assets/images/docs/DropDownButton/example.png" alt="带图标的下拉按钮 示例">
 </div>
 
 按钮本身及其菜单项都可以包含图标。

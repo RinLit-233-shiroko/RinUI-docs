@@ -6,7 +6,7 @@
 
 
 <div align="center">
-  <img src="/assets/images/docs/TimePicker/基本时间选择器-12-小时制.png" alt="基本时间选择器（12 小时制） 示例">
+  <img src="/assets/images/docs/TimePicker/12.png" alt="基本时间选择器（12 小时制） 示例">
 </div>
 
 默认情况下，`TimePicker` 使用 12 小时制时钟格式，并带有 AM/PM 选择器。显示的小时、分钟和 AM/PM 值基于组件的当前选择。
@@ -40,7 +40,7 @@ TimePicker {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TimePicker/24-小时制时间选择器.png" alt="24 小时制时间选择器 示例">
+  <img src="/assets/images/docs/TimePicker/24.png" alt="24 小时制时间选择器 示例">
 </div>
 
 将 `use24Hour` 属性设置为 `true` 以使用 24 小时制时钟格式。这将隐藏 AM/PM 选择器。
@@ -62,7 +62,7 @@ TimePicker {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TimePicker/以编程方式设置时间.png" alt="以编程方式设置时间 示例">
+  <img src="/assets/images/docs/TimePicker/example.png" alt="以编程方式设置时间 示例">
 </div>
 
 `setTime()` 方法允许您设置选择器的时间。它接受 "HH:MM"（24 小时制）格式的字符串。

@@ -15,7 +15,7 @@
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentPage/基本页面.png" alt="基本页面 示例">
+  <img src="/assets/images/docs/FluentPage/example-2.png" alt="基本页面 示例">
 </div>
 
 ```qml
@@ -49,7 +49,7 @@ FluentPage {
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentPage/标题与头部.png" alt="标题与头部 示例">
+  <img src="/assets/images/docs/FluentPage/example-3.png" alt="标题与头部 示例">
 </div>
 
 设置 `title` 后，页面会显示统一风格的标题行。`extraHeaderItems` 会把附加控件放在标题右侧；`customHeader` 和 `contentHeader` 分别用于替换头部内容、在正文前插入独立横幅或说明区域。
@@ -78,7 +78,7 @@ FluentPage {
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentPage/页脚.png" alt="页脚 示例">
+  <img src="/assets/images/docs/FluentPage/example-4.png" alt="页脚 示例">
 </div>
 
 `pageFooter` 使用 Qt Quick `Page.footer`，适合放置固定在页面底部的操作栏：
@@ -111,7 +111,7 @@ FluentPage {
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentPage/内容宽度与间距.png" alt="内容宽度与间距 示例">
+  <img src="/assets/images/docs/FluentPage/example.png" alt="内容宽度与间距 示例">
 </div>
 
 页面默认使用 `wrapperWidth: 1000` 和 `horizontalPadding: 56`，把正文限制在可读宽度内并保留水平边距。`contentSpacing` 控制正文 `ColumnLayout` 的项目间距，`spacing` 控制页面自身的间距。

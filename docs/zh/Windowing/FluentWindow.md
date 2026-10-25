@@ -15,7 +15,7 @@
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentWindow/基本用法.png" alt="基本用法 示例">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="基本用法 示例">
 </div>
 
 ```qml
@@ -90,7 +90,7 @@ sys.exit(app.exec())
 
 
 <div align="center">
-  <img src="/assets/images/docs/FluentWindow/标题栏内容.png" alt="标题栏内容 示例">
+  <img src="/assets/images/docs/FluentWindow/example-2.png" alt="标题栏内容 示例">
 </div>
 
 ```qml
@@ -117,7 +117,7 @@ RinUI 的窗口背景、圆角、边框和主题变化由 `FluentWindowBase` 统
 页面内容示例同样采用 Gallery 的 `SamplePage.qml`，与 `NavigationView` 文档中的默认页面保持一致。
 
 <div align="center">
-  <img src="/assets/images/docs/FluentWindow/基本用法.png" alt="FluentWindow 加载 SamplePage 示例">
+  <img src="/assets/images/docs/FluentWindow/example.png" alt="FluentWindow 加载 SamplePage 示例">
 </div>
 
 每个导航页面通常继承 `FluentPage`：

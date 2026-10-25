@@ -5,7 +5,7 @@
 ## 在可折叠区域中使用 `SettingItem`
 
 <div align="center">
-  <img src="/assets/images/docs/SettingExpander/在可折叠区域中使用-settingitem.png" alt="在可折叠区域中使用 `SettingItem` 示例">
+  <img src="/assets/images/docs/SettingExpander/settingitem.png" alt="在可折叠区域中使用 `SettingItem` 示例">
 </div>
 
 `SettingExpander` 的可折叠内容区域通常用 `SettingItem` 组件填充，以保持子设置列表的一致布局。

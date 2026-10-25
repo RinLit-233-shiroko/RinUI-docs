@@ -4,6 +4,10 @@
 
 ## 基本用法
 
+<div align="center">
+  <img src="/assets/images/docs/ColorPicker/example-2.png" alt="ColorPicker 基本用法示例">
+</div>
+
 ```qml
 ColorPicker {
     color: "#E74856"
@@ -13,6 +17,10 @@ ColorPicker {
 ## 启用透明度
 
 `alphaEnabled` 开启透明度相关控件。颜色值可以使用带 alpha 的十六进制格式，例如 `#80E74856`。
+
+<div align="center">
+  <img src="/assets/images/docs/ColorPicker/example-3.png" alt="ColorPicker 透明度示例">
+</div>
 
 ```qml
 ColorPicker {
@@ -25,6 +33,10 @@ ColorPicker {
 
 默认使用方形 HSV 取色区域。设置 `ringMode` 后切换为色相环形式。
 
+<div align="center">
+  <img src="/assets/images/docs/ColorPicker/example-4.png" alt="ColorPicker 环形取色示例">
+</div>
+
 ```qml
 ColorPicker {
     color: "#3A86FF"
@@ -35,6 +47,10 @@ ColorPicker {
 ## 控制辅助输入项
 
 可以按界面空间需要隐藏颜色通道、十六进制或透明度输入控件。
+
+<div align="center">
+  <img src="/assets/images/docs/ColorPicker/example.png" alt="ColorPicker 辅助输入项示例">
+</div>
 
 ```qml
 ColorPicker {

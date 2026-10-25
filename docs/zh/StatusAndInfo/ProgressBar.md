@@ -6,7 +6,7 @@ ProgressBar 是显示任务进度的控件。它可以显示一个明确或不�
 
 
 <div align="center">
-  <img src="/assets/images/docs/ProgressBar/基本进度条.png" alt="基本进度条 示例">
+  <img src="/assets/images/docs/ProgressBar/example-2.png" alt="基本进度条 示例">
 </div>
 
 ```qml
@@ -21,7 +21,7 @@ ProgressBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/ProgressBar/不确定进度条.png" alt="不确定进度条 示例">
+  <img src="/assets/images/docs/ProgressBar/example-3.png" alt="不确定进度条 示例">
 </div>
 
 ```qml
@@ -36,7 +36,7 @@ ProgressBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/ProgressBar/自定义颜色进度条.png" alt="自定义颜色进度条 示例">
+  <img src="/assets/images/docs/ProgressBar/example.png" alt="自定义颜色进度条 示例">
 </div>
 
 ```qml

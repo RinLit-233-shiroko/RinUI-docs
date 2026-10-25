@@ -5,7 +5,7 @@ Hyperlink 组件用于创建充当链接的文本。它的样式类似于传统�
 ## 基本超链接到 URL
 
 <div align="center">
-  <img src="/assets/images/docs/Hyperlink/基本超链接到-url.png" alt="基本超链接到 URL 示例">
+  <img src="/assets/images/docs/Hyperlink/example.png" alt="基本超链接到 URL 示例">
 </div>
 
 要创建在默认 Web 浏览器中打开外部 URL 的超链接，请设置用于显示的 `text` 和 `openUrl`（或其别名 `url`）属性。
@@ -29,7 +29,7 @@ Hyperlink {
 ## 用于应用内操作的超链接
 
 <div align="center">
-  <img src="/assets/images/docs/Hyperlink/用于应用内操作的超链接.png" alt="用于应用内操作的超链接 示例">
+  <img src="/assets/images/docs/Hyperlink/url.png" alt="用于应用内操作的超链接 示例">
 </div>
 
 您还可以使用 `Hyperlink` 通过处理其 `onClicked` 信号来触发内部应用程序操作。如果您只想执行应用内操作而不导航到 URL，请不要设置 `openUrl` 属性。

@@ -7,7 +7,7 @@
 不设置图片、文本或图标时，控件显示默认人物图标。
 
 <div align="center">
-  <img src="/assets/images/docs/Avatar/默认头像.png" alt="默认头像示例">
+  <img src="/assets/images/docs/Avatar/avatar-sample.png" alt="默认头像示例">
 </div>
 
 ```qml
@@ -21,7 +21,7 @@ Avatar {
 设置 `source` 加载图片。头像会按正方形区域裁切，并使用圆形遮罩显示。
 
 <div align="center">
-  <img src="/assets/images/docs/Avatar/图片头像.png" alt="图片头像示例">
+  <img src="/assets/images/docs/Avatar/default.png" alt="图片头像示例">
 </div>
 
 ```qml
@@ -36,7 +36,7 @@ Avatar {
 设置 `text` 后，组件会提取第一个和最后一个单词的首字母，适用于姓名或用户标识。
 
 <div align="center">
-  <img src="/assets/images/docs/Avatar/姓名缩写.png" alt="姓名缩写示例">
+  <img src="/assets/images/docs/Avatar/example-2.png" alt="姓名缩写示例">
 </div>
 
 ```qml
@@ -51,7 +51,7 @@ Avatar {
 可通过 `icon` 别名设置 Fluent 图标名称。只有在未设置 `source` 和 `text` 时才会显示图标。
 
 <div align="center">
-  <img src="/assets/images/docs/Avatar/自定义占位图标.png" alt="自定义占位图标示例">
+  <img src="/assets/images/docs/Avatar/example-3.png" alt="自定义占位图标示例">
 </div>
 
 ```qml

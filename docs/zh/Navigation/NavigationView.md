@@ -9,7 +9,7 @@
 下面的示例以 Gallery 中的 `SamplePage.qml` 作为首页内容，展示导航栏与实际页面的组合效果。
 
 <div align="center">
-  <img src="/assets/images/docs/NavigationView/在-fluentwindow-中使用.png" alt="FluentWindow 中的 NavigationView 示例">
+  <img src="/assets/images/docs/NavigationView/example-2.png" alt="FluentWindow 中的 NavigationView 示例">
 </div>
 
 最省事的方式是直接在 `FluentWindow` 上声明导航项：
@@ -66,7 +66,7 @@ FluentWindow {
 下方截图同样使用 Gallery 的 `SamplePage.qml`，便于直观看到应用启动后页面内容的呈现方式。
 
 <div align="center">
-  <img src="/assets/images/docs/NavigationView/默认页面.png" alt="NavigationView 默认页面示例">
+  <img src="/assets/images/docs/NavigationView/example-3.png" alt="NavigationView 默认页面示例">
 </div>
 
 ```qml

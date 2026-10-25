@@ -5,7 +5,7 @@ ComboBox 允许用户从下拉列表中选择一个选项。它可以配置为�
 ## 基本组合框
 
 <div align="center">
-  <img src="/assets/images/docs/ComboBox/基本组合框.png" alt="基本组合框 示例">
+  <img src="/assets/images/docs/ComboBox/example-2.png" alt="基本组合框 示例">
 </div>
 
 包含字符串项目列表的标准组合框。
@@ -31,7 +31,7 @@ ComboBox {
 ## 使用 ListModel 的组合框
 
 <div align="center">
-  <img src="/assets/images/docs/ComboBox/使用-listmodel-的组合框.png" alt="使用 ListModel 的组合框 示例">
+  <img src="/assets/images/docs/ComboBox/example.png" alt="使用 ListModel 的组合框 示例">
 </div>
 
 对于更复杂的项目或当模型需要动态时，可以使用 `ListModel`。模型中的每个 `ListElement` 都应具有可用于显示的属性（例如 `text` 或 `value`）。
@@ -60,7 +60,7 @@ ComboBox {
 ## 可编辑组合框
 
 <div align="center">
-  <img src="/assets/images/docs/ComboBox/可编辑组合框.png" alt="可编辑组合框 示例">
+  <img src="/assets/images/docs/ComboBox/listmodel.png" alt="可编辑组合框 示例">
 </div>
 
 将 `editable` 设置为 `true` 以允许用户键入值。`accepted()` 信号可用于处理新的输入。输入字段是一个 `TextField`。

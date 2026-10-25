@@ -7,7 +7,7 @@
 将 `ToolTip` 声明为目标控件的子对象，并设置提示文本。通过 `visible` 绑定控件的悬停状态，在鼠标移入时显示提示。
 
 <div align="center">
-  <img src="/assets/images/docs/ToolTip/基本用法.png" alt="工具提示基本用法示例">
+  <img src="/assets/images/docs/ToolTip/example-2.png" alt="工具提示基本用法示例">
 </div>
 
 ```qml
@@ -27,7 +27,7 @@ Button {
 `delay` 控制显示前的等待时间，`timeout` 控制显示时长。RinUI 的 `ToolTip` 默认 `timeout` 为 `-1`，即不自动关闭；需要自动消失时可显式指定时长。
 
 <div align="center">
-  <img src="/assets/images/docs/ToolTip/设置显示延迟与时长.png" alt="工具提示延迟与时长示例">
+  <img src="/assets/images/docs/ToolTip/example-3.png" alt="工具提示延迟与时长示例">
 </div>
 
 ```qml
@@ -49,7 +49,7 @@ Button {
 可以覆盖组件的颜色属性以适配特定场景。未覆盖时，颜色会跟随当前 RinUI 主题更新。
 
 <div align="center">
-  <img src="/assets/images/docs/ToolTip/自定义主题颜色.png" alt="工具提示自定义主题颜色示例">
+  <img src="/assets/images/docs/ToolTip/example.png" alt="工具提示自定义主题颜色示例">
 </div>
 
 ```qml

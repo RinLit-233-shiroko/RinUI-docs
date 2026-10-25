@@ -6,7 +6,7 @@ BusyIndicator 用于提示用户当前仍有操作正在进行。控件以循环
 
 
 <div align="center">
-  <img src="/assets/images/docs/BusyIndicator/基本用法.png" alt="基本用法 示例">
+  <img src="/assets/images/docs/BusyIndicator/example-2.png" alt="基本用法 示例">
 </div>
 
 ```qml
@@ -19,7 +19,7 @@ BusyIndicator {
 
 
 <div align="center">
-  <img src="/assets/images/docs/BusyIndicator/与状态文字组合.png" alt="与状态文字组合 示例">
+  <img src="/assets/images/docs/BusyIndicator/example-3.png" alt="与状态文字组合 示例">
 </div>
 
 ```qml
@@ -44,7 +44,7 @@ Column {
 
 
 <div align="center">
-  <img src="/assets/images/docs/BusyIndicator/自定义尺寸.png" alt="自定义尺寸 示例">
+  <img src="/assets/images/docs/BusyIndicator/example.png" alt="自定义尺寸 示例">
 </div>
 
 ```qml

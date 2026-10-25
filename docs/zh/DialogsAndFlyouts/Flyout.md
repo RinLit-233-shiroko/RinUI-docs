@@ -7,7 +7,7 @@
 ## 基本浮出控件
 
 <div align="center">
-  <img src="/assets/images/docs/Flyout/基本浮出控件.png" alt="基本浮出控件 示例">
+  <img src="/assets/images/docs/Flyout/example.png" alt="基本浮出控件 示例">
 </div>
 
 `Flyout` 通常在响应按钮点击或其他用户操作时打开。它可以包含文本和自定义按钮。`target` 属性可用于将浮出控件与其打开控件关联，这有助于定位。

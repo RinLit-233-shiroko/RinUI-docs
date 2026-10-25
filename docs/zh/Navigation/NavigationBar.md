@@ -6,7 +6,7 @@ NavigationBar 是一个提供垂直导航区域的控件。它可以折叠或展
 
 
 <div align="center">
-  <img src="/assets/images/docs/NavigationBar/基本导航栏.png" alt="基本导航栏 示例">
+  <img src="/assets/images/docs/NavigationBar/example-2.png" alt="基本导航栏 示例">
 </div>
 
 ```qml
@@ -28,7 +28,7 @@ NavigationBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/NavigationBar/折叠的导航栏.png" alt="折叠的导航栏 示例">
+  <img src="/assets/images/docs/NavigationBar/example.png" alt="折叠的导航栏 示例">
 </div>
 
 ```qml

@@ -6,7 +6,7 @@ MenuItem 是表示菜单中单个项的组件。它可以包含文本、图标�
 
 
 <div align="center">
-  <img src="/assets/images/docs/MenuItem/基本菜单项.png" alt="基本菜单项 示例">
+  <img src="/assets/images/docs/MenuItem/example-2.png" alt="基本菜单项 示例">
 </div>
 
 ```qml
@@ -21,7 +21,7 @@ MenuItem {
 
 
 <div align="center">
-  <img src="/assets/images/docs/MenuItem/带复选框的菜单项.png" alt="带复选框的菜单项 示例">
+  <img src="/assets/images/docs/MenuItem/example-3.png" alt="带复选框的菜单项 示例">
 </div>
 
 ```qml
@@ -37,7 +37,7 @@ MenuItem {
 
 
 <div align="center">
-  <img src="/assets/images/docs/MenuItem/带单选按钮的菜单项.png" alt="带单选按钮的菜单项 示例">
+  <img src="/assets/images/docs/MenuItem/example.png" alt="带单选按钮的菜单项 示例">
 </div>
 
 ```qml

@@ -6,7 +6,7 @@ CalendarDatePicker 以按钮形式显示当前日期或占位文字。用户点�
 
 
 <div align="center">
-  <img src="/assets/images/docs/CalendarDatePicker/基本使用.png" alt="基本使用 示例">
+  <img src="/assets/images/docs/CalendarDatePicker/example-2.png" alt="基本使用 示例">
 </div>
 
 ```qml
@@ -19,7 +19,7 @@ CalendarDatePicker {
 
 
 <div align="center">
-  <img src="/assets/images/docs/CalendarDatePicker/设置日期范围.png" alt="设置日期范围 示例">
+  <img src="/assets/images/docs/CalendarDatePicker/example-3.png" alt="设置日期范围 示例">
 </div>
 
 ```qml
@@ -34,7 +34,7 @@ CalendarDatePicker {
 
 
 <div align="center">
-  <img src="/assets/images/docs/CalendarDatePicker/自定义占位文字和日期格式.png" alt="自定义占位文字和日期格式 示例">
+  <img src="/assets/images/docs/CalendarDatePicker/example-4.png" alt="自定义占位文字和日期格式 示例">
 </div>
 
 ```qml
@@ -48,7 +48,7 @@ CalendarDatePicker {
 
 
 <div align="center">
-  <img src="/assets/images/docs/CalendarDatePicker/监听日期选择.png" alt="监听日期选择 示例">
+  <img src="/assets/images/docs/CalendarDatePicker/example.png" alt="监听日期选择 示例">
 </div>
 
 ```qml

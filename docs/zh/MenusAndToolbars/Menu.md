@@ -6,7 +6,7 @@ Menu 是一个显示 MenuItem 对象列表的组件。它可以用来向用户�
 
 
 <div align="center">
-  <img src="/assets/images/docs/Menu/基本菜单.png" alt="基本菜单 示例">
+  <img src="/assets/images/docs/Menu/example-2.png" alt="基本菜单 示例">
 </div>
 
 ```qml
@@ -42,7 +42,7 @@ Menu {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Menu/带子菜单的菜单.png" alt="带子菜单的菜单 示例">
+  <img src="/assets/images/docs/Menu/example.png" alt="带子菜单的菜单 示例">
 </div>
 
 ```qml

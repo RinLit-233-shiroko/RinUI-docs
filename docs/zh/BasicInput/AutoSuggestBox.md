@@ -6,7 +6,7 @@ AutoSuggestBox 是一个文本输入控件，当用户开始输入时提供建�
 
 
 <div align="center">
-  <img src="/assets/images/docs/AutoSuggestBox/基本使用.png" alt="基本使用 示例">
+  <img src="/assets/images/docs/AutoSuggestBox/example-2.png" alt="基本使用 示例">
 </div>
 
 ```qml
@@ -32,7 +32,7 @@ AutoSuggestBox {
 
 
 <div align="center">
-  <img src="/assets/images/docs/AutoSuggestBox/使用自定义模型.png" alt="使用自定义模型 示例">
+  <img src="/assets/images/docs/AutoSuggestBox/example-3.png" alt="使用自定义模型 示例">
 </div>
 
 ```qml
@@ -55,7 +55,7 @@ AutoSuggestBox {
 
 
 <div align="center">
-  <img src="/assets/images/docs/AutoSuggestBox/处理选择.png" alt="处理选择 示例">
+  <img src="/assets/images/docs/AutoSuggestBox/example.png" alt="处理选择 示例">
 </div>
 
 ```qml

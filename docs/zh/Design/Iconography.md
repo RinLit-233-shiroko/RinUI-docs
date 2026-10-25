@@ -2,11 +2,13 @@
 
 图标学是一种视觉设计语言，可以用于快速有效地传达信息。RinUI 提供了一套完整的图标，遵循一致的设计原则，可以轻松集成到您的应用程序中。
 
+<IconSearch />
+
 ## 基本图标使用
 
 
 <div align="center">
-  <img src="/assets/images/docs/Iconography/基本图标使用.png" alt="基本图标使用 示例">
+  <img src="/assets/images/docs/Iconography/example-2.png" alt="基本图标使用 示例">
 </div>
 
 ```qml
@@ -22,7 +24,7 @@ Icon {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Iconography/不同尺寸的图标.png" alt="不同尺寸的图标 示例">
+  <img src="/assets/images/docs/Iconography/example-3.png" alt="不同尺寸的图标 示例">
 </div>
 
 ```qml
@@ -55,7 +57,7 @@ Column {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Iconography/带颜色的图标.png" alt="带颜色的图标 示例">
+  <img src="/assets/images/docs/Iconography/example-4.png" alt="带颜色的图标 示例">
 </div>
 
 ```qml
@@ -88,7 +90,7 @@ Row {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Iconography/按钮中的图标.png" alt="按钮中的图标 示例">
+  <img src="/assets/images/docs/Iconography/example-5.png" alt="按钮中的图标 示例">
 </div>
 
 ```qml
@@ -115,7 +117,7 @@ Row {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Iconography/导航中的图标.png" alt="导航中的图标 示例">
+  <img src="/assets/images/docs/Iconography/example.png" alt="导航中的图标 示例">
 </div>
 
 ```qml

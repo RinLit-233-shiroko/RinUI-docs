@@ -15,7 +15,7 @@ ScrollableTextArea 是一个包含可滚动 TextArea 的控件。它为 TextArea
 
 
 <div align="center">
-  <img src="/assets/images/docs/ScrollableTextArea/基本可滚动文本区域.png" alt="基本可滚动文本区域 示例">
+  <img src="/assets/images/docs/ScrollableTextArea/example-2.png" alt="基本可滚动文本区域 示例">
 </div>
 
 ```qml
@@ -31,7 +31,7 @@ ScrollableTextArea {
 
 
 <div align="center">
-  <img src="/assets/images/docs/ScrollableTextArea/带占位符的可滚动文本区域.png" alt="带占位符的可滚动文本区域 示例">
+  <img src="/assets/images/docs/ScrollableTextArea/example-3.png" alt="带占位符的可滚动文本区域 示例">
 </div>
 
 ```qml
@@ -47,7 +47,7 @@ ScrollableTextArea {
 
 
 <div align="center">
-  <img src="/assets/images/docs/ScrollableTextArea/只读可滚动文本区域.png" alt="只读可滚动文本区域 示例">
+  <img src="/assets/images/docs/ScrollableTextArea/example.png" alt="只读可滚动文本区域 示例">
 </div>
 
 ```qml

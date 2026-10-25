@@ -6,7 +6,7 @@ TableView 是一个用于以行和列显示数据的控件。它扩展了标准 
 
 
 <div align="center">
-  <img src="/assets/images/docs/TableView/基本表格视图.png" alt="基本表格视图 示例">
+  <img src="/assets/images/docs/TableView/example-2.png" alt="基本表格视图 示例">
 </div>
 
 ```qml
@@ -35,7 +35,7 @@ TableView {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TableView/自定义列宽.png" alt="自定义列宽 示例">
+  <img src="/assets/images/docs/TableView/example-3.png" alt="自定义列宽 示例">
 </div>
 
 ```qml
@@ -66,7 +66,7 @@ TableView {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TableView/按列排序.png" alt="按列排序 示例">
+  <img src="/assets/images/docs/TableView/example.png" alt="按列排序 示例">
 </div>
 
 ```qml

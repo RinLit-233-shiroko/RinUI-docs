@@ -6,7 +6,7 @@ TextArea 是一个多行文本输入控件，类似于标准 QML TextArea，但�
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextArea/基本使用.png" alt="基本使用 示例">
+  <img src="/assets/images/docs/TextArea/example-2.png" alt="基本使用 示例">
 </div>
 
 ```qml
@@ -22,7 +22,7 @@ TextArea {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextArea/自定义样式.png" alt="自定义样式 示例">
+  <img src="/assets/images/docs/TextArea/example-3.png" alt="自定义样式 示例">
 </div>
 
 ```qml
@@ -39,7 +39,7 @@ TextArea {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextArea/无边框模式.png" alt="无边框模式 示例">
+  <img src="/assets/images/docs/TextArea/example-4.png" alt="无边框模式 示例">
 </div>
 
 ```qml
@@ -56,7 +56,7 @@ TextArea {
 
 
 <div align="center">
-  <img src="/assets/images/docs/TextArea/只读模式.png" alt="只读模式 示例">
+  <img src="/assets/images/docs/TextArea/example.png" alt="只读模式 示例">
 </div>
 
 ```qml

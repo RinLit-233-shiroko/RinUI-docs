@@ -6,7 +6,7 @@
 
 
 <div align="center">
-  <img src="/assets/images/docs/Segmented/基本用法.png" alt="基本用法 示例">
+  <img src="/assets/images/docs/Segmented/example-2.png" alt="基本用法 示例">
 </div>
 
 ```qml
@@ -36,7 +36,7 @@ Segmented {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Segmented/仅图标.png" alt="仅图标 示例">
+  <img src="/assets/images/docs/Segmented/example-3.png" alt="仅图标 示例">
 </div>
 
 `SegmentedItem` 可以省略文本，并使用 `ToolTip` 补充含义：
@@ -67,7 +67,7 @@ Segmented {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Segmented/动态项目.png" alt="动态项目 示例">
+  <img src="/assets/images/docs/Segmented/example-4.png" alt="动态项目 示例">
 </div>
 
 `Segmented` 继承 `TabBar`，可以使用 `Repeater` 生成项目，并通过 `currentIndex` 读取当前选择：
@@ -91,7 +91,7 @@ Segmented {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Segmented/状态与选择.png" alt="状态与选择 示例">
+  <img src="/assets/images/docs/Segmented/example.png" alt="状态与选择 示例">
 </div>
 
 - `currentIndex`：当前选中项的索引，继承自 `TabBar`。

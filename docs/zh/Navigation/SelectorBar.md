@@ -6,7 +6,7 @@
 
 
 <div align="center">
-  <img src="/assets/images/docs/SelectorBar/基本用法.png" alt="基本用法 示例">
+  <img src="/assets/images/docs/SelectorBar/example-2.png" alt="基本用法 示例">
 </div>
 
 ```qml
@@ -36,7 +36,7 @@ SelectorBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/SelectorBar/切换内容.png" alt="切换内容 示例">
+  <img src="/assets/images/docs/SelectorBar/example-3.png" alt="切换内容 示例">
 </div>
 
 使用 `currentIndex` 配合 `Loader` 或 `StackLayout`，可以让选择项与内容视图保持同步：
@@ -72,7 +72,7 @@ Column {
 
 
 <div align="center">
-  <img src="/assets/images/docs/SelectorBar/动态项目.png" alt="动态项目 示例">
+  <img src="/assets/images/docs/SelectorBar/example-4.png" alt="动态项目 示例">
 </div>
 
 `SelectorBar` 继承 `TabBar`，可以用 `Repeater` 创建项目：
@@ -98,7 +98,7 @@ SelectorBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/SelectorBar/状态与事件.png" alt="状态与事件 示例">
+  <img src="/assets/images/docs/SelectorBar/example.png" alt="状态与事件 示例">
 </div>
 
 - `currentIndex`：当前选择项索引，继承自 `TabBar`。

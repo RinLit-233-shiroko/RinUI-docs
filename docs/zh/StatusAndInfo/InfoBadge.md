@@ -7,7 +7,7 @@
 设置 `count` 显示数量。默认最大显示值为 `99`，超过后会显示为 `99+`；负数表示不显示数量。
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBadge/显示数量.png" alt="显示数量示例">
+  <img src="/assets/images/docs/InfoBadge/example-2.png" alt="显示数量示例">
 </div>
 
 ```qml
@@ -21,7 +21,7 @@ InfoBadge {
 通过 `severity` 指定状态。未设置文本或数量时，徽章会显示对应状态图标。
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBadge/状态图标.png" alt="状态图标示例">
+  <img src="/assets/images/docs/InfoBadge/example-3.png" alt="状态图标示例">
 </div>
 
 ```qml
@@ -40,7 +40,7 @@ Row {
 `dot` 可切换为无文字的小圆点；将 `solid` 设为 `false` 可使用透明背景和状态色描边。
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBadge/圆点与描边样式.png" alt="圆点与描边样式示例">
+  <img src="/assets/images/docs/InfoBadge/example.png" alt="圆点与描边样式示例">
 </div>
 
 ```qml

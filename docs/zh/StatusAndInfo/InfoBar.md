@@ -6,7 +6,7 @@ InfoBar 是向用户显示信息消息的控件。它可以显示不同类型的
 
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBar/基本信息栏.png" alt="基本信息栏 示例">
+  <img src="/assets/images/docs/InfoBar/example-2.png" alt="基本信息栏 示例">
 </div>
 
 ```qml
@@ -21,7 +21,7 @@ InfoBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBar/带自定义内容的信息栏.png" alt="带自定义内容的信息栏 示例">
+  <img src="/assets/images/docs/InfoBar/example-3.png" alt="带自定义内容的信息栏 示例">
 </div>
 
 ```qml
@@ -46,7 +46,7 @@ InfoBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBar/不同严重性级别.png" alt="不同严重性级别 示例">
+  <img src="/assets/images/docs/InfoBar/example-4.png" alt="不同严重性级别 示例">
 </div>
 
 ```qml
@@ -76,7 +76,7 @@ InfoBar {
 
 
 <div align="center">
-  <img src="/assets/images/docs/InfoBar/自动消失的信息栏.png" alt="自动消失的信息栏 示例">
+  <img src="/assets/images/docs/InfoBar/example.png" alt="自动消失的信息栏 示例">
 </div>
 
 ```qml

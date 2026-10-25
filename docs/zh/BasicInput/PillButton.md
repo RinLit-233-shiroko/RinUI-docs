@@ -5,7 +5,7 @@ PillButton 是一种拨动按钮，其样式设计为药丸状或胶囊状，继
 ## 基本胶囊按钮
 
 <div align="center">
-  <img src="/assets/images/docs/PillButton/基本胶囊按钮.png" alt="基本胶囊按钮 示例">
+  <img src="/assets/images/docs/PillButton/example-2.png" alt="基本胶囊按钮 示例">
 </div>
 
 PillButton 可用于表示开/关状态或选择。它默认是 `checkable` 的。
@@ -36,7 +36,7 @@ PillButton {
 ## 带图标的胶囊按钮
 
 <div align="center">
-  <img src="/assets/images/docs/PillButton/带图标的胶囊按钮.png" alt="带图标的胶囊按钮 示例">
+  <img src="/assets/images/docs/PillButton/example.png" alt="带图标的胶囊按钮 示例">
 </div>
 
 与标准 `Button` 类似，可以向 `PillButton` 添加图标。

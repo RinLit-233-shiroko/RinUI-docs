@@ -2,20 +2,11 @@
 
 Popup 是一个用于在界面上方显示浮动内容的控件。它可以用于工具提示、确认对话框或其他需要浮在主界面上方的内容。
 
-<VPImage
-  :image="{
-    light: '/assets/images/examples/Popup-light.png',
-    dark: '/assets/images/examples/Popup-dark.png',
-    alt: 'Popup 组件示例（亮色与暗色）'
-  }"
-  width="1000"
-/>
-
 ## 基本弹出窗口
 
 
 <div align="center">
-  <img src="/assets/images/docs/Popup/基本弹出窗口.png" alt="基本弹出窗口 示例">
+  <img src="/assets/images/docs/Popup/example-2.png" alt="基本弹出窗口 示例">
 </div>
 
 ```qml
@@ -34,7 +25,7 @@ Popup {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Popup/带位置的弹出窗口.png" alt="带位置的弹出窗口 示例">
+  <img src="/assets/images/docs/Popup/example-3.png" alt="带位置的弹出窗口 示例">
 </div>
 
 ```qml
@@ -63,7 +54,7 @@ Popup {
 
 
 <div align="center">
-  <img src="/assets/images/docs/Popup/带锚点项的弹出窗口.png" alt="带锚点项的弹出窗口 示例">
+  <img src="/assets/images/docs/Popup/example.png" alt="带锚点项的弹出窗口 示例">
 </div>
 
 ```qml
