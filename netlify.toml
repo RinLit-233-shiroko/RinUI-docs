@@ -4,4 +4,4 @@ publish = "docs/.vitepress/dist"
 
 [build.environment]
 NODE_VERSION = "20"
-NODE_ENV = "development"
+NODE_ENV = "production"
