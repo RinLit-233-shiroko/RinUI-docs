@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "RinUI"
-  text: "Qt Quick で Fluent アプリを構築"
-  tagline: "Qt Quick 向け Fluent Design UI ライブラリ。ネイティブなウィンドウ統合、充実したコントロール、統一されたテーマを提供します。"
+  name: "Qt Quick + PySide"
+  text: "デスクトップアプリ向けの Fluent スタイルオープンソース UI ライブラリ"
+  tagline: "ウィンドウ、ナビゲーション、テーマ、コントロールを、使い慣れた QML で提供します。"
   image:
-    src: /assets/images/home/rinui-app.png
+    src: /assets/images/brand/rinui-vertical-dark.png
     alt: RinUI
     width: 128
     height: 128
@@ -50,27 +50,13 @@ features:
 
 ## RinUI を選ぶ理由
 
-RinUI は単独のコントロールを集めただけのライブラリではありません。ウィンドウ、ナビゲーション、ページ、テーマ、主要なコントロールを一つの API にまとめ、Qt Quick デスクトップアプリの共通基盤を提供します。
+RinUI は、Qt Quick デスクトップアプリのウィンドウ、ナビゲーション、ページ、テーマ、主要なコントロールを一つの再利用可能な基盤にまとめます。
 
-- **ウィンドウとページがひとつの構造になる**：`FluentWindow` には `NavigationView`、ナビゲーションバー、コンテンツ領域が組み込まれています。`navigationItems` でページを宣言し、`FluentPage` でタイトル、本文、フッターを整理できます。
-- **ネイティブに近いデスクトップ体験**：Windows では Mica、Acrylic、Tabbed の背景、カスタムタイトルバー、フレームレスウィンドウ、標準ウィンドウ操作に対応します。macOS ではネイティブのトラフィックライトを使用し、その他のプラットフォームでは安全に通常背景へフォールバックします。
-- **アプリ全体に届くテーマ**：ライト、ダーク、自動モードが同じ色、角丸、フォント、モーション値を共有します。アクセントカラーを変更すると、コントロール、アイコン、状態色もまとめて更新されます。
-- **使い慣れた QML 名と充実した Fluent 状態**：`Button`、`ComboBox`、`ListView`、`Dialog` などの API を保ちながら、ホバー、押下、フォーカス、無効状態を整えています。
-- **アイコンと多言語化をすぐ利用できる**：Fluent System Icons を `ic_fluent_*` 名で利用でき、UI 文言を拡張するための翻訳リソースも含まれています。
-- **短い Python 起動コード**：`QApplication` を作成し、`RinUIWindow("main.qml")` で画面を読み込むだけです。設定、テーマ管理、プラットフォーム固有のウィンドウ効果はランチャーが処理します。
+- **完成したウィンドウ構成**：`FluentWindow`、`NavigationView`、`FluentPage` をそのまま組み合わせられます。
+- **ネイティブなデスクトップ体験**：Windows で Mica、Acrylic、カスタムタイトルバー、標準ウィンドウ操作に対応します。
+- **統一されたデザインシステム**：テーマ、コントロール、アイコン、翻訳、Python 起動コードが同じ API を共有します。
 
-## 実際の画面
-
-現在の RinUI Gallery の実際の画面です。ドキュメントのライト／ダークテーマを切り替えると、スクリーンショットも連動して切り替わります。
-
-<VPImage
-  :image="{
-    light: '/assets/images/home/gallery-light.png',
-    dark: '/assets/images/home/gallery-dark.png',
-    alt: 'RinUI Gallery'
-  }"
-  width="960"
-/>
+<GalleryCarousel section="home" />
 
 ## RinUI が向いているプロジェクト
 

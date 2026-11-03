@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "RinUI"
-  text: "用 Qt Quick 构建 Fluent 桌面应用"
-  tagline: "面向 Qt Quick 的 Fluent Design UI 库，提供原生窗口集成、完整控件与统一的主题系统。"
+  name: "Qt Quick + PySide"
+  text: "面向桌面应用的 Fluent 风格开源 UI 库"
+  tagline: "为桌面应用提供窗口、导航、主题和常用控件，保留熟悉的 QML 开发方式。"
   image:
-    src: /assets/images/home/rinui-app.png
+    src: /assets/images/brand/rinui-vertical-dark.png
     alt: RinUI
     width: 128
     height: 128
@@ -50,27 +50,13 @@ features:
 
 ## 为什么选择 RinUI
 
-RinUI 为 Qt Quick 桌面应用提供一套可复用的界面基础：窗口、导航、页面、主题和常用控件使用同一套 API，减少重复搭建外壳和统一视觉状态的工作。
+RinUI 为 Qt Quick 桌面应用提供一套可复用的界面基础，统一窗口、导航、页面、主题和常用控件的使用方式。
 
-- **窗口与页面开箱即用**：`FluentWindow` 已组合好 `NavigationView`、导航栏和内容区域。通过 `navigationItems` 声明页面入口，再用 `FluentPage` 组织标题、正文和页脚。
-- **贴近原生桌面体验**：Windows 支持 Mica、Acrylic 与 Tabbed 背景，并提供无边框窗口、自定义标题栏和窗口控制按钮；macOS 使用原生交通灯按钮，其他平台会回退到普通背景。
-- **主题覆盖整个应用**：浅色、深色和跟随系统模式共享颜色、圆角、字体与动效参数。修改强调色后，控件、图标和状态色会同步更新。
-- **熟悉的控件，完整的 Fluent 状态**：`Button`、`ComboBox`、`ListView`、`Dialog` 等控件沿用常见用法，并包含悬停、按下、焦点和禁用状态。
-- **图标与多语言资源现成可用**：可直接通过 `ic_fluent_*` 名称使用 Fluent System Icons，也可基于内置语言资源扩展界面文案。
-- **Python 集成简单**：创建 `QApplication` 后，用 `RinUIWindow("main.qml")` 加载界面；配置、主题和平台窗口效果由启动器处理。
+- **完整的窗口结构**：`FluentWindow`、`NavigationView` 与 `FluentPage` 开箱即可组合使用。
+- **原生桌面体验**：Windows 支持 Mica、Acrylic、自定义标题栏和标准窗口控制。
+- **统一的设计系统**：主题、控件、图标、多语言资源与 Python 启动入口共享一致 API。
 
-## 实际界面
-
-下面是 RinUI Gallery 在当前版本中的真实界面。切换文档的亮色或深色主题，截图也会同步切换。
-
-<VPImage
-  :image="{
-    light: '/assets/images/home/gallery-light.png',
-    dark: '/assets/images/home/gallery-dark.png',
-    alt: 'RinUI Gallery'
-  }"
-  width="960"
-/>
+<GalleryCarousel section="home" />
 
 ## 适合哪些项目
 

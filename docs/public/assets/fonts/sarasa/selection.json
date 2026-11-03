@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "families": {
+    "ui-sc": {
+      "fontFamily": "Sarasa UI SC",
+      "version": "1.0.41",
+      "weights": [
+        400,
+        600
+      ]
+    }
+  }
+}

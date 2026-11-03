@@ -1,11 +1,10 @@
 # Getting Started
 
 ## Gallery Example
-You can download the Gallery example program from the [Releases Page](https://github.com/RinLit-233-shiroko/Rin-UI/releases) of the RinUI repository and run it to experience the basic functionalities of RinUI.
 
-<div align="center">
-  <img src="/assets/images/home/gallery-light.png" alt="Gallery Example">
-</div>
+Explore RinUI’s Fluent style Qt Quick/QML controls through interactive examples, with component guides, icons, and source links.
+
+<GalleryCarousel section="guide" />
 
 ## Installation & Testing
 ### Python

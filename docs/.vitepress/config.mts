@@ -7,7 +7,7 @@ export default defineConfig({
   title: "RinUI Documentation",
   description: "RinUI development documentation - A Fluent Design-like UI library for Qt Quick (QML)",
   head: [
-      ['link', { rel: 'icon', href: '/assets/images/home/rinui-app.png' }]  // 添加网站图标
+      ['link', { rel: 'icon', href: '/assets/images/brand/rinui-mark-light.png' }]  // 添加网站图标
   ],
 
   // Use VitePress's built-in MiniSearch index for multilingual documentation.
@@ -26,6 +26,7 @@ export default defineConfig({
     root: {
       label: "English",
       lang: "en",
+      title: "Documentation",
 
       themeConfig: {
         // 导航
@@ -185,7 +186,7 @@ export default defineConfig({
     zh: {
       label: "简体中文",
       lang: "zh",
-      title: 'RinUI 开发文档',
+      title: '开发文档',
 
       themeConfig: {
         // 导航
@@ -344,7 +345,7 @@ export default defineConfig({
     ja: {
       label: "日本語",
       lang: "ja",
-      title: 'RinUI ドキュメンテーション',
+      title: 'ドキュメント',
 
       themeConfig: {
         // 导航
@@ -504,7 +505,7 @@ export default defineConfig({
 
   themeConfig: {
     search: { provider: 'local' },
-    logo: '/assets/images/home/rinui-app.png',
+    logo: { light: '/assets/images/brand/rinui-logo-light.png', dark: '/assets/images/brand/rinui-logo-dark.png' },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RinLit-233-shiroko/Rin-UI' }

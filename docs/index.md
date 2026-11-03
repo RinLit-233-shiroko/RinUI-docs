@@ -2,11 +2,11 @@
 layout: home
 
 hero:
-  name: "RinUI"
-  text: "Build Fluent apps with Qt Quick"
-  tagline: "A Fluent Design UI library for Qt Quick, with native window integration, complete controls, and a shared theme system."
+  name: "Qt Quick + PySide"
+  text: "Open-source Fluent UI for desktop applications"
+  tagline: "Windows, navigation, themes, and ready-to-use controls for desktop apps, built with the QML workflow you already know."
   image:
-    src: /assets/images/home/rinui-app.png
+    src: /assets/images/brand/rinui-vertical-dark.png
     alt: RinUI
     width: 128
     height: 128
@@ -50,27 +50,13 @@ features:
 
 ## Why RinUI
 
-RinUI is more than a collection of standalone controls. It provides a shared foundation for Qt Quick desktop applications by bringing windows, navigation, pages, themes, and common controls into one coherent API.
+RinUI gives Qt Quick desktop applications one reusable foundation for windows, navigation, pages, themes, and familiar controls.
 
-- **A complete window and page structure**: `FluentWindow` already combines `NavigationView`, the navigation bar, and the content area. Declare pages with `navigationItems`, then organize each screen with `FluentPage`.
-- **Native desktop window behavior**: Windows builds can use Mica, Acrylic, and Tabbed backdrops, custom title bars, frameless windows, and standard window controls. macOS uses native traffic lights, while other platforms fall back safely.
-- **A theme that reaches every control**: Light, dark, and automatic mode share one set of colors, radii, typography, and motion values. Changing the accent color updates controls, icons, and status colors together.
-- **Familiar QML names with complete Fluent states**: `Button`, `ComboBox`, `ListView`, `Dialog`, and other controls keep familiar APIs while adding polished hover, pressed, focus, and disabled states.
-- **Icons and localization are ready to use**: Fluent System Icons are available through `ic_fluent_*` names, and the project includes translation resources for extending application copy.
-- **A short Python startup path**: Create a `QApplication`, then load the interface with `RinUIWindow("main.qml")`. Configuration, theme management, and platform window effects are handled by the launcher.
+- **A complete window structure**: `FluentWindow`, `NavigationView`, and `FluentPage` work together out of the box.
+- **Native desktop behavior**: Use Mica, Acrylic, custom title bars, and standard window controls on Windows.
+- **One coherent design system**: Themes, controls, icons, translations, and the Python entry point share the same API.
 
-## A look at RinUI
-
-This is the current RinUI Gallery. Switch the documentation theme and the screenshot will follow the matching light or dark interface.
-
-<VPImage
-  :image="{
-    light: '/assets/images/home/gallery-light.png',
-    dark: '/assets/images/home/gallery-dark.png',
-    alt: 'RinUI Gallery'
-  }"
-  width="960"
-/>
+<GalleryCarousel section="home" />
 
 ## Where RinUI fits
 

@@ -1,12 +1,10 @@
 # 快速开始
 
 ## Gallery 示例
-您可在 RinUI 仓库的 [Releases 页面](https://github.com/RinLit-233-shiroko/Rin-UI/releases) 下载 Gallery 示例程序，并运行它来体验 RinUI 的基本功能。
 
-<picture class="gallery-theme-preview">
-  <source srcset="/assets/images/home/gallery-dark.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)">
-  <img src="/assets/images/home/gallery-light.png" alt="RinUI Gallery" />
-</picture>
+用交互式示例浏览 RinUI 的 Fluent 风格 Qt Quick/QML 控件，查看组件说明、图标和源码入口。
+
+<GalleryCarousel section="guide" />
 
 ## 安装 & 测试
 ### Python
