@@ -4,7 +4,7 @@
 
 用交互式示例浏览 RinUI 的 Fluent 风格 Qt Quick/QML 控件，查看组件说明、图标和源码入口。
 
-<GalleryCarousel section="guide" />
+<GalleryCarousel section="guide" :show-copy="false" />
 
 ## 安装 & 测试
 ### Python

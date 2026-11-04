@@ -4,7 +4,7 @@
 
 Explore RinUI’s Fluent style Qt Quick/QML controls through interactive examples, with component guides, icons, and source links.
 
-<GalleryCarousel section="guide" />
+<GalleryCarousel section="guide" :show-copy="false" />
 
 ## Installation & Testing
 ### Python

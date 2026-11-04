@@ -1,3 +1,14 @@
+<div align="center">
+  <VPImage
+    :image="{
+      light: '/assets/images/brand/rinui-logo-light.png',
+      dark: '/assets/images/brand/rinui-logo-dark.png',
+      alt: 'RinUI'
+    }"
+    width="240"
+  />
+</div>
+
 # 何为 RinUI？
 
 RinUI 是一个面向 **Qt Quick（QML）** 应用开发的界面组件库。它以 Fluent Design 为设计灵感，提供一组可在 QML 中直接使用的控件、主题能力与辅助工具，帮助开发者更快地构建风格统一、交互清晰的桌面应用。

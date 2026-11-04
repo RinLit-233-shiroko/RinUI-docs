@@ -6,9 +6,10 @@ import { ChevronLeft, ChevronRight } from '@lucide/vue'
 
 defineProps<{
   section: 'home' | 'guide'
+  showCopy?: boolean
 }>()
 
-const { lang } = useData()
+const { lang, isDark } = useData()
 const current = ref(0)
 const direction = ref(1)
 const images = ['Screenshot.png', 'Screenshot-1.png', 'Screenshot-2.png', 'Screenshot-3.png', 'Screenshot-4.png']
@@ -65,8 +66,10 @@ onUnmounted(stop)
 
 <template>
   <section class="gallery-carousel" :class="`gallery-carousel--${section}`" @mouseenter="stop" @mouseleave="start" @focusin="stop" @focusout="start" @keydown.left.prevent="previous" @keydown.right.prevent="next" aria-roledescription="carousel" :aria-label="copy.title">
-    <h2>{{ copy.title }}</h2>
-    <p>{{ copy.description }}</p>
+    <template v-if="showCopy !== false">
+      <h2>{{ copy.title }}</h2>
+      <p>{{ copy.description }}</p>
+    </template>
     <div class="gallery-carousel__stage" aria-live="off">
       <Transition :name="direction > 0 ? 'gallery-slide-forward' : 'gallery-slide-backward'">
         <img :key="current" :src="`${base}/${images[current]}`" :alt="copy.slide(current + 1)" loading="lazy">
@@ -80,8 +83,7 @@ onUnmounted(stop)
       </div>
       <div class="gallery-carousel__actions">
         <a class="gallery-carousel__store-badge" href="https://apps.microsoft.com/detail/9NJGH90NLXDM?referrer=appbadge&amp;mode=full" target="_blank" rel="noopener noreferrer" :aria-label="copy.store">
-          <img class="gallery-carousel__store-badge--light" :src="`/assets/images/store-badges/${storeLocale}-dark.svg`" width="200" :alt="copy.store">
-          <img class="gallery-carousel__store-badge--dark" :src="`/assets/images/store-badges/${storeLocale}-light.svg`" width="200" :alt="copy.store">
+          <img :src="`/assets/images/store-badges/${storeLocale}-${isDark ? 'light' : 'dark'}.svg`" width="200" :alt="copy.store">
         </a>
         <VPButton class="gallery-carousel__download" size="medium" theme="brand" :text="copy.download" href="https://github.com/RinLit-233-shiroko/Rin-UI/releases" target="_blank" rel="noreferrer" />
       </div>

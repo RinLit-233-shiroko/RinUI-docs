@@ -6,10 +6,15 @@ hero:
   text: "デスクトップアプリ向けの Fluent スタイルオープンソース UI ライブラリ"
   tagline: "ウィンドウ、ナビゲーション、テーマ、コントロールを、使い慣れた QML で提供します。"
   image:
-    src: /assets/images/brand/rinui-vertical-dark.png
+    light:
+      src: /assets/images/brand/rinui-vertical-light.png
+      width: 128
+      height: 128
+    dark:
+      src: /assets/images/brand/rinui-vertical-dark.png
+      width: 128
+      height: 128
     alt: RinUI
-    width: 128
-    height: 128
   actions:
     - theme: brand
       text: はじめに

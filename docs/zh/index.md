@@ -6,10 +6,15 @@ hero:
   text: "面向桌面应用的 Fluent 风格开源 UI 库"
   tagline: "为桌面应用提供窗口、导航、主题和常用控件，保留熟悉的 QML 开发方式。"
   image:
-    src: /assets/images/brand/rinui-vertical-dark.png
+    light:
+      src: /assets/images/brand/rinui-vertical-light.png
+      width: 128
+      height: 128
+    dark:
+      src: /assets/images/brand/rinui-vertical-dark.png
+      width: 128
+      height: 128
     alt: RinUI
-    width: 128
-    height: 128
   actions:
     - theme: brand
       text: 快速开始

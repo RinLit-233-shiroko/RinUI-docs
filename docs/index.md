@@ -6,10 +6,15 @@ hero:
   text: "Open-source Fluent UI for desktop applications"
   tagline: "Windows, navigation, themes, and ready-to-use controls for desktop apps, built with the QML workflow you already know."
   image:
-    src: /assets/images/brand/rinui-vertical-dark.png
+    light:
+      src: /assets/images/brand/rinui-vertical-light.png
+      width: 128
+      height: 128
+    dark:
+      src: /assets/images/brand/rinui-vertical-dark.png
+      width: 128
+      height: 128
     alt: RinUI
-    width: 128
-    height: 128
   actions:
     - theme: brand
       text: Get Started

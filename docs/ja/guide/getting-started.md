@@ -4,7 +4,7 @@
 
 インタラクティブなサンプルで RinUI の Qt Quick/QML コントロール、コンポーネント説明、アイコン、ソースコードへのリンクを確認できます。
 
-<GalleryCarousel section="guide" />
+<GalleryCarousel section="guide" :show-copy="false" />
 
 ## インストールとテスト
 ### Python

@@ -306,18 +306,6 @@
   height: auto;
 }
 
-.gallery-carousel__store-badge--dark {
-  display: none;
-}
-
-.dark .gallery-carousel__store-badge--light {
-  display: none;
-}
-
-.dark .gallery-carousel__store-badge--dark {
-  display: block;
-}
-
 .gallery-slide-forward-enter-active,
 .gallery-slide-backward-enter-active,
 .gallery-slide-forward-leave-active,
