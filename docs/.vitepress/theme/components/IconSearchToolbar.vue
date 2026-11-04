@@ -124,6 +124,9 @@ const hasFilters = computed(
   font: inherit;
   font-size: 14px;
 }
+.icon-toolbar-search input::-webkit-search-cancel-button {
+  appearance: none;
+}
 .icon-toolbar-search:focus-within svg {
   fill: var(--vp-c-brand-1);
 }
