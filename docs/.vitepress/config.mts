@@ -26,41 +26,52 @@ export default defineConfig({
     root: {
       label: "English",
       lang: "en",
-      title: "Documentation",
+      title: "RinUI Documentation",
 
       themeConfig: {
+        siteTitle: 'Documentation',
         // 导航
         nav: [
           { text: 'Home', link: '/' },
-          { text: 'Guide', link: '/guide' },
+          { text: 'Guide', link: '/guide/' },
+          { text: 'Components', link: '/components/' },
+          { text: 'v0.5.0', items: [
+            { text: 'Release notes', link: 'https://github.com/RinLit-233-shiroko/Rin-UI/releases' },
+            { text: 'PyPI', link: 'https://pypi.org/project/rinui/' }
+          ] },
+          { text: 'Download Gallery', items: [
+            { text: 'Microsoft Store', link: 'https://apps.microsoft.com/detail/9NJGH90NLXDM?referrer=appbadge&mode=full' },
+            { text: 'GitHub Releases', link: 'https://github.com/RinLit-233-shiroko/Rin-UI/releases' }
+          ] },
         ],
 
         // sidebar
-        sidebar: [
-          {
-            text: 'Introduction',
-            items: [
-              { text: 'What is RinUI?', link: '/guide/' },
-              { text: 'Getting Started', link: '/guide/getting-started' },
-              { text: 'Project Structure and Resources', link: '/guide/project-structure' },
-            ]
-          },
-          {
-            text: 'RinUI Core',
-            collapsed: true,
-            items: [
-              { text: 'Theme', link: '/core/theme' },
-              { text: 'Utils', link: '/core/utils' },
-              { text: 'Float Layer Manager', link: '/core/floatLayer' },
-              { text: 'Iconography', link: '/Design/Iconography.md' },
-            ]
-          },
+        sidebar: {
+          '/guide/': [
+            {
+              text: 'Introduction',
+              items: [
+                { text: 'What is RinUI?', link: '/guide/' },
+                { text: 'Getting Started', link: '/guide/getting-started' },
+                { text: 'Project Structure and Resources', link: '/guide/project-structure' },
+              ]
+            },
+            {
+              text: 'RinUI Core',
+              collapsed: true,
+              items: [
+                { text: 'Theme', link: '/core/theme' },
+                { text: 'Utils', link: '/core/utils' },
+                { text: 'Float Layer Manager', link: '/core/floatLayer' },
+                { text: 'Iconography', link: '/Design/Iconography.md' },
+              ]
+            }
+          ],
+          '/': [
           {
             text: 'Styles',
             collapsed: true,
-            items: [
-              { text: 'AcrylicBrush', link: '/Styles/AcrylicBrush.md' }
-            ]
+            items: [{ text: 'AcrylicBrush', link: '/Styles/AcrylicBrush.md' }]
           },
           {
             text: 'BasicInput',
@@ -179,47 +190,60 @@ export default defineConfig({
               { text: 'FluentPage', link: '/Windowing/FluentPage.md' }
             ]
           }
-        ]
+          ]
+        }
       }
     },
 
     zh: {
       label: "简体中文",
       lang: "zh",
-      title: '开发文档',
+      title: 'RinUI 开发文档',
 
       themeConfig: {
+        siteTitle: '开发文档',
         // 导航
         nav: [
           { text: '首页', link: '/zh/' },
-          { text: '指南', link: '/zh/guide' },
+          { text: '指南', link: '/zh/guide/' },
+          { text: '控件', link: '/zh/components/' },
+          { text: 'v0.5.0', items: [
+            { text: '更新日志 (Releases)', link: 'https://github.com/RinLit-233-shiroko/Rin-UI/releases' },
+            { text: 'PyPI', link: 'https://pypi.org/project/rinui/' }
+          ] },
+          { text: '下载 Gallery', items: [
+            { text: 'Microsoft Store', link: 'https://apps.microsoft.com/detail/9NJGH90NLXDM?referrer=appbadge&mode=full' },
+            { text: 'GitHub Releases', link: 'https://github.com/RinLit-233-shiroko/Rin-UI/releases' }
+          ] },
         ],
 
         // 侧边栏
-        sidebar: [
-          {
-            text: 'RinUI 简介',
-            items: [
-              { text: '何为 RinUI?', link: '/zh/guide/' },
-              { text: '快速开始', link: '/zh/guide/getting-started' },
-            ]
-          },
-          {
-            text: 'RinUI 核心',
-            collapsed: true,
-            items: [
-              { text: '主题', link: '/zh/core/theme' },
-              { text: '工具', link: '/zh/core/utils' },
-              { text: '浮层管理器', link: '/zh/core/floatLayer' },
-              { text: '图标', link: '/zh/Design/Iconography.md' }
-            ]
-          },
+        sidebar: {
+          '/zh/guide/': [
+            {
+              text: 'RinUI 简介',
+              items: [
+                { text: '何为 RinUI?', link: '/zh/guide/' },
+                { text: '快速开始', link: '/zh/guide/getting-started' },
+                { text: '项目结构与资源', link: '/zh/guide/project-structure' },
+              ]
+            },
+            {
+              text: 'RinUI 核心',
+              collapsed: true,
+              items: [
+                { text: '主题', link: '/zh/core/theme' },
+                { text: '工具', link: '/zh/core/utils' },
+                { text: '浮层管理器', link: '/zh/core/floatLayer' },
+                { text: '图标', link: '/zh/Design/Iconography.md' }
+              ]
+            }
+          ],
+          '/zh/': [
           {
             text: '样式',
             collapsed: true,
-            items: [
-              { text: '亚克力材质 (AcrylicBrush)', link: '/zh/Styles/AcrylicBrush.md' }
-            ]
+            items: [{ text: '亚克力材质 (AcrylicBrush)', link: '/zh/Styles/AcrylicBrush.md' }]
           },
           {
             text: '基本输入',
@@ -338,48 +362,60 @@ export default defineConfig({
               { text: 'FluentPage', link: '/zh/Windowing/FluentPage.md' }
             ]
           }
-        ],
+          ]
+        },
       }
     },
 
     ja: {
       label: "日本語",
       lang: "ja",
-      title: 'ドキュメント',
+      title: 'RinUI ドキュメント',
 
       themeConfig: {
+        siteTitle: 'ドキュメント',
         // 导航
         nav: [
           { text: 'ホーム', link: '/ja/' },
           { text: 'ガイド', link: '/ja/guide/' },
+          { text: 'コンポーネント', link: '/ja/components/' },
+          { text: 'v0.5.0', items: [
+            { text: 'リリースノート', link: 'https://github.com/RinLit-233-shiroko/Rin-UI/releases' },
+            { text: 'PyPI', link: 'https://pypi.org/project/rinui/' }
+          ] },
+          { text: 'Gallery をダウンロード', items: [
+            { text: 'Microsoft Store', link: 'https://apps.microsoft.com/detail/9NJGH90NLXDM?referrer=appbadge&mode=full' },
+            { text: 'GitHub Releases', link: 'https://github.com/RinLit-233-shiroko/Rin-UI/releases' }
+          ] },
         ],
 
         // 侧边栏
-        sidebar: [
-          {
-            text: 'RinUI 紹介',
-            items: [
-              { text: 'RinUIとは？', link: '/ja/guide/' },
-              { text: 'はじめに', link: '/ja/guide/getting-started' },
-              { text: 'プロジェクト構成とリソース', link: '/ja/guide/project-structure' },
-            ]
-          },
-          {
-            text: 'RinUI コア',
-            collapsed: true,
-            items: [
-              { text: 'テーマ', link: '/ja/core/theme' },
-              { text: 'ユーティリティ', link: '/ja/core/utils' },
-              { text: 'フロートレイヤーマネージャー', link: '/ja/core/floatLayer' },
-              { text: 'アイコンビジュアル', link: '/ja/Design/Iconography.md' }
-            ]
-          },
+        sidebar: {
+          '/ja/guide/': [
+            {
+              text: 'RinUI 紹介',
+              items: [
+                { text: 'RinUIとは？', link: '/ja/guide/' },
+                { text: 'はじめに', link: '/ja/guide/getting-started' },
+                { text: 'プロジェクト構成とリソース', link: '/ja/guide/project-structure' },
+              ]
+            },
+            {
+              text: 'RinUI コア',
+              collapsed: true,
+              items: [
+                { text: 'テーマ', link: '/ja/core/theme' },
+                { text: 'ユーティリティ', link: '/ja/core/utils' },
+                { text: 'フロートレイヤーマネージャー', link: '/ja/core/floatLayer' },
+                { text: 'アイコンビジュアル', link: '/ja/Design/Iconography.md' }
+              ]
+            }
+          ],
+          '/ja/': [
           {
             text: 'スタイル',
             collapsed: true,
-            items: [
-              { text: 'アクリルブラシ (AcrylicBrush)', link: '/ja/Styles/AcrylicBrush.md' }
-            ]
+            items: [{ text: 'アクリルブラシ (AcrylicBrush)', link: '/ja/Styles/AcrylicBrush.md' }]
           },
           {
             text: '基本入力',
@@ -498,7 +534,8 @@ export default defineConfig({
               { text: 'FluentPage', link: '/ja/Windowing/FluentPage.md' }
             ]
           }
-        ],
+          ]
+        },
       }
     }
   },

@@ -73,6 +73,22 @@
   --vp-c-danger-soft: var(--vp-c-red-soft);
 }
 
+/* Keep the Gallery download menu visible in the compact top navigation. */
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:hover,
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:hover .text {
+  color: var(--vp-c-brand-2);
+}
+
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */
