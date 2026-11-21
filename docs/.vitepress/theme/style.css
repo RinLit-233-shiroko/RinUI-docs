@@ -75,18 +75,40 @@
 
 /* Keep the Gallery download menu visible in the compact top navigation. */
 .VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button {
-  color: var(--vp-c-brand-1);
+  height: 30px;
+  margin: 17px 0;
+  padding: 0 15px;
+  border: 1px solid var(--vp-button-brand-border);
+  border-radius: 15px;
+  color: var(--vp-button-brand-text);
+  background-color: var(--vp-button-brand-bg);
+  font-size: 13px;
   font-weight: 600;
+  transition: color 0.25s, border-color 0.25s, background-color 0.25s;
 }
 
 .VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button .text {
-  color: var(--vp-c-brand-1);
+  line-height: 1;
+  color: inherit;
+  font-size: inherit;
   font-weight: 600;
 }
 
-.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:hover,
-.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:hover .text {
-  color: var(--vp-c-brand-2);
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:hover {
+  border-color: var(--vp-button-brand-hover-border);
+  color: var(--vp-button-brand-hover-text);
+  background-color: var(--vp-button-brand-hover-bg);
+}
+
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:active {
+  border-color: var(--vp-button-brand-active-border);
+  color: var(--vp-button-brand-active-text);
+  background-color: var(--vp-button-brand-active-bg);
+}
+
+.VPNavBarMenu > .VPNavBarMenuGroup:last-child > .button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .footer-beian {
