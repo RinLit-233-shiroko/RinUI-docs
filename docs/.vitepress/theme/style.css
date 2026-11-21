@@ -89,6 +89,22 @@
   color: var(--vp-c-brand-2);
 }
 
+.footer-beian {
+  white-space: nowrap;
+}
+
+.footer-beian__badge {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  vertical-align: -3px;
+}
+
+.footer-beian__separator {
+  margin: 0 6px;
+}
+
 /**
  * Component: Button
  * -------------------------------------------------------------------------- */

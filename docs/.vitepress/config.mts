@@ -551,7 +551,7 @@ export default defineConfig({
     // 页脚
     footer: {
       message: 'Released under the MIT License.',
-      copyright: `Copyright © ${currentYear} RinLit · <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer"><strong>琼ICP备2026014960号-1</strong></a>`
+      copyright: `Copyright © ${currentYear} RinLit · <a class="footer-beian" href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer"><strong>琼ICP备2026014960号-1</strong></a><span class="footer-beian__separator" aria-hidden="true">·</span><a class="footer-beian" href="https://beian.mps.gov.cn/#/query/webSearch?code=46010002002491" target="_blank" rel="noreferrer"><img class="footer-beian__badge" src="/assets/images/beian/gongan-police-badge.png" alt="" width="16" height="16">琼公网安备46010002002491号</a>`
     }
   }
 })
